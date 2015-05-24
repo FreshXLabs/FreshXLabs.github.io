@@ -34,6 +34,7 @@
 	h2{
 		font-size: 2em;
 		margin: 0 0 18px 0;
+		text-align: center;
 		font-family: arial,helvetica;
 	}
 
@@ -176,22 +177,133 @@
 
 	#section1 .box{
 		position: absolute;
-		top: 50%;
-		left: 50%;
+		top: 60%;
+		left: 60%;
 		margin-top: -192px;
 		margin-left: 89px;
 		width: 395px;
 		z-index: 1;
 	}
-	#section1 .imgsContainer{
+
+	#section1 .imgsContainerFashion{
+		opacity: 1;
 		display: block;
 		position: absolute;
 		z-index: 1;
-		top: 10%;
-		margin-top: -100px;
+		top: 60%;
+		margin-top: 300px;
 		margin-left: -100px;
+		width: 200px;
+		height: 200px;
+	}
+	#section1 .overlayFashion
+	{
+		opacity: 1;
+		display: block;
+		position: absolute;
+		z-index: 2;
+		top: 60%;
+		margin-top: 300px;
+		margin-left: -110px;
+		width: 150px;
+		height: 200px;
+
+	}
+	#section1 .overlayFashion:hover
+	{
+		opacity: 0;
+		z-index: 2;
+	}
+	#section1 .imgsContainerFashion:hover{
+		opacity: 1;
+		z-index: 1;
+	}
+	#section1 .imgsContainerInteriorDesign{
+		display: block;
+		position: absolute;
+		z-index: 1;
+		top: 5%;
+		margin-top: -100px;
+		margin-left: -650px;
 		width: 800px;
-		height: 800px;
+		height: 400px;
+	}
+		#section1 .overlayInteriorDesign{
+		display: block;
+		position: absolute;
+		z-index: 2;
+		top: 5%;
+		margin-top: -100px;
+		margin-left: -650px;
+		width: 800px;
+		height: 400px;
+	}
+	#section1 .overlayInteriorDesign:hover
+	{
+		opacity: 0;
+		z-index: 2;
+	}
+	#section1 .imgsContainerInteriorDesign:hover{
+		opacity: 1;
+		z-index: 1;
+	}
+	#section1 .imgsContainerAutomotive{
+		display: block;
+		position: absolute;
+		z-index: 1;
+		top: 60%;
+		margin-top:  300px;
+		margin-left: 110px;
+		width: 200px;
+		height: 200px;
+	}
+	#section1 .overlayAutomobile{
+		display: block;
+		position: absolute;
+		z-index: 2;
+		top: 60%;
+		margin-top:  300px;
+		margin-left: 110px;
+		width: 200px;
+		height: 200px;
+	}
+	#section1 .overlayAutomobile:hover
+	{
+		opacity: 0;
+		z-index: 2;
+	}
+	#section1 .imgsContainerAutomotive:hover{
+		opacity: 1;
+		z-index: 1;
+	}
+	#section1 .imgsContainerMedical{
+		display: block;
+		position: absolute;
+		z-index: 1;
+		top: 60%;
+		margin-top:  300px;
+		margin-left: 400px;
+		width: 200px;
+		height: 200px;
+	}
+	#section1 .overlayMedical{
+		display: block;
+		position: absolute;
+		z-index: 2;
+		top: 60%;
+		margin-top:  300px;
+		margin-left: 400px;
+		width: 200px;
+		height: 200px;
+	}
+	#section1 .overlayMedical:hover
+	{
+		opacity: 0;
+		z-index: 2;
+	}
+	#section1 .imgsContainerMedical:hover{
+		opacity: 1;
+		z-index: 1;
 	}
 	#section1 img{
 		height: 100%;
@@ -216,38 +328,97 @@
 		}
 	}
 	#fashion{
-		z-index: 10;
+		z-index: 1;	}
+	#fashion.active
+	{
+		-webkit-transform: translate3d(0px, -400px, 0px);
+		-moz-transform: translate3d(0px, -400px, 0px);
+		-ms-transform:translate3d(0px, -400px, 0px);
+		transform: translate3d(0px, -400px, 0px);
 	}
-	#fashion
-	.active{
-		-webkit-transform: translate3d(534px, 0px, 0px);
-		-moz-transform: translate3d(534px, 0px, 0px);
-		-ms-transform:translate3d(534px, 0px, 0px);
-		transform: translate3d(534px, 0px, 0px);
+	#overlayFashion
+	{
+		z-index: 2;	
+	}
+	
+
+	#overlayFashion.active
+	{
+		-webkit-transform: translate3d(0px, -400px, 0px);
+		-moz-transform: translate3d(0px, -400px, 0px);
+		-ms-transform:translate3d(0px, -400px, 0px);
+		transform: translate3d(0px, -400px, 0px);
 	}
 
-	#iphone3{
+	#interiordesign{
 		z-index: 12;
 	}
-	#iphone3.active{
-		-webkit-transform: translate3d(213px, 0px, 0px);
-		-moz-transform: translate3d(213px, 0px, 0px);
-		-ms-transform:translate3d(213px, 0px, 0px);
-		transform: translate3d(213px, 0px, 0px);
+	#interiordesign.active{
+		-webkit-transform: translate3d(600px, 0px, 0px);
+		-moz-transform: translate3d(600px, 0px, 0px);
+		-ms-transform:translate3d(600px, 0px, 0px);
+		transform: translate3d(600px, 0px, 0px);
 	}
 
-	#iphone4{
+	#overlayInteriorDesign{
+		z-index: 12;
+	}
+	#overlayInteriorDesign.active{
+		-webkit-transform: translate3d(600px, 0px, 0px);
+		-moz-transform: translate3d(600px, 0px, 0px);
+		-ms-transform:translate3d(600px, 0px, 0px);
+		transform: translate3d(600px, 0px, 0px);
+	}
+
+
+	#automobile{
 		z-index: 11;
 		left: 140px;
 	}
 
-	#iphone4.active{
-		-webkit-transform: translate3d(548px, 0px, 0px);
-		-moz-transform: translate3d(548px, 0px, 0px);
-		-ms-transform:translate3d(548px, 0px, 0px);
-		transform: translate3d(548px, 0px, 0px);
+	#automobile.active{
+
+		-webkit-transform: translate3d(0px, -400px, 0px);
+		-moz-transform: translate3d(0px, -400px, 0px);
+		-ms-transform:translate3d(0px, -400px, 0px);
+		transform: translate3d(0px, -400px, 0px);
+	}
+	#overlayAutomobile{
+
+		z-index: 11;
+		left: 140px;
+	}
+
+	#overlayAutomobile.active{
+		
+		-webkit-transform: translate3d(0px, -400px, 0px);
+		-moz-transform: translate3d(0px, -400px, 0px);
+		-ms-transform:translate3d(0px, -400px, 0px);
+		transform: translate3d(0px, -400px, 0px);
+	}
+	#medical{
+		z-index: 11;
+		left: 140px;
+	}
+
+	#medical.active{
+			-webkit-transform: translate3d(0px, -400px, 0px);
+		-moz-transform: translate3d(0px, -400px, 0px);
+		-ms-transform:translate3d(0px, -400px, 0px);
+		transform: translate3d(0px, -400px, 0px);
 	}
         
+    #overlayMedical{
+		z-index: 11;
+		left: 140px;
+	}
+
+	#overlayMedical.active{
+			-webkit-transform: translate3d(0px, -400px, 0px);
+		-moz-transform: translate3d(0px, -400px, 0px);
+		-ms-transform:translate3d(0px, -400px, 0px);
+		transform: translate3d(0px, -400px, 0px);
+	}
     #bubble{
 		z-index: 11;
 		left: 140px;
@@ -483,14 +654,14 @@
                 
 				'verticalCentered': false,
 				'css3': true,
-				'sectionsColor': ['#FFFFFF', '#fff', '#fff', '#fff', '#ffffff'],
+				'sectionsColor': ['#FFFFFF', '#fff', '#fff', '#fff', '#ffffff', '#fff'],
 				'navigation': true,
 				'navigationPosition': 'right',
-				'navigationTooltips': ['one', 'two', 'three', 'four', 'five'],
+				'navigationTooltips': ['one', 'two', 'three', 'four', 'five', 'six'],
 
 				'afterLoad': function(anchorLink, index){
 					if(index == 2){
-						$('#fashion, #bubble, #iphone3, #iphone2, #iphone4').addClass('active');
+						$('#fashion, #overlayFashion, #interiordesign, #automobile, #medical, #overlayAutomobile, #overlayMedical, #overlayInteriorDesign').addClass('active');
 					}
 				},
 
@@ -557,15 +728,33 @@
 	</div>
 	
 	<div class="section" id="section1">
+
 		<div class="wrap">
-			<div class="imgsContainer">
-			
-				<img src="imgs/fashion.png" alt="fashion" id="fashion" />
-				<img src="imgs/ins2.png" alt="iphone" id="iphone2" />
-				<img src="imgs/u.png" alt="iphone" id="iphone3" />
-				<img src="imgs/iphone4.png" alt="iphone" id="iphone4" />
+						<div class="overlayFashion">
+			<img src="imgs/fashionOverlay.png" alt="iphone" id="overlayFashion" />
+			</div>
+			<div class="imgsContainerFashion">
+				<img src="imgs/fashion2.png" alt="iphone" id="fashion" />
 			</div>
 <!--		iphone6 theme:	ins6, ins4-->
+<div class="imgsContainerInteriorDesign">
+	<img src="imgs/interiordesign.jpg" alt="iphone" id="interiordesign" />
+</div>
+<div class="overlayInteriorDesign">
+			<img src="imgs/interioroverlay.png" alt="iphone" id="overlayInteriorDesign" />
+			</div>
+<div class="overlayAutomobile">
+			<img src="imgs/automotiveOverlay.png" alt="iphone" id="overlayAutomobile" />
+			</div>
+<div class="imgsContainerAutomotive">
+<img src="imgs/automobile.jpg" alt="iphone" id="automobile" />
+</div>
+<div class="overlayMedical">
+			<img src="imgs/medicalOverlay.png" alt="iphone" id="overlayMedical" />
+			</div>
+<div class="imgsContainerMedical">
+<img src="imgs/medicalcollaborate.jpg" alt="iphone" id="medical" />
+</div>
 
 			<div class="box">
 				<h2>Every image has a story to tell...</h2>
