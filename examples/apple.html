@@ -59,9 +59,8 @@
 	}
 	.box{
 		text-align: left;
-		color: #808080;
-		font-size: 1.2em;
-		line-height: 1.6em;
+		color: #FFFFFF;
+		font-size: 1.6em;
 	}
 
         
@@ -188,12 +187,11 @@
 		display: block;
 		position: absolute;
 		z-index: 1;
-		top: 42%;
-		left: 58%;
-		margin-top: -325px;
-		margin-left: -747px;
+		top: 10%;
+		margin-top: -100px;
+		margin-left: -100px;
 		width: 800px;
-		height: 696px;
+		height: 800px;
 	}
 	#section1 img{
 		height: 100%;
@@ -217,14 +215,15 @@
 			height: 464px;
 		}
 	}
-	#iphone2{
+	#fashion{
 		z-index: 10;
 	}
-	#iphone2.active{
-		-webkit-transform: translate3d(-134px, 0px, 0px);
-		-moz-transform: translate3d(-134px, 0px, 0px);
-		-ms-transform:translate3d(-134px, 0px, 0px);
-		transform: translate3d(-134px, 0px, 0px);
+	#fashion
+	.active{
+		-webkit-transform: translate3d(534px, 0px, 0px);
+		-moz-transform: translate3d(534px, 0px, 0px);
+		-ms-transform:translate3d(534px, 0px, 0px);
+		transform: translate3d(534px, 0px, 0px);
 	}
 
 	#iphone3{
@@ -491,7 +490,7 @@
 
 				'afterLoad': function(anchorLink, index){
 					if(index == 2){
-						$('#bubble, #iphone3, #iphone2, #iphone4').addClass('active');
+						$('#fashion, #bubble, #iphone3, #iphone2, #iphone4').addClass('active');
 					}
 				},
 
@@ -545,7 +544,6 @@
 <div id="fullpage">
 	<div id="staticImg">
 		<div class="imgsContainer">
-			<img src="imgs/insta.png" alt="iphone" id="iphone-green" />
 		</div>
 	</div>
 
@@ -562,7 +560,7 @@
 		<div class="wrap">
 			<div class="imgsContainer">
 			
-				<img src="imgs/bubble.png" alt="iphone" id="bubble" />
+				<img src="imgs/fashion.png" alt="fashion" id="fashion" />
 				<img src="imgs/ins2.png" alt="iphone" id="iphone2" />
 				<img src="imgs/u.png" alt="iphone" id="iphone3" />
 				<img src="imgs/iphone4.png" alt="iphone" id="iphone4" />
@@ -570,8 +568,7 @@
 <!--		iphone6 theme:	ins6, ins4-->
 
 			<div class="box">
-				<h2>Welcome To Fresh!</h2>
-                <strong>"A Fresh new way to view your favourite style inspirations"</strong><br>Come explore our Fresh New World!
+				<h2>Every image has a story to tell...</h2>
 			</div>
 		</div>
 	</div>
