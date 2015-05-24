@@ -89,7 +89,7 @@
         display:inline;
     }
     #menu{
-        top:0;
+        top:10px;
         left:1200px;
         height: 10px;
         z-index:100;
@@ -100,13 +100,24 @@
     #logo{
         position: fixed;
         display: block;
-        height: 30px;
+        height: 40px;
+        padding-top:5px;
         width: 30px;
         padding-left: 40px;
     }
+    #headerImage
+    {
+		position: fixed;
+        display: block;
+        height: 30px;
+        padding-top:5px;
+        width: 200px;
+        padding-left: 800px;
+
+    }
     #header{
 		position:fixed;
-		height: 30px;
+		height: 50px;
 		display:block;
 		width: 100%;
 		background: #000;
@@ -142,15 +153,12 @@
 	* --------------------------------------- */
 	#section0{
 		padding: 0px 0;
+		background-image: url(imgs/toge3.png);
         overflow: hidden;
+        background-size: 100% 100%;
 	}
-/*
-	#section0 img{
-		height: 100%;
-        width: 100%;
-		margin: 0px 0 0 0;
-	}
-*/
+
+
     #section0 .layer{
 		position: absolute;
 		z-index: 4;
@@ -158,24 +166,6 @@
 		left: 0;
 		top: 43%;
 	}
-    #myVideo{
-		position: relative;
-		right: 0;
-		bottom: 0;
-		top:0;
-		right:0;
-		width: 80%;
-		height: 80%;
-        margin-top: 100px;
-		background-size: 100% 100%;
- 		background-color: black; /* in case the video doesn't fit the whole page*/
-  		background-image: /* our video */;
-  		background-position: center center;
-  		background-size: contain;
-   		object-fit: cover; /*cover video background */
-   		z-index:3;
-	}
-
 
 	/* Section 1
 	* --------------------------------------- */
@@ -547,10 +537,10 @@
 
 <div id="header">
 	<a href="#firstPage"><img src="imgs/templogo.png" alt="logo" id = "logo"/></a>
-	<b><strong>Fresh</strong></b>
+	<a href="#firstPage"><img src="imgs/freshHeader.png" alt="headerImage" id = "headerImage"/></a>
 </div>
 
-<div id="footer"> Copyright © fresh.Inc</div>
+<div id="footer"> Copyright © FreshXLabs.Inc</div>
 
 <div id="fullpage">
 	<div id="staticImg">
@@ -564,13 +554,7 @@
 		<h1>FRESH</h1>
 		<img src="imgs/face.jpg" alt="iphone" />
 -->
-		<video autoplay loop muted controls="false" id="myVideo">
-			<source src="imgs/flowers.mp4" type="video/mp4">
-			<source src="imgs/flowers.webm" type="video/webm">
-		</video>
-		<div class="layer">
-			<h1>//fresh.inc//</h1>
-		</div>
+
 		
 	</div>
 	
