@@ -89,36 +89,37 @@
         display:inline;
     }
     #menu{
+		position: relative;
         top:10px;
-        left:60%;
+		right:0px;
         height: 10px;
         z-index:100;
-        width: 100%;
         padding:0;
         margin-left:150px;
-    }
+		text-align: right;
+	}
     #logo{
         position: fixed;
         display: block;
-        height: 40px;
-        padding-top:5px;
-        width: 30px;
-        padding-left: 40px;
+        height: 200px;
+        top:40%;
+        width: 150px;
+        left: 50px;
     }
     #headerImage
     {
 		position: fixed;
         display: block;
-        height: 30px;
-        padding-top:5px;
-        width: 200px;
-        left: 40%;
-
+        height: 150px;
+        top:40%;
+        width: 800px;
+        left: 250px;
     }
     #header{
-		position:fixed;
+		position: absolute;
 		height: 50px;
 		display:block;
+		top: -60px;
 		width: 100%;
 		background: #000;
 		z-index:9;
@@ -142,9 +143,6 @@
 		padding: 10px 0 0 0;
     }
 */
-	#header{
-		top:0px;
-	}
 	#footer{
 		bottom:0px;
 	}
@@ -666,13 +664,25 @@
 				},
 
 				'onLeave': function(index, nextIndex, direction){
+					if (index == 1 && direction == 'down'){
+						$('#logo').animate({height:'40px', width:'30px', top:'5px', left:'30px'}, "fast");
+						$('#headerImage').animate({height:'30px',width:'200px', top:'5px',left:'40%'}, "fast");
+						$('#header').animate({top:'0px'});
+					}
+					else if (nextIndex == 1 && direction == 'up'){
+						$('#logo').animate({height:'200px', width:'150px', top:'40%', left:'50px'}, "fast");
+						$('#headerImage').animate({height:'150px',width:'1000px', top:'40%',left:'250px'}, "fast");
+						$('#header').animate({top:'-60px'});
+
+					}
+					
 					if (index == 3 && direction == 'down'){
 						$('.section').eq(index -1).removeClass('moveDown').addClass('moveUp');
 					}
 					else if(index == 3 && direction == 'up'){
 						$('.section').eq(index -1).removeClass('moveUp').addClass('moveDown');
 					}
-
+										
 					$('#staticImg').toggleClass('active', (index == 2 && direction == 'down' ) || (index == 4 && direction == 'up'));
 					$('#staticImg').toggleClass('moveDown', nextIndex == 4);
 					$('#staticImg').toggleClass('moveUp', index == 4 && direction == 'up');
@@ -698,16 +708,17 @@
 </div>
 -->
 
-<ul id="menu">
-	<li data-menuanchor="firstPage"><a href="#firstPage">Home</a></li>
-	<li data-menuanchor="secondPage"><a href="#secondPage">About</a></li>
-	<li data-menuanchor="3rdPage"><a href="#3rdPage">Sign Up</a></li>
-	<li data-menuanchor="4thpage"><a href="#4thpage">Contact</a></li>
-</ul>
+
 
 <div id="header">
 	<a href="#firstPage"><img src="imgs/templogo.png" alt="logo" id = "logo"/></a>
 	<a href="#firstPage"><img src="imgs/freshHeader.png" alt="headerImage" id = "headerImage"/></a>
+	<ul id="menu">
+		<li data-menuanchor="firstPage"><a href="#firstPage">Home</a></li>
+		<li data-menuanchor="secondPage"><a href="#secondPage">About</a></li>
+		<li data-menuanchor="3rdPage"><a href="#3rdPage">Sign Up</a></li>
+		<li data-menuanchor="4thpage"><a href="#4thpage">Contact</a></li>
+	</ul>
 </div>
 
 <div id="footer"> Copyright © FreshXLabs.Inc</div>
