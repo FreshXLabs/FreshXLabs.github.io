@@ -17,7 +17,7 @@
 
 
 	body{
-		color: #333, #ffffff;
+		color: #333;
 		font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
 	}
 
@@ -67,57 +67,74 @@
         
   /* Fixed header and footer.
 	* --------------------------------------- */
-        
-    /*    MENU RIGHT*/
-    #menu2 li {
+	#menu li {
         display:inline-block;
+        margin: 1px;
+        float: right;
         margin-top: 13px;
-        background:#666;
-        background: rgba(0,0,0, 0.5);
-        color: #fff;
-        -webkit-border-radius: 10px;
-                border-radius: 10px;
-    }
-    #menu2 li.active{
         color: #000;
         background:#fff;
         background: rgba(255,255,255, 0.5);
+        -webkit-border-radius: 10px;
+                border-radius: 10px;
     }
-    #menu2 li a{
-        text-decoration:none;
+    #menu li.active{
+        background:#666;
+        background: rgba(0,0,0, 0.5);
         color: #fff;
     }
-    #menu2 li.active a:hover{
+    #menu li a{
+        text-decoration:none;
         color: #000;
     }
-    #menu2 li:hover{
+    #menu li.active a:hover{
+        color: #000;
+    }
+    #menu li:hover{
         background: rgba(255,255,255, 0.8);
     }
-    #menu2 li a,
-    #menu2 li.active a{
+    #menu li a,
+    #menu li.active a{
         padding: 9px 18px;
         display:block;
     }
-    #menu2 li.active a{
+    #menu li.active a{
         color: #fff;
     }
-    #menu2{
-        position: relative;
-        padding-bottom: 10px;
-        z-index:10;
-        padding-right:10px;
+    #menu{
+<<<<<<< HEAD
+        top:0;
+        left:0;
+=======
+		position: relative;
+        top:10px;
+		right:0px;
+>>>>>>> c7da831bda1ceba847be43c355d1edd3413e72de
+        height: 10px;
+        z-index:100;
+        padding:0;
+<<<<<<< HEAD
         margin:0;
+    }
+    #logo{
+        position: fixed;
+        display: block;
+        height: 40px;
+        padding-top:1px;
+        width: 30px;
+        padding-left: 40px;
+=======
+        margin-left:150px;
 		text-align: right;
 	}
-/*    MENU ENDED    */
-        
     #logo{
         position: fixed;
         display: block;
         height: 200px;
-        padding-top:2px;
+        top:40%;
         width: 150px;
         left: 50px;
+>>>>>>> c7da831bda1ceba847be43c355d1edd3413e72de
     }
     #headerImage
     {
@@ -127,30 +144,54 @@
         top:40%;
         width: 800px;
         left: 250px;
-        padding-top:7px;
     }
     #header{
 		position: absolute;
 		height: 50px;
 		display:block;
-		top: -500px;
+		top: -60px;
 		width: 100%;
-		background: #000;
-        opacity: 0.7;
+		background: black;
 		z-index:9;
 		text-align:left;
-        text-indent: 15px;
+        text-indent: 75px;
 		color: #FFFFFF;
+/*        #36CEA4*/
 		padding: 10px 0 0 0;
 	}
 
+     #footer{
+        position:fixed;
+		height: 30px;
+		display:block;
+		width: 100%;
+		background: #f2f2f2;
+		z-index:9;
+		text-align:center;
+		color: #FC30A7;
+        #36CEA4
+		padding: 10px 0 0 0;
+    }
+<<<<<<< HEAD
+*/
+	#header{
+		top:0px;
+	}
+/*
+=======
+		
+>>>>>>> c7da831bda1ceba847be43c355d1edd3413e72de
+	#footer{
+		bottom:0px;
+	}
+*/
         
 	/* Section 0
 	* --------------------------------------- */
 	#section0{
 		padding: 0px 0;
         overflow: hidden;
-        background-image: url(imgs/temp.png);
+        background-image: url(imgs/page1background.png);
         margin: 0px 0 0 0;
         background-size: 100% 100%;
 	}
@@ -166,10 +207,7 @@
 
 	/* Section 1
 	* --------------------------------------- */
-	#section1{
-        background-image: url(imgs/cam.png);
-    }
-    #section1 img{
+	#section1 img{
 		position:absolute;
 		left: 40px;
 		top: 100px;
@@ -402,7 +440,7 @@
 	}
 
 	#medical.active{
-        -webkit-transform: translate3d(0px, -400px, 0px);
+			-webkit-transform: translate3d(0px, -400px, 0px);
 		-moz-transform: translate3d(0px, -400px, 0px);
 		-ms-transform:translate3d(0px, -400px, 0px);
 		transform: translate3d(0px, -400px, 0px);
@@ -442,12 +480,8 @@
 
 	/* Section 2
 	* --------------------------------------- */
-	#section2{
-        background-image: url(imgs/temp2.png);
-    }
-    #section2 img{
+	#section2 img{
 		position:absolute;
-        
 	}
 	#section2 .imgsContainer,
 	#staticImg .imgsContainer,
@@ -623,22 +657,34 @@
         /* Section 4
 	* --------------------------------------- */
         #section4{
-/*            background-image: url(imgs/fresh.jpg);*/
+            background-image: url(imgs/fresh.jpg);
+            opacity: 1;
             margin: 0px 0 0 0;
             background-size: 100% 100%;
         }
-        #section4 .box{
-            width:305px; 
-            margin:0;
-            text-align: center;
-            top: 25%;
-            left: 25%;
-            position: absolute;
-            width: 582px;
-            opacity: 1;
-        }
         
+        /*Contactus*/
 /*
+        #section4 .box{
+            margin: 10% 0 0 0;
+            text-align: left;
+        }
+*/
+        
+        /* Sign Up
+        *------------------------*/
+/*
+        #signup{
+            margin: 30px;
+            background-color: #ffffff;
+            border: 1px solid black;
+            opacity:0.6;
+            filter:alpha(opacity=60); 
+            margin: 5%;
+            font-weight: bold;
+            color: #000000;
+        }
+*/
         #section4 .signupbox {
             width:305px; 
             margin:0;
@@ -649,8 +695,6 @@
             width: 582px;  
             
         }
-*/
-    
             /* Nicely lines up the labels. */
             #section4 .form label {display:inline-block; width:500px;}
  
@@ -700,10 +744,10 @@
                 
 				'verticalCentered': false,
 				'css3': true,
-				'sectionsColor': ['#FFFFFF', '#fff', '#fff', '#fff', '#000', '#000'],
+				'sectionsColor': ['#FFFFFF', '#fff', '#fff', '#fff', '#ffffff', '#fff'],
 				'navigation': true,
 				'navigationPosition': 'right',
-				'navigationTooltips': ['1', '2', '3', '4', '5'],
+				'navigationTooltips': ['one', 'two', 'three', 'four', 'five'],
 
 				'afterLoad': function(anchorLink, index){
 					if(index == 2){
@@ -714,7 +758,7 @@
 				'onLeave': function(index, nextIndex, direction){
 					if (index == 1 && direction == 'down'){
 						$('#logo').animate({height:'40px', width:'30px', top:'5px', left:'30px'}, "fast");
-						$('#headerImage').animate({height:'30px',width:'200px', top:'5px',left:'6%'}, "fast");
+						$('#headerImage').animate({height:'30px',width:'200px', top:'5px',left:'40%'}, "fast");
 						$('#header').animate({top:'0px'});
 					}
 					else if (nextIndex == 1 && direction == 'up'){
@@ -741,7 +785,7 @@
 //					$('video').get(0).play();
 //				},
                 anchors: ['firstPage', 'secondPage', '3rdPage', '4thPage', '5thPage' ],
-                menu: '#menu2, #menu1', 
+                menu: '#menu',
 				easingcss3: 'cubic-bezier(0.175, 0.885, 0.320, 1.275)'
 			});
 		});
@@ -754,20 +798,24 @@
 </div>
 -->
 
+<<<<<<< HEAD
+<ul id="menu">
+	<li data-menuanchor= "4thPage"><a href="#4thPage">Sign Up</a></li>
+	<li data-menuanchor= "secondPage"><a href="#secondPage">About</a></li>
+</ul>
+=======
 
+>>>>>>> c7da831bda1ceba847be43c355d1edd3413e72de
 
 <div id="header">
 	<a href="#firstPage"><img src="imgs/white.png" alt="logo" id = "logo"/></a>
 	<a href="#firstPage"><img src="imgs/freshHeader.png" alt="headerImage" id = "headerImage"/></a>
-	
-	<ul id="menu2">
-        <li data-menuanchor= "firstPage"><a href="#firstPage">Home</a></li>
-        <li data-menuanchor= "secondPage"><a href="#secondPage">About</a></li>
-        <li data-menuanchor= "3rdPage"><a href="#3rdPage">RND</a></li>
-        <li data-menuanchor= "4thPage"><a href="#4thPage">Sign Up</a></li>
-        <li data-menuanchor= "5thPage"><a href="#5thPage">Contact</a></li>	  	    
-    </ul>
-<!--	<a href="#firstPage"><img src="imgs/templogo.png" alt="logo" id = "logo"/></a>-->
+	<ul id="menu">
+		<li data-menuanchor="firstPage"><a href="#firstPage">Home</a></li>
+		<li data-menuanchor="secondPage"><a href="#secondPage">About</a></li>
+		<li data-menuanchor="3rdPage"><a href="#3rdPage">Sign Up</a></li>
+		<li data-menuanchor="4thpage"><a href="#4thpage">Contact</a></li>
+	</ul>
 </div>
 
 <!--<div id="footer"> Copyright © FreshXLabs.Inc</div>-->
@@ -781,6 +829,11 @@
 -->
 
 	<div class="section" id="section0">
+<!--
+		<h1>FRESH</h1>
+		<img src="imgs/face.jpg" alt="iphone" />
+-->
+
 		
 	</div>
 	
@@ -850,7 +903,8 @@
             </div>
             </div>
 		</div>
-<!-- 
+<!--
+            
 		<div class="imgsContainer">
 			<img src="imgs/ins5.png" alt="iphone" id="iphone-two" />
 		</div>
@@ -859,17 +913,27 @@
 	
 	<div class="section moveDown" id="section4">
 		<div class="wrap">
-			<div class="box">
-                  <h2 style = "color:#ffffff"><b>Contact Us</b></h2>
-                   <address>
-                    151 Charles Street West<br>
-                    Kitchener, Ontario<br>
-                    Canada, N2G 1H6<br><br>
-                   <strong>C:</strong> 519-123-1234<br>
-                   <strong>T:</strong> 519-123-1234<br><br>
-                    Copyright © fresh.Inc<br>
-                    </address>
-			</div>
+
+			<div class = signupbox>
+			<form id = "signup">
+                <h4 style= "font-size: 30pt; color:white"><strong>sign up.</strong></h4><br>
+                <div class="line">
+                <input type="text" id="email" placeholder="Email" style= "font-size: 15pt"/>
+                </div>
+                
+                <div class="line">
+                <input type="password" id="pwd" placeholder="Password"style= "font-size: 15pt" />
+                </div>
+                
+                <div class="line">
+                <input type="text" id="username" placeholder="Username" style= "font-size: 15pt" />
+                </div>
+                <br>
+                <div class="line submit">
+                <input type="submit" value="Create" style= "font-size: 19pt" />
+                </div>
+            </form>
+            </div>
 		</div>
 	</div>
 	
