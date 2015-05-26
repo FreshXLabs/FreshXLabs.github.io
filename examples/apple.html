@@ -17,7 +17,7 @@
 
 
 	body{
-		color: #333, #ffffff;
+		color: #ffffff, #333;
 		font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
 	}
 
@@ -26,7 +26,7 @@
 	* --------------------------------------- */
 	h1{
 		font-size: 5em;
-		font-family: arial,helvetica;
+		font-family: arial,helvetica, tahoma, optima;
 		margin:0;
 		padding:0;
         color: white;
@@ -35,7 +35,7 @@
 		font-size: 2em;
 		margin: 0 0 18px 0;
 		text-align: center;
-		font-family: arial,helvetica;
+		font-family: arial,helvetica, tahoma, optima;
 	}
 
 
@@ -167,283 +167,169 @@
 	/* Section 1
 	* --------------------------------------- */
 	#section1{
-        background-image: url(imgs/cam.png);
+        background-image: url(imgs/galaxy.png);
+        background-size: 100% 100%;
     }
     #section1 img{
 		position:absolute;
 		left: 40px;
 		top: 100px;
 	}
-
 	#section1 .box{
-		position: absolute;
-		top: 60%;
-		left: 60%;
-		margin-top: -192px;
-		margin-left: 70px;
-		width: 395px;
-		z-index: 1;
-	}
-
-	#section1 .imgsContainerFashion{
-		opacity: 1;
-		display: block;
-		position: absolute;
-		z-index: 1;
-		top: 60%;
-		margin-top: 300px;
-		margin-left: -100px;
-		width: 200px;
-		height: 200px;
-	}
-	#section1 .overlayFashion
-	{
-		opacity: 1;
-		display: block;
-		position: absolute;
-		z-index: 2;
-		top: 60%;
-		margin-top: 300px;
-		margin-left: -110px;
-		width: 150px;
-		height: 200px;
-
-	}
-	#section1 .overlayFashion:hover
-	{
-		opacity: 0;
-		z-index: 2;
-	}
-	#section1 .imgsContainerFashion:hover{
-		opacity: 1;
-		z-index: 1;
-	}
-	#section1 .imgsContainerInteriorDesign{
-		display: block;
-		position: absolute;
-		z-index: 1;
-		top: 5%;
+		position: relative;
+		top: 50%;
+		left: 0px;
 		margin-top: -100px;
-		margin-left: -650px;
-		width: 800px;
-		height: 400px;
-	}
-		#section1 .overlayInteriorDesign{
-		display: block;
-		position: absolute;
-		z-index: 2;
-		top: 5%;
-		margin-top: -100px;
-		margin-left: -650px;
-		width: 800px;
-		height: 400px;
-	}
-	#section1 .overlayInteriorDesign:hover
-	{
-		opacity: 0;
-		z-index: 2;
-	}
-	#section1 .imgsContainerInteriorDesign:hover{
-		opacity: 1;
+		margin-left: 50px;
+		width: 350px;
 		z-index: 1;
-	}
-	#section1 .imgsContainerAutomotive{
-		display: block;
-		position: absolute;
-		z-index: 1;
-		top: 60%;
-		margin-top:  300px;
-		margin-left: 110px;
-		width: 200px;
-		height: 200px;
-	}
-	#section1 .overlayAutomobile{
-		display: block;
-		position: absolute;
-		z-index: 2;
-		top: 60%;
-		margin-top:  300px;
-		margin-left: 110px;
-		width: 200px;
-		height: 200px;
-	}
-	#section1 .overlayAutomobile:hover
-	{
-		opacity: 0;
-		z-index: 2;
-	}
-	#section1 .imgsContainerAutomotive:hover{
-		opacity: 1;
-		z-index: 1;
-	}
-	#section1 .imgsContainerMedical{
-		display: block;
-		position: absolute;
-		z-index: 1;
-		top: 60%;
-		margin-top:  300px;
-		margin-left: 400px;
-		width: 200px;
-		height: 200px;
-	}
-	#section1 .overlayMedical{
-		display: block;
-		position: absolute;
-		z-index: 2;
-		top: 60%;
-		margin-top:  300px;
-		margin-left: 400px;
-		width: 200px;
-		height: 200px;
-	}
-	#section1 .overlayMedical:hover
-	{
-		opacity: 0;
-		z-index: 2;
-	}
-	#section1 .imgsContainerMedical:hover{
-		opacity: 1;
-		z-index: 1;
-	}
-	#section1 img{
-		height: 100%;
-	}
-	/*screen resolutions between 620px and 800px*/
-	@media all and (min-width: 620px) and (max-width: 800px){
-		#section1 .imgsContainer{
-			margin-top: -278px;
-			margin-left: -685px;
-			width: 647px;
-			height: 563px;
-		}
-	}
-
-	/*screen resolutions lower than 620px*/
-	@media all and (max-width: 620px){
-		#section1 .imgsContainer{
-			margin-top: -208px;
-			margin-left: -516px;
-			width: 534px;
-			height: 464px;
-		}
-	}
-	#fashion{
-		z-index: 1;	}
-	#fashion.active
-	{
-		-webkit-transform: translate3d(0px, -400px, 0px);
-		-moz-transform: translate3d(0px, -400px, 0px);
-		-ms-transform:translate3d(0px, -400px, 0px);
-		transform: translate3d(0px, -400px, 0px);
-	}
-	#overlayFashion
-	{
-		z-index: 2;	
-	}
-	
-
-	#overlayFashion.active
-	{
-		-webkit-transform: translate3d(0px, -400px, 0px);
-		-moz-transform: translate3d(0px, -400px, 0px);
-		-ms-transform:translate3d(0px, -400px, 0px);
-		transform: translate3d(0px, -400px, 0px);
-	}
-
-	#interiordesign{
-		z-index: 12;
-	}
-	#interiordesign.active{
-		-webkit-transform: translate3d(600px, 0px, 0px);
-		-moz-transform: translate3d(600px, 0px, 0px);
-		-ms-transform:translate3d(600px, 0px, 0px);
-		transform: translate3d(600px, 0px, 0px);
-	}
-
-	#overlayInteriorDesign{
-		z-index: 12;
-	}
-	#overlayInteriorDesign.active{
-		-webkit-transform: translate3d(600px, 0px, 0px);
-		-moz-transform: translate3d(600px, 0px, 0px);
-		-ms-transform:translate3d(600px, 0px, 0px);
-		transform: translate3d(600px, 0px, 0px);
-	}
-
-
-	#automobile{
-		z-index: 11;
-		left: 140px;
-	}
-
-	#automobile.active{
-
-		-webkit-transform: translate3d(0px, -400px, 0px);
-		-moz-transform: translate3d(0px, -400px, 0px);
-		-ms-transform:translate3d(0px, -400px, 0px);
-		transform: translate3d(0px, -400px, 0px);
-	}
-	#overlayAutomobile{
-
-		z-index: 11;
-		left: 140px;
-	}
-
-	#overlayAutomobile.active{
-		
-		-webkit-transform: translate3d(0px, -400px, 0px);
-		-moz-transform: translate3d(0px, -400px, 0px);
-		-ms-transform:translate3d(0px, -400px, 0px);
-		transform: translate3d(0px, -400px, 0px);
-	}
-	#medical{
-		z-index: 11;
-		left: 140px;
-	}
-
-	#medical.active{
-        -webkit-transform: translate3d(0px, -400px, 0px);
-		-moz-transform: translate3d(0px, -400px, 0px);
-		-ms-transform:translate3d(0px, -400px, 0px);
-		transform: translate3d(0px, -400px, 0px);
 	}
         
-    #overlayMedical{
-		z-index: 11;
-		left: 140px;
-	}
+        #section1 a{
+            position:absolute;
+            left: 0px;
+            top: 0px;
+            display: block;
+            width:100%;
+            height:100%;
+        }
+        #section1 .overlay {
+            z-index: 2;
+            opacity: 1;
+            display: block;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            width:200px;
+            height:200px;
+        }
 
-	#overlayMedical.active{
-			-webkit-transform: translate3d(0px, -400px, 0px);
-		-moz-transform: translate3d(0px, -400px, 0px);
-		-ms-transform:translate3d(0px, -400px, 0px);
-		transform: translate3d(0px, -400px, 0px);
-	}
-    #bubble{
-		z-index: 11;
-		left: 140px;
-	}
+        #section1 .overlay:hover{
+            opacity:0;
+        }
+        #section1 .container{
+            display: block;
+            position: absolute;
+            z-index: 1;
+            opacity: 1;
+            width:200px;
+            height:200px;
+            
+        }
+        #section1 .bottomContainers{
+            position: absolute;
+            display: block;
+            height:200px;
+            width:100%;
+            top:100%;
+            -webkit-transition: all 0.3s ease-out;
+            -moz-transition: all 0.3s ease-out;
+            -o-transition: all 0.5s ease-out;
+            transition: all 0.4s ease-out;
+           
+        }
+        #section1 .fashion{
+            left:45%;
+            top:-110px;
+            -webkit-border-radius: 10px;
+            border-radius: 10px;
+        }
+        #section1 .automotive{
+            left:45%;
+            top:-340px;
+            -webkit-border-radius: 10px;
+            border-radius: 10px;
+        }
+        #section1 .medical{
+            left:65%;
+            top:-110px;
+            -webkit-border-radius: 10px;
+            border-radius: 10px;
+        }
 
-	#bubble.active{
-		-webkit-transform: translate3d(600px, 0px, 0px);
-		-moz-transform: translate3d(600px, 0px, 0px);
-		-ms-transform:translate3d(600px, 0px, 0px);
-		transform: translate3d(600px, 0px, 0px);
+        #section1 .interiorDesign{
+            left:65%;
+            top:-340px;
+            -webkit-border-radius: 10px;
+            border-radius: 10px;
+        }
+
+        #section1 .bottomContainers.active{
+            -webkit-transform: translate3d(0px, -100px, 0px);
+            -moz-transform: translate3d(0px, -100px%, 0px);
+            -ms-transform:translate3d(0px, -100px, 0px);
+            transform: translate3d(0px, -100px, 0px);
+        }
+        #section1 img{
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            
+            -webkit-border-radius: 10px;
+            border-radius: 10px;
+            box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+            -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+            -moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+        }
+        /*screen resolutions between 620px and 800px*/
+        @media all and (min-width: 620px) and (max-width: 800px){
+            #section1 .imgsContainer{
+                margin-top: -278px;
+                margin-left: -685px;
+                width: 647px;
+                height: 563px;
+            }
+        }
+        /*screen resolutions lower than 620px*/
+        @media all and (max-width: 620px){
+            #section1 .imgsContainer{
+                margin-top: -208px;
+                margin-left: -516px;
+                width: 534px;
+                height: 464px;
+            }
+        }	
+        #bubble{
+            z-index: 11;
+            left: 140px;
+        }
+        #bubble.active{
+            -webkit-transform: translate3d(600px, 0px, 0px);
+            -moz-transform: translate3d(600px, 0px, 0px);
+            -ms-transform:translate3d(600px, 0px, 0px);
+            transform: translate3d(600px, 0px, 0px);
+            -webkit-transition: all 3s ease-out;
+            -moz-transition: all 3s ease-out;
+            -o-transition: all 3s ease-out;
+            transition: all 3s ease-out;
+        }
+        .modalBackground{
+            position:absolute;
+            left:0px;
+            top:0px;
+            height:100%;
+            width:100%;				
+        }
+        .modalMouseOver{
+            position:absolute;
+            left:0px;
+            top:0px;
+            height:100%;
+            width:100%;
+        }
         
-        -webkit-transition: all 3s ease-out;
-		-moz-transition: all 3s ease-out;
-		-o-transition: all 3s ease-out;
-		transition: all 3s ease-out;
         
-	}
-
-
-
-
+        
 	/* Section 2
 	* --------------------------------------- */
 	#section2{
-        background-image: url(imgs/temp2.png);
+        background-image: url(imgs/neural.jpg);
+        background-size: 80% 110%;
+        background-repeat: no-repeat;
+        background-position: center;
+        
     }
     #section2 img{
 		position:absolute;
@@ -468,16 +354,16 @@
 	}
 
 	#section2.moveUp .imgsContainer{
-		top: 50%;
+/*		top: 50%;*/
 	}
 
 	#section2.moveDown .imgsContainer,
 	#staticImg .imgsContainer{
-		top: 90%;
+/*		top: 90%;*/
 	}
 
 	#section2.active .imgsContainer{
-		top: 50%;
+/*		top: 50%;*/
 	}
 
 	#section2 .box{
@@ -566,6 +452,10 @@
 		position: absolute;
 	}
 */
+    #section3{
+          background-image: url(imgs/ca.jpg);
+        background-size: 100% 100%;
+    }
 	#section3 .box{
 		text-align: center;
 		margin: 10% 0 0 0;
@@ -610,32 +500,33 @@
     width:70px;
     outline
 }
-        
-        
-/*
-#section3 .inputWithButton > button::-moz-focus-inner {
-    border: 0;
-}
-*/
-
-
-        
-        /* Section 4
+       
+    /* Section 4
 	* --------------------------------------- */
         #section4{
 /*            background-image: url(imgs/fresh.jpg);*/
             margin: 0px 0 0 0;
             background-size: 100% 100%;
+            background-image: url(imgs/road.jpg);
         }
-        #section4 .box{
-            width:305px; 
-            margin:0;
+        #section4 .transbox
+        {
+            margin: 0px;
+/*            background-color: ;*/
+/*            opacity:0.6;*/
+/*            filter:alpha(opacity=60);  For IE8 and earlier */
             text-align: center;
-            top: 25%;
-            left: 25%;
+            top: 35%;
+            left: -95px;
             position: absolute;
-            width: 582px;
-            opacity: 1;
+            width: 500px;
+        }
+        
+        #address
+        {
+            margin: 5%;
+            font-weight: bold;
+            color: #000000;
         }
         
 /*
@@ -700,14 +591,14 @@
                 
 				'verticalCentered': false,
 				'css3': true,
-				'sectionsColor': ['#FFFFFF', '#fff', '#fff', '#fff', '#000', '#000'],
+				'sectionsColor': ['#FFFFFF', '#fff', '#000', '#fff', '#000', '#000'],
 				'navigation': true,
 				'navigationPosition': 'right',
 				'navigationTooltips': ['1', '2', '3', '4', '5'],
 
 				'afterLoad': function(anchorLink, index){
 					if(index == 2){
-						$('#fashion, #overlayFashion, #interiordesign, #automobile, #medical, #overlayAutomobile, #overlayMedical, #overlayInteriorDesign').addClass('active');
+						$('#section1 .bottomContainers').addClass('active');
 					}
 				},
 
@@ -736,10 +627,10 @@
 					$('#staticImg').toggleClass('moveUp', index == 4 && direction == 'up');
 				},
                 
-//                afterRender: function(){
-//					//playing the video
-//					$('video').get(0).play();
-//				},
+                afterRender: function(){
+					//playing the video
+					$('video').get(0).play();
+				},
                 anchors: ['firstPage', 'secondPage', '3rdPage', '4thPage', '5thPage' ],
                 menu: '#menu2, #menu1', 
 				easingcss3: 'cubic-bezier(0.175, 0.885, 0.320, 1.275)'
@@ -782,63 +673,96 @@
 
 	<div class="section" id="section0">
 		
+		<video autoplay loop muted controls="false" id="myVideo">
+			<source src="imgs/Fireflies%20%20%20FREE%20Video%20Background%20Loop%20HD%201080p.mp4" type="video/mp4">
+			<source src="imgs/Fireflies%20%20%20FREE%20Video%20Background%20Loop%20HD%201080p.mp4" type="video/webm">
+		</video>
+		
 	</div>
 	
 	<div class="section" id="section1">
 
 		<div class="wrap">
-						<div class="overlayFashion">
-			<img src="imgs/fashionOverlay.png" alt="iphone" id="overlayFashion" />
-			</div>
-			<div class="imgsContainerFashion">
-				<img src="imgs/fashion2.png" alt="iphone" id="fashion" />
-			</div>
-<!--		iphone6 theme:	ins6, ins4-->
-<div class="imgsContainerInteriorDesign">
-	<img src="imgs/interiordesign.jpg" alt="iphone" id="interiordesign" />
-</div>
-<div class="overlayInteriorDesign">
-			<img src="imgs/interioroverlay.png" alt="iphone" id="overlayInteriorDesign" />
-			</div>
-<div class="overlayAutomobile">
-			<img src="imgs/automotiveOverlay.png" alt="iphone" id="overlayAutomobile" />
-			</div>
-<div class="imgsContainerAutomotive">
-<img src="imgs/automobile.jpg" alt="iphone" id="automobile" />
-</div>
-<div class="overlayMedical">
-			<img src="imgs/medicalOverlay.png" alt="iphone" id="overlayMedical" />
-			</div>
-<div class="imgsContainerMedical">
-<img src="imgs/medicalcollaborate.jpg" alt="iphone" id="medical" />
-</div>
+                <div class="bottomContainers">
+                
+                    <div class="overlay interiorDesign">
+                    <a href="#interiorDesignModal" class="fancybox">
+                    <img src="imgs/interioroverlay.png" alt="iphone"/>
+                    </a>
+                    </div>
+                
+                    <div class="container interiorDesign">
+                    <a><img src="imgs/interiordesign.jpg" alt="iphone"/></a>
+                    </div>
 
-			<div class="box">
-				<h2>Every image <br>has a story <br>to tell...</h2>
-			</div>
+                    <div class="container fashion">
+                    <a>
+                    <img src="imgs/fashion2.png" alt="iphone"/>
+                    </a>
+                    </div>
+                    
+                    <div class="overlay fashion">
+                    <a href="#fashionModal" class="fancybox">
+                    <img src="imgs/fashionOverlay.png" alt="iphone"/>
+                    </a>
+                    </div>	
+                    									
+                    <div class="overlay automotive">
+                    <a href="#automotiveModal" class="fancybox">
+                    <img src="imgs/automotiveOverlay.png" alt="iphone"/>
+                    </a>
+                    </div>
+                    
+                    <div class="container automotive">
+                    <a>
+                    <img src="imgs/automobile.jpg" alt="iphone"/>
+                    </a>
+                    </div>
+
+                    <div class="overlay medical">
+                    <a href="#medicalModal" class="fancybox">
+                    <img src="imgs/medicalOverlay.png" alt="iphone" id="overlayMedical" />
+                    </a>
+                    </div>
+                    
+                    <div class="container medical">
+                    <a>
+                    <img src="imgs/medicalcollaborate.jpg" alt="iphone"/>
+                    </a>
+                    </div>
+                </div>
+
+                <div class="box">
+                <h2 style = "color: #FFFFFF; font-family: optima;">Every imgage has a story <br>to tell...</h2>
+                </div>
 		</div>
 	</div>
 
 	<div class="section moveDown" id="section2">
 		<div class="wrap">
+
 			<div class="imgsContainer">
-				<img src="imgs/pin.png" alt="iphone" id="iphone-yellow" />
-				<img src="imgs/inss.png" alt="iphone" id="iphone-red" />
-				<img src="imgs/fashh.png" alt="iphone" id="iphone-blue" />
+				<img src="imgs/whiteclick.png" alt="iphone" id="iphone-yellow" />
+				<img src="imgs/whiteclick.png" alt="iphone" id="iphone-red" />
+				<img src="imgs/whiteclick.png" alt="iphone" id="iphone-blue" />
 			</div>
 
+
+<!--
 			<div class="box">
-				<h2>Amazing Stuff</h2>
+				<h2 style = "color: #FFFFFF">Amazing Stuff</h2>
 				<strong>"A Fresh new way to view<br>
 				your favourite style inspirations"</strong><br>
 				Come explore our Fresh New World!
 			</div>
+-->
+    
 		</div>
 	</div>
 	<div class="section moveDown" id="section3">
 		<div class="wrap">
 			<div class="box">
-				<h2>Get an exclusive <br>preview of
+				<h2 style = "color:#FFFFFF">Get an exclusive <br>preview of
 				FreshXLab's <br>cutting edge
 				technology</h2>
            
@@ -859,9 +783,9 @@
 	
 	<div class="section moveDown" id="section4">
 		<div class="wrap">
-			<div class="box">
-                  <h2 style = "color:#ffffff"><b>Contact Us</b></h2>
-                   <address>
+			<div class="transbox">
+                  <h2 style = "color:#FFFFFF"><b>Contact Us</b></h2>
+                   <address id = "address" style = "color:#FFFFFF">
                     151 Charles Street West<br>
                     Kitchener, Ontario<br>
                     Canada, N2G 1H6<br><br>
