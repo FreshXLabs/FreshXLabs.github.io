@@ -65,43 +65,56 @@
 	}
 
         
-    /* Fixed header and footer.
+  /* Fixed header and footer.
 	* --------------------------------------- */
 	#menu li {
         display:inline-block;
-        margin: 10px;
-        float: center;
-        color: #fff;
+        margin: 1px;
+        float: right;
+        margin-top: 13px;
+        color: #000;
+        background:#fff;
+        background: rgba(255,255,255, 0.5);
+        -webkit-border-radius: 10px;
+                border-radius: 10px;
     }
     #menu li.active{
+        background:#666;
+        background: rgba(0,0,0, 0.5);
         color: #fff;
     }
     #menu li a{
         text-decoration:none;
+        color: #000;
     }
     #menu li.active a:hover{
+        color: #000;
     }
     #menu li:hover{
+        background: rgba(255,255,255, 0.8);
     }
     #menu li a,
     #menu li.active a{
         padding: 9px 18px;
-        display:inline;
+        display:block;
+    }
+    #menu li.active a{
+        color: #fff;
     }
     #menu{
-        top:10px;
-        left:60%;
+        top:0;
+        left:0;
         height: 10px;
         z-index:100;
         width: 100%;
         padding:0;
-        margin-left:150px;
+        margin:0;
     }
     #logo{
         position: fixed;
         display: block;
         height: 40px;
-        padding-top:5px;
+        padding-top:1px;
         width: 30px;
         padding-left: 40px;
     }
@@ -120,7 +133,7 @@
 		height: 50px;
 		display:block;
 		width: 100%;
-		background: #000;
+		background: black;
 		z-index:9;
 		text-align:left;
         text-indent: 75px;
@@ -145,16 +158,19 @@
 	#header{
 		top:0px;
 	}
+/*
 	#footer{
 		bottom:0px;
 	}
+*/
         
 	/* Section 0
 	* --------------------------------------- */
 	#section0{
 		padding: 0px 0;
-		background-image: url(imgs/page1background.png);
         overflow: hidden;
+        background-image: url(imgs/page1background.png);
+        margin: 0px 0 0 0;
         background-size: 100% 100%;
 	}
 
@@ -180,7 +196,7 @@
 		top: 60%;
 		left: 60%;
 		margin-top: -192px;
-		margin-left: 89px;
+		margin-left: 70px;
 		width: 395px;
 		z-index: 1;
 	}
@@ -551,6 +567,7 @@
 
 	/* Section 3
 	* --------------------------------------- */
+/*
 	#section3 .imgsContainer{
 		top: 50%;
 	}
@@ -560,12 +577,62 @@
 		left: 455px;
 		position: absolute;
 	}
+*/
 	#section3 .box{
 		text-align: center;
 		margin: 10% 0 0 0;
 	}
+        
+    #section3 .signupbox {
+            width:305px; 
+            margin:0;
+            text-align: center;
+            top: 25%;
+            left: 25%;
+            position: absolute;
+            width: 582px;  
+            
+        }
+        
+               
+.inputWithButton{
+    display:inline-block;
+/*    overflow:hidden;*/
+    border-radius: 3px;
+    margin-top: 100px;
+    margin-left: 50px;
+}
+.inputWithButton > *{
+    vertical-align:top;
+    border:0;
+    margin:0;
+    padding: 13px 10px;
+}
+.inputWithButton > input[type=text]{
+    width:300px;
+    border:1px solid #444;
+/*    border-right:none;*/
+}
+.inputWithButton > input[type=button]{
+    border-left:1px solid gray;
+    background:#A30000;
+    border:1px solid #A30000;
+    color:#fff;
+    cursor:pointer;
+    width:70px;
+    outline
+}
+        
+        
+/*
+#section3 .inputWithButton > button::-moz-focus-inner {
+    border: 0;
+}
+*/
 
-    /* Section 4
+
+        
+        /* Section 4
 	* --------------------------------------- */
         #section4{
             background-image: url(imgs/fresh.jpg);
@@ -607,20 +674,21 @@
             
         }
             /* Nicely lines up the labels. */
-            form label {display:inline-block; width:500px;}
+            #section4 .form label {display:inline-block; width:500px;}
  
             /* You could add a class to all the input boxes instead, 
             if you like. That would be safer, and more backwards-compatible */
-            form input[type="email"],
-            form input[type="password"],
-            form input[type="username"] {width:400px;border-style: inset;}
+             #section4 .form input[type="email"],
+             #section4 .form input[type="password"],
+             #section4 .form input[type="username"] {width:400px;border-style: inset;}
 /*            input[type=text]{ -webkit-border-radius: 5px; border-radius: 5px;}*/
             form .line {clear:both;}
             form .line.submit {text-align:right; width: 400px;}
             input[type=submit] {padding:1px 1px; background:skyblue; border:0 none; cursor:pointer;
                 color: white; width: 54%; 
                 -webkit-border-radius: 5px; border-radius: 5px; }
-
+ 
+        
 	/* Overwriting fullPage.js tooltip color
 	* --------------------------------------- */
 	.fp-tooltip{
@@ -657,7 +725,7 @@
 				'sectionsColor': ['#FFFFFF', '#fff', '#fff', '#fff', '#ffffff', '#fff'],
 				'navigation': true,
 				'navigationPosition': 'right',
-				'navigationTooltips': ['one', 'two', 'three', 'four', 'five', 'six'],
+				'navigationTooltips': ['one', 'two', 'three', 'four', 'five'],
 
 				'afterLoad': function(anchorLink, index){
 					if(index == 2){
@@ -678,14 +746,12 @@
 					$('#staticImg').toggleClass('moveUp', index == 4 && direction == 'up');
 				},
                 
-                afterRender: function(){
-					//playing the video
-					$('video').get(0).play();
-				},
-                anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', '5thpage'],
+//                afterRender: function(){
+//					//playing the video
+//					$('video').get(0).play();
+//				},
+                anchors: ['firstPage', 'secondPage', '3rdPage', '4thPage', '5thPage' ],
                 menu: '#menu',
-
-				//equivalent to jQuery `easeOutBack` extracted from http://matthewlein.com/ceaser/
 				easingcss3: 'cubic-bezier(0.175, 0.885, 0.320, 1.275)'
 			});
 		});
@@ -699,26 +765,26 @@
 -->
 
 <ul id="menu">
-	<li data-menuanchor="firstPage"><a href="#firstPage">Home</a></li>
-	<li data-menuanchor="secondPage"><a href="#secondPage">About</a></li>
-	<li data-menuanchor="3rdPage"><a href="#3rdPage">Sign Up</a></li>
-	<li data-menuanchor="4thpage"><a href="#4thpage">Contact</a></li>
+	<li data-menuanchor= "4thPage"><a href="#4thPage">Sign Up</a></li>
+	<li data-menuanchor= "secondPage"><a href="#secondPage">About</a></li>
 </ul>
 
 <div id="header">
-	<a href="#firstPage"><img src="imgs/templogo.png" alt="logo" id = "logo"/></a>
+	<a href="#firstPage"><img src="imgs/white.png" alt="logo" id = "logo"/></a>
 	<a href="#firstPage"><img src="imgs/freshHeader.png" alt="headerImage" id = "headerImage"/></a>
 </div>
 
-<div id="footer"> Copyright © FreshXLabs.Inc</div>
+<!--<div id="footer"> Copyright © FreshXLabs.Inc</div>-->
 
 <div id="fullpage">
+<!--
 	<div id="staticImg">
 		<div class="imgsContainer">
 		</div>
 	</div>
+-->
 
-	<div class="section " id="section0">
+	<div class="section" id="section0">
 <!--
 		<h1>FRESH</h1>
 		<img src="imgs/face.jpg" alt="iphone" />
@@ -757,7 +823,7 @@
 </div>
 
 			<div class="box">
-				<h2>Every image has a story to tell...</h2>
+				<h2>Every image <br>has a story <br>to tell...</h2>
 			</div>
 		</div>
 	</div>
@@ -772,41 +838,38 @@
 
 			<div class="box">
 				<h2>Amazing Stuff</h2>
-				<strong>"A Fresh new way to view<br>your favourite style inspirations"</strong><br>Come explore our Fresh New World!
+				<strong>"A Fresh new way to view<br>
+				your favourite style inspirations"</strong><br>
+				Come explore our Fresh New World!
 			</div>
 		</div>
 	</div>
 	<div class="section moveDown" id="section3">
 		<div class="wrap">
 			<div class="box">
-				<h2>Simple and Easy</h2>
-				This is, of course, just a demo. I didn't want to spend much time on it.
-				Don't expect it to work perfectly in all kind of screens.
-				It has been designed to work on 1180px width or over on modern browsers with CSS3.
-			</div>
+				<h2>Get an exclusive <br>preview of
+				FreshXLab's <br>cutting edge
+				technology</h2>
+           
+               <div class = signupbox>
+                <span class="inputWithButton" action="demo_form.asp" method="post">
+                  <input type="text" placeholder="Your email"/>
+                  <input type= "button" value = "Sign up"/>
+                </span>
+            </div>
+            </div>
 		</div>
+<!--
+            
 		<div class="imgsContainer">
 			<img src="imgs/ins5.png" alt="iphone" id="iphone-two" />
 		</div>
+-->
 	</div>
 	
 	<div class="section moveDown" id="section4">
 		<div class="wrap">
-		
-<!--
-			<div class="box">
-                  <h2>Contact Us</h2>
-                   <address>
-                    151 Charles Street West<br>
-                    Kitchener, Ontario<br>
-                    Canada, N2G 1H6<br><br>
-                   <strong>C:</strong> 519-123-1234<br>
-                   <strong>T:</strong> 519-123-1234<br><br>
-                    Copyright © fresh.Inc<br>
-                    </address>
-			</div>
--->
-			
+
 			<div class = signupbox>
 			<form id = "signup">
                 <h4 style= "font-size: 30pt; color:white"><strong>sign up.</strong></h4><br>
@@ -815,7 +878,7 @@
                 </div>
                 
                 <div class="line">
-                <input type="text" id="pwd" placeholder="Password"style= "font-size: 15pt" />
+                <input type="password" id="pwd" placeholder="Password"style= "font-size: 15pt" />
                 </div>
                 
                 <div class="line">
@@ -829,6 +892,7 @@
             </div>
 		</div>
 	</div>
+	
 </div>
 </body>
 </html>
