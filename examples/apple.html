@@ -223,20 +223,22 @@
 				-moz-transition: all 0.3s ease-out;
 				-o-transition: all 0.5s ease-out;
 				transition: all 0.4s ease-out;
-
 			}
+
 			#section1 .fashion{
 				left:45%;
 				top:-110px;
 				-webkit-border-radius: 10px;
 				border-radius: 10px;
 			}
+
 			#section1 .automotive{
 				left:45%;
 				top:-340px;
 				-webkit-border-radius: 10px;
 				border-radius: 10px;
 			}
+
 			#section1 .medical{
 				left:65%;
 				top:-110px;
@@ -310,14 +312,8 @@
 				left:0px;
 				top:0px;
 				height:100%;
-				width:100%;				
-			}
-			.modalMouseOver{
-				position:absolute;
-				left:0px;
-				top:0px;
-				height:100%;
 				width:100%;
+				z-index:0;
 			}
 
 			.modalMouseOver{
@@ -347,9 +343,63 @@
 				text-align: center;
 				color:white;
 				opacity: 0;
-				z-index: 3;
+				z-index: 3;				
 			}
-
+			
+			.modal{
+				width:1000px;
+				height:500px;
+			}
+			
+			.medicalPages{
+				position:relative;
+				width:2000px;
+				height:100%;	
+				left:0px;
+			}						
+			
+			.medicalPage{
+				height: 100%;
+				width: 1000px;
+				position:absolute;
+				top:0px;
+				left:0px;
+				z-index:0;
+			}
+			
+			.medicalPageImage{
+				width:1000px;
+				height:500px;
+				z-index:0;
+			}
+			
+			.medicalPage#rightPage{
+				left:1000px;	
+			}
+			
+			.medicalPage .modalDescription{
+				opacity: 1;	
+			}
+			
+			.medicalPage .modalOverlay{
+				width:1000px;
+				height:60px;
+				bottom:0px;
+				left:0px;
+				opacity:0.5;
+				z-index:1;
+			}
+			
+/*<div class="medicalPages">
+				<div class="medicalPage" id="leftPage">
+					<img class="medicalPageImage" src="imgs/temp/medicalcollaborate.jpg"/>
+					<div class="modalDescription">Collaborate with other medical professionals.</div>
+				</div>
+				<div class="medicalPage" id="rightPage">
+					<img class="medicalPageImage" src="imgs/temp/doctorwpatient.jpg"/>
+					<div class="modalDescription">Interact with patients like never before.</div>
+				</div>
+			</div>*/
 			/* Section 2
 			* --------------------------------------- */
 			#section2{
@@ -466,10 +516,7 @@
 				top: 487px;
 			}
 
-			.modal{
-				width:1000px;
-				height:500px;
-			}
+			
 			/* Section 3
 			* --------------------------------------- */
 			/*
@@ -599,9 +646,13 @@
 			}
 			#fp-nav li .active span, .fp-slidesNav .active span{
 				background: #AAA;
+			}			
+
+			.fancybox-inner{
+				overflow: hidden;
+				overflow-x:hidden;
+				overflow-y:hidden;
 			}
-
-
 		</style>
 
 		<!--[if IE]>
@@ -622,69 +673,114 @@ var console = { log: function() {} };
 
 		<script type="text/javascript">
 			$(document).ready(function() {
-
+				var medicalInterval;
+				
 				$(".fancybox").fancybox({
 					fitToView: true,
 					width: '90%',
 					height: '90%',
+					scrolling: 'no',
 					afterLoad: function(){						
 						var $background = $('.modalBackground');
 						var $mouseover = $('.modalMouseOver');
 						var $currentMouseover;
 						var factor = 1.25;
-						var mouseoverWidth, mouseoverHeight, coughLeft, mouseoverTop;
+						var couchWidth, couchHeight, couchLeft, couchTop;
 						var backgroundWidth, backgroundHeight;
-						if ($mouseover.attr('id') == 'couch'){							
-							$mouseover.width(mouseoverWidth = $background.parent().width()*0.56);												
-							$mouseover.height(mouseoverHeight = $background.parent().height()*0.32);
-							$mouseover.css('left', mouseoverLeft = $background.parent().width()*0.1);
-							$mouseover.css('top',mouseoverTop = $background.parent().height()*0.525);							
-						}
-						else if ($mouseover.attr('id') == 'engine'){
-							$mouseover.css('opacity',1);
-							$mouseover.width(mouseoverWidth = $background.parent().width()*0.56);												
-							$mouseover.height(mouseoverHeight = $background.parent().height()*0.32);
-							$mouseover.css('left', mouseoverLeft = $background.parent().width()*0.1);
-							$mouseover.css('top',mouseoverTop = $background.parent().height()*0.525);
-						}
 
+						//Positioning and sizing the couch
+						$('.modalMouseOver#couch').width(couchWidth = $('#interiorDesignModal').width()*0.56);		
+						$('.modalMouseOver#couch').height(couchHeight = $('#interiorDesignModal').height()*0.32);
+						$('.modalMouseOver#couch').css('left', couchLeft = $('#interiorDesignModal').width()*0.1);
+						$('.modalMouseOver#couch').css('top',couchTop = $('#interiorDesignModal').height()*0.525);															
+						//Positioning and sizing the engine
+						$('.modalMouseOver#engine').width($('#automotiveModal').width()*0.26);								
+						$('.modalMouseOver#engine').height($('#automotiveModal').height()*0.2);
+						$('.modalMouseOver#engine').css('left',$('#automotiveModal').width()*0.4);
+						$('.modalMouseOver#engine').css('top',$('#automotiveModal').height()*0.45);
+
+						//Positioning and sizing the engine specs
+						$('#engineSpecs').width($('#automotiveModal').height()*0.7);								
+						$('#engineSpecs').height($('#automotiveModal').height()*0.7);
+						$('#engineSpecs').css('left', $('#automotiveModal').width()*0.05);
+						$('#engineSpecs').css('top', $('#automotiveModal').width()*0.05);
+																		
 						function expandCouch(){
-							$currentMouseover.stop().css('opacity',1);
-							$currentMouseover.parent().find('.modalDescription').stop().animate({opacity:1},'fast');
-							$('.modalOverlay').stop().animate({opacity:0.5}, 'fast');
-							$currentMouseover.stop().animate({
-								width: mouseoverWidth*factor,
-								height: mouseoverHeight*factor,
-								left : $background.width()/2 - mouseoverWidth*factor/2,
-								top : $background.height()/2 - mouseoverHeight*factor/2,
+							$('.modalMouseOver#couch').stop().css('opacity',1);
+							$('.modalMouseOver#couch').parent().find('.modalDescription').stop().animate({opacity:1},'fast');
+							$('#interiorDesignModal .modalOverlay').stop().animate({opacity:0.5}, 'fast');
+							$('.modalMouseOver#couch').stop().animate({
+								width: couchWidth*factor,
+								height: couchHeight*factor,
+								left : $background.width()/2 - couchWidth*factor/2,
+								top : $background.height()/2 - couchHeight*factor/2,
 							});
 						}
 
 						function collapseCouch(){
-							$('.modalOverlay').stop().animate({opacity:0}, 'fast');
-							$currentMouseover.parent().find('.modalDescription').stop().animate({opacity:0},'fast');
-							$currentMouseover.stop().animate({
-								width: mouseoverWidth+"px",
-								height: mouseoverHeight+"px",
-								left : mouseoverLeft+"px",
-								top : mouseoverTop+"px"
+							$('#interiorDesignModal .modalOverlay').stop().animate({opacity:0}, 'fast');
+							$('.modalMouseOver#couch').parent().find('.modalDescription').stop().animate({opacity:0},'fast');
+							$('.modalMouseOver#couch').stop().animate({
+								width: couchWidth+"px",
+								height: couchHeight+"px",
+								left : couchLeft+"px",
+								top : couchTop+"px"
 							}, function(){
-								$currentMouseover.stop().css('opacity','0');
-							});	
+								$('.modalMouseOver#couch').stop().css('opacity','0');
+							});
 						}
 
 						$('.modalMouseOver#couch').hover(							
 							function(){
-								$currentMouseover = $(this);							
 								expandCouch();
 							},
 							function(){
-								$currentMouseover = $(this);
 								collapseCouch();							
 							});
+
+						function showSpecs(){
+							$('#automotiveModal .modalOverlay').stop().animate({opacity:0.5}, 'fast');
+							$('#automotiveModal .modalDescription').stop().animate({opacity:1},'fast');							
+						}
+
+						function hideSpecs(){
+							$('#automotiveModal .modalOverlay').stop().animate({opacity:0}, 'fast');
+							$('#automotiveModal .modalDescription').stop().animate({opacity:0},'fast');	
+						}
+
+						$('.modalMouseOver#engine').hover(
+							function(){
+								showSpecs();
+							},
+							function(){
+								hideSpecs();							
+							});		
 					}
 				});
+				
 
+				$('.medical .fancybox').fancybox({
+					fitToView: true,
+					width: '90%',
+					height: '90%',
+					scrolling: 'no',
+					afterLoad: function(){						
+						function toggleMedical(){
+							var newLeft = '-1000px';
+							if ($('.medicalPages').css('left') == '-1000px'){
+								newLeft = '0px';
+							}
+							$('.medicalPages').animate({left:newLeft}, 'slow');
+						}						
+						medicalInterval = setInterval(toggleMedical,3000);
+					},
+					
+					afterClose: function(){
+						clearInterval(medicalInterval);
+					}
+				});
+				
+				
 				$('#fullpage').fullpage({
 
 					'verticalCentered': false,
@@ -882,12 +978,27 @@ Come explore our Fresh New World!
 			<div class="modalDescription">Interact with objects within images.</div>
 			</div></div>
 		<div style="display:none"><div id="fashionModal" class="modal">Fashion.</div></div>
-		<div style="display:none"><div id="automotiveModal" class="modal">Automotive.
+		<div style="display:none"><div id="automotiveModal" class="modal">
 			<img class="modalBackground" src="imgs/temp/automobile.jpg"/>
-			<div class="modalOverlay"/>			
-			<img clas="modalMouseOver" id ="engine" src="imgs/temp/engine.jpg"/>
-			<img id="engineSpecs" src="imgs/temp/enginespecs.JPG"/>
+			<div class="modalOverlay"></div>	
+			<img class="modalMouseOver" id="engine" src="imgs/temp/engine.jpg"/>
+			<img id="engineSpecs" class="modalDescription" src="imgs/temp/enginespecs.JPG"/>
+			<div class="modalDescription">Find out exactly what's under the hood.</div>
 			</div></div>
-		<div style="display:none"><div id="medicalModal" class="modal">Medical.</div></div>
+		<div style="display:none"><div id="medicalModal" class="modal">
+			<div class="medicalPages">
+				<div class="medicalPage" id="leftPage">
+					<img class="medicalPageImage" src="imgs/temp/medicalcollaborate.jpg"/>
+					<div class="modalOverlay"></div>
+					<div class="modalDescription">Collaborate with other medical professionals.</div>
+				</div>
+				<div class="medicalPage" id="rightPage">					
+					<img class="medicalPageImage" src="imgs/temp/doctorwpatient.jpg"/>
+					<div class="modalOverlay"></div>
+					<div class="modalDescription">Interact with patients like never before.</div>
+				</div>
+			</div>
+
+			</div></div>		
 	</body>
 </html>
