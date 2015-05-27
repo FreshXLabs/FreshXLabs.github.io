@@ -161,7 +161,7 @@
 			/* Section 1
 			* --------------------------------------- */
             #section1{
-                background-image: url(imgs/galaxy.png);
+                background-image: url(imgs/back2.png);
                 background-size: 100% 100%;
             }
             #section1 img{
@@ -277,7 +277,7 @@
 					height: 563px;
 				}
 			}
-			/*screen resolutions lower than 620px*/
+			screen resolutions lower than 620px
 			@media all and (max-width: 620px){
 				#section1 .imgsContainer{
 					margin-top: -208px;
@@ -330,6 +330,20 @@
 				opacity: 0;
 				z-index: 3;
 			}
+            
+            
+            #cart{
+                position: absolute;
+                height: 25%;
+                width: 15%;
+                top:70%;
+                left: 80%;
+                
+            -webkit-transform: translate3d(0px, -100px, 0px);
+            -moz-transform: translate3d(0px, -100px%, 0px);
+            -ms-transform:translate3d(0px, -100px, 0px);
+            transform: translate3d(0px, -100px, 0px);
+            }
 
 			/* Section 2
 			* --------------------------------------- */
@@ -341,9 +355,13 @@
 
 			}
 			#section2 .box{
-				
-				height: 100%;
-                width: 100%;
+				position: absolute;
+				height: 110%;
+                width: 80%;
+                left: 7%;
+                top: 35px;
+                
+            
 			}
             #imagesegmentation{
                 position: absolute;
@@ -359,7 +377,7 @@
                 height: 15%;
                 width: 15%;
             }
-            #neuralnetwork{
+            #imageclassification{
                 position: absolute;
                 top:82%;
                 left:55%;
@@ -372,6 +390,13 @@
                 left: 73%;
                 height: 15%;
                 width: 15%;
+            }
+            #stochastic{
+                position: absolute;
+                top: 12%;
+                left: 85%;
+                height: 12%;
+                width: 12%;
             }
 
 			.modal{
@@ -609,13 +634,9 @@ var console = { log: function() {} };
                             $('#header').animate({top:'-60px'});
                             }
                         
-                        if (index ==1 && direction == 'down'){
+                        if (index ==1 || index ==2 || index ==4 || index ==5 && direction == 'down'){
                             $('#section2 .wrap').fadeOut(10);
-                        }
-                        if (index ==2 && direction == 'down'){
-                            $('#section2 .wrap').fadeOut(10);
-                        }
-                        
+                        }                        
                         if (index ==3 && direction == 'down'){
                             $('#section2 .wrap').fadeOut(10);
                         }
@@ -732,7 +753,10 @@ var console = { log: function() {} };
                             </a>
                         </div>
                         <div class="box">
-                            <h2 style = "color: #FFFFFF; font-family: optima;">Every imgage has a story <br>to tell...</h2>
+                            <h2 style = "font-family: optima;">
+                            <b style = "color: #ffffff">Every image</b>
+                            <b style = "color: #ffffff">has a story</b>
+                            <br><b style = "color: #ffffff">to tell...</b></h2>
                         </div>
 					</div>			
 				</div>
@@ -742,13 +766,14 @@ var console = { log: function() {} };
 				<div class="wrap">
                    
                     <div class="box"> 
-                    <img src="imgs/neuralhoverlines.png"/>
+                    <img src="imgs/neuralhoverlines2.png"/>
                     </div>
 					<div class="imgsContainer">
 						<img src="imgs/deeplearning.png" id="deeplearning" />
 						<img src="imgs/edgedetection.png" id="edgedetection" />
 						<img src="imgs/imageseg.png" id="imagesegmentation" />
-						<img src="imgs/neuralnetwork.png" id="neuralnetwork" />
+						<img src="imgs/imageclassification.png" id="imageclassification" />
+						<img src="imgs/stochastic.png" id="stochastic" />
 					</div>
                     
 				</div>
@@ -799,7 +824,12 @@ var console = { log: function() {} };
 			<img class="modalMouseOver" id="couch" src="imgs/popupSofa.png"/>
 			<div class="modalDescription">Interact with objects within images.</div>
 			</div></div>
-		<div style="display:none"><div id="fashionModal" class="modal">Fashion.</div></div>
+			
+		<div style="display:none"><div id="fashionModal" class="modal">Fashion.
+		<img class="appear" id="cart" src="imgs/blackcart.png"/>
+		
+		
+		</div></div>
 		<div style="display:none"><div id="automotiveModal" class="modal">Automotive.
 			<img class="modalBackground" src="imgs/temp/automobile.jpg"/>
 			<div class="modalOverlay"/>			
