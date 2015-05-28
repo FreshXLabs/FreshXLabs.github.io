@@ -43,11 +43,7 @@
 
 
 			/* Common styles
-<<<<<<< HEAD
-			* --------------------------------------- */
-=======
 			* --------------------------------------- */			
->>>>>>> 2bb8dae3c4e54d4c24aff73dc392fe67410978c5
 			.section{
 				text-align:center;
 				overflow:hidden;
@@ -76,13 +72,8 @@
 				background:#666;
 				background: rgba(0,0,0, 0.5);
 				color: #fff;
-<<<<<<< HEAD
-				-webkit-border-radius: 10px;
-				border-radius: 10px;
-=======
-				-webkit-border-radius: 3px;
-				border-radius: 3px;
->>>>>>> 2bb8dae3c4e54d4c24aff73dc392fe67410978c5
+				-webkit-border-radius: 7px;
+				border-radius: 7px;
 			}
 			#menu2 li.active{
 				color: #000;
@@ -101,11 +92,7 @@
 			}
 			#menu2 li a,
 			#menu2 li.active a{
-<<<<<<< HEAD
-				padding: 9px 18px;
-=======
 				padding: 7px 20px;
->>>>>>> 2bb8dae3c4e54d4c24aff73dc392fe67410978c5
 				display:block;
 			}
 			#menu2 li.active a{
@@ -113,15 +100,14 @@
 			}
 			#menu2{
 				position: relative;
-				padding-bottom: 10px;
-				z-index:10;
-				padding-right:10px;
-				margin:0;
+/*				padding-bottom: 10px;*/
+/*				z-index:10;*/
+				padding-right:5%;
+				margin:-1%;
 				text-align: right;
 			}
 			/*    MENU ENDED    */
 <<<<<<< HEAD
-
 			#logo{
 				position: fixed;
 				display: block;
@@ -150,11 +136,9 @@
 				opacity: 0.7;
 				z-index:9;
 				text-align:left;
-				text-indent: 15px;
 				color: #FFFFFF;
 				padding: 10px 0 0 0;
 			}
-
 =======
             #logo{
                 position: fixed;
@@ -163,6 +147,7 @@
                 padding-top:2px;
                 width: 150px;
                 left: 50px;
+                top: -500px;
             }
             #headerImage
             {
@@ -176,29 +161,25 @@
             }
             #header{
                 position: absolute;
-                height: 50px;
+                height: 40px;
                 display:block;
-                top: -500px;
+                top: 0px;
                 width: 100%;
                 background: #000;
-                opacity: 0.7;
+                opacity: 0.6;
                 z-index:9;
                 text-align:left;
                 color: #FFFFFF;
                 padding: 10px 0 0 0;
             }
->>>>>>> 2bb8dae3c4e54d4c24aff73dc392fe67410978c5
+>>>>>>> origin/ericasite
 
 			/* Section 0
 			* --------------------------------------- */
 			#section0{
 				padding: 0px 0;
 				overflow: hidden;
-<<<<<<< HEAD
-				background-image: url(imgs/temp.png);
-=======
-/*				background-image: url(imgs/temp.png);*/
->>>>>>> 2bb8dae3c4e54d4c24aff73dc392fe67410978c5
+				/*				background-image: url(imgs/temp.png);*/
 				margin: 0px 0 0 0;
 				background-size: 100% 100%;
 			}
@@ -211,34 +192,55 @@
 				left: 0;
 				top: 70%;
 			}
-
+            #myVideo{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                
+            }
+/*
+            .videosection{
+             position: relative;
+            padding-bottom: 56%;
+                height: 0;
+            }
+*/
 			/* Section 1
 			* --------------------------------------- */
 <<<<<<< HEAD
 			#section1{
-				background-image: url(imgs/galaxy.png);
+
+				/*                background-image: url(imgs/temp.png);*/
 				background-size: 100% 100%;
+				padding: 0px 0px;
+=======
+            #section1{
+              
+                background-image: url(imgs/back5.jpg);
+                background-size: 100% 100%;
+                padding: 0px 0px;
+>>>>>>> origin/ericasite
+				overflow: hidden;
+				height: 100%;
 			}
 			#section1 img{
 				position:absolute;
-				left: 0px;
-				top: 0px;
-				display: block;
-				width:100%;
-				height:100%;
+				left: 40px;
+				top: 100px;
 			}
 			#section1 .box{
 				position: relative;
-				top: 50%;
+				top:-260px;
 				left: 0px;
 				margin-top: -100px;
 				margin-left: 50px;
 				width: 350px;
 				z-index: 1;
-			}
+			}	
 
 			#section1 a{
-				z-index: 2;
 				position:absolute;
 				left: 0px;
 				top: 0px;
@@ -247,7 +249,9 @@
 				height:100%;
 			}
 
-			#section1 .container{
+			#section1 .overlay {
+				z-index: 2;
+				opacity: 1;
 				display: block;
 				position: absolute;
 				left: 0px;
@@ -263,44 +267,48 @@
 				opacity: 1;
 				width:200px;
 				height:200px;
-
+				overflow: hidden;
 			}
+
+			#section1 .container img{
+				position:absolute;
+				z-index: 1;	
+			}			
 			#section1 .bottomContainers{
 				position: absolute;
 				display: block;
 				height:200px;
 				width:100%;
 				top:100%;
-				-webkit-transition: all 0.3s ease-out;
-				-moz-transition: all 0.3s ease-out;
-				-o-transition: all 0.5s ease-out;
+				-webkit-transition: all 0.4
+					s ease-out;
+				-moz-transition: all 0.4s ease-out;
+				-o-transition: all 0.4s ease-out;
 				transition: all 0.4s ease-out;
-			}
 
+			}
 			#section1 .fashion{
 				left:45%;
-				top:-110px;
+				top:-220px;
 				-webkit-border-radius: 10px;
 				border-radius: 10px;
 			}
-
 			#section1 .automotive{
 				left:45%;
-				top:-340px;
+				top:-440px;
 				-webkit-border-radius: 10px;
 				border-radius: 10px;
 			}
-
 			#section1 .medical{
 				left:65%;
-				top:-110px;
+				top:-220px;
 				-webkit-border-radius: 10px;
 				border-radius: 10px;
 			}
 
 			#section1 .interiorDesign{
 				left:65%;
-				top:-340px;
+				top:-440px;
 				-webkit-border-radius: 10px;
 				border-radius: 10px;
 			}
@@ -310,9 +318,7 @@
 				-moz-transform: translate3d(0px, -100px%, 0px);
 				-ms-transform:translate3d(0px, -100px, 0px);
 				transform: translate3d(0px, -100px, 0px);
-				transform: translate3d(0px, -300px, 0px);
 			}
-
 			#section1 img{
 				height: 100%;
 				width: 100%;
@@ -326,120 +332,6 @@
 				-webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
 				-moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
 			}
-=======
-            #section1{
-              
-/*                background-image: url(imgs/temp.png);*/
-                background-size: 100% 100%;
-                padding: 0px 0px;
-				overflow: hidden;
-				height: 100%;
-            }
-            #section1 img{
-                position:absolute;
-                left: 40px;
-                top: 100px;
-            }
-            #section1 .box{
-                position: relative;
-                top:-260px;
-                left: 0px;
-                margin-top: -100px;
-                margin-left: 50px;
-                width: 350px;
-                z-index: 1;
-            }	
-
-            #section1 a{
-                position:absolute;
-                left: 0px;
-                top: 0px;
-                display: block;
-                width:100%;
-                height:100%;
-        }
-        #section1 .overlay {
-            z-index: 2;
-            opacity: 1;
-            display: block;
-            position: absolute;
-            left: 0px;
-            top: 0px;
-            width:200px;
-            height:200px;
-        }
-
-        #section1 .overlay:hover{
-            opacity:0;
-        }
-        #section1 .container{
-            display: block;
-            position: absolute;
-            z-index: 1;
-            opacity: 1;
-            width:200px;
-            height:200px;
-            
-        }
-        #section1 .bottomContainers{
-            position: absolute;
-            display: block;
-            height:200px;
-            width:100%;
-            top:100%;
-            -webkit-transition: all 0.4
-                s ease-out;
-            -moz-transition: all 0.4s ease-out;
-            -o-transition: all 0.4s ease-out;
-            transition: all 0.4s ease-out;
-           
-        }
-        #section1 .fashion{
-            left:45%;
-            top:-220px;
-            -webkit-border-radius: 10px;
-            border-radius: 10px;
-        }
-        #section1 .automotive{
-            left:45%;
-            top:-440px;
-            -webkit-border-radius: 10px;
-            border-radius: 10px;
-        }
-        #section1 .medical{
-            left:65%;
-            top:-220px;
-            -webkit-border-radius: 10px;
-            border-radius: 10px;
-        }
-
-        #section1 .interiorDesign{
-            left:65%;
-            top:-440px;
-            -webkit-border-radius: 10px;
-            border-radius: 10px;
-        }
-
-        #section1 .bottomContainers.active{
-            -webkit-transform: translate3d(0px, -100px, 0px);
-            -moz-transform: translate3d(0px, -100px%, 0px);
-            -ms-transform:translate3d(0px, -100px, 0px);
-            transform: translate3d(0px, -100px, 0px);
-        }
-        #section1 img{
-            height: 100%;
-            width: 100%;
-            position: absolute;
-            left: 0px;
-            top: 0px;
-            
-            -webkit-border-radius: 10px;
-            border-radius: 10px;
-            box-shadow: 0 0 8px rgba(0, 0, 0, .8);
-            -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
-            -moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
-        }
->>>>>>> 2bb8dae3c4e54d4c24aff73dc392fe67410978c5
 			/*screen resolutions between 620px and 800px*/
 			@media all and (min-width: 620px) and (max-width: 800px){
 				#section1 .imgsContainer{
@@ -449,11 +341,7 @@
 					height: 563px;
 				}
 			}
-<<<<<<< HEAD
-			/*screen resolutions lower than 620px*/
-=======
 			screen resolutions lower than 620px
->>>>>>> 2bb8dae3c4e54d4c24aff73dc392fe67410978c5
 			@media all and (max-width: 620px){
 				#section1 .imgsContainer{
 					margin-top: -208px;
@@ -461,26 +349,7 @@
 					width: 534px;
 					height: 464px;
 				}
-<<<<<<< HEAD
-			}
-			#bubble{
-				z-index: 11;
-				left: 140px;
-			}
-			#bubble.active{
-				-webkit-transform: translate3d(600px, 0px, 0px);
-				-moz-transform: translate3d(600px, 0px, 0px);
-				-ms-transform:translate3d(600px, 0px, 0px);
-				transform: translate3d(600px, 0px, 0px);
-				-webkit-transition: all 3s ease-out;
-				-moz-transition: all 3s ease-out;
-				-o-transition: all 3s ease-out;
-				transition: all 3s ease-out;
-
-			}
-=======
 			}	
->>>>>>> 2bb8dae3c4e54d4c24aff73dc392fe67410978c5
 			.modalBackground{
 				position:absolute;
 				left:0px;
@@ -512,6 +381,7 @@
 			.modalDescription{
 				position: absolute;
 				width:100%;
+				height:60px;
 				bottom: 0px;
 				font-size: 40px;
 				text-align: center;
@@ -519,6 +389,7 @@
 				opacity: 0;
 				z-index: 3;				
 			}
+
 
 			.modal{
 				width:1000px;
@@ -564,182 +435,148 @@
 				z-index:1;
 			}
 
-			#circle{
+			#loadingCircle{
 				position:absolute;
-				left:111px;
-				top:81px;
+				left:11.1%;
+				top:16.2%;
 				z-index:2;
+				display:block;
+			}
+
+			.circle{
+				border-radius: 100%;
+				background-color: transparent;
+				border: 3px solid #AAA;
+			}
+
+			#shirtCircle{
+				position:absolute;
+				left:24%;
+				top:16.5%;
+				width:52%;
+				height:50%;
+				z-index:2;
+				display:block;
+				opacity:0;
 			}
 
 			#girl{
 				position:absolute;
-				height:500px;
-				width:475px;
+				height:100%;
+				width:47.5%;
 				z-index:0;
+				display:block;
 			}
 
 			#shirt{
 				position:absolute;
 				z-index:1;
-				height:500px;
-				width:475px;				
+				height:100%;
+				width:47.5%;				
 				opacity:0;
+				display:block;
+			}
+
+			#shirt img{
+				height:100%;
+				width:100%;
+				z-index:0;
 			}
 
 			#cart{
 				position:absolute;
 				z-index:4;
-				width:300px;
-				height:300px;
+				width:30%;
+				height:60%;
+				display:block;
 			}
-			
+
 			#fashionText{
 				position:absolute;
 				z-index:4;
 				font-size:40px;
-				left:450px;
-				top:50px;
+				left:45%;
+				top:10%;
+				display:block;
 			}
+
+			.mouseoverInstructions{
+				top:0px;
+				opacity:1;
+				background-color: rgba(0, 0, 0, 0.5);
+				position: absolute;
+				width:100%;
+				height:60px;
+				font-size: 40px;
+				text-align: center;
+				color:white;
+				z-index: 3;	
+			}
+
 			/* Section 2
 			* --------------------------------------- */
 			#section2{
 				background-image: url(imgs/neural.jpg);
-				background-size: 80% 110%;
+				background-size: 50% 70%;
 				background-repeat: no-repeat;
 				background-position: center;
 
 			}
+            #text{
+                position: absolute;
+                top: 58%;
+                left: 70%;
+                height: 20%;
+                width: 25%;
+            }
+			#section2 .box{
+				position: absolute;
 <<<<<<< HEAD
-			#section2 img{
-				position:absolute;
-
-			}
-			#section2 .imgsContainer,
-			#staticImg .imgsContainer,
-			#section3 .imgsContainer{
-				position: absolute;
-				z-index: 1;
-				left: 50%;
-				display: block;
-				margin-top: -288px;
-				margin-left: -636px;
-				width: 0;
-				height: 0;
-
-				-webkit-transition: all 1.1s ease-in-out;
-				-moz-transition: all 1.1s ease-in-out;
-				-o-transition: all 1.1s ease-in-out;
-				transition: all 1.1s ease-in-out;
-			}
-
-			#section2.moveUp .imgsContainer{
-				/*		top: 50%;*/
-			}
-
-			#section2.moveDown .imgsContainer,
-			#staticImg .imgsContainer{
-				/*		top: 90%;*/
-			}
-
-			#section2.active .imgsContainer{
-				/*		top: 50%;*/
-			}
-
-			#section2 .box{
-				top: 22%;
-				left: 42%;
-				position: absolute;
-				width: 582px;
-			}
-
-			#iphone-yellow{
-				top: -35px;
-				left: -222px;
-			}
-
-			#iphone-red{
-				top: -194px;
-				left: 106px;
-			}
-
-			#iphone-blue{
-				top: 320px;
-				left: 448px;
-			}
-
-			#iphone-green{
-				left: 106px;
-				position:absolute;
-			}
-
-			#staticImg{
-				display: block;
-				position: absolute;
-				z-index: 1;
-				top: 200%;
-				left: 0;
-				width: 100%;
-				min-width: 980px;
-				height: 100%;
-
-				-webkit-transition: all 0.7s ease-out;
-				-moz-transition: all 0.7s ease-out;
-				-o-transition: all 0.7s ease-out;
-				transition: all 0.7s ease-out;
-
-				-webkit-backface-visibility: hidden;
-				-webkit-perspective: 1000;
-			}
-			#staticImg.moveDown{
-				-webkit-transform: translate3d(0, 100%, 0);
-				-ms-transform: translate3d(0, 100%, 0);
-				transform: translate3d(0, 100%, 0);
-			}
-			#staticImg.moveUp{
-
-				-webkit-transform: translate3d(0, 0, 0);
-				-ms-transform: translate3d(0, 0, 0);
-				transform: translate3d(0, 0, 0);
-			}
-			#staticImg.moveDown .imgsContainer{
-				top: 50%;
-			}
-			#staticImg.moveDown img{
-				top: 200px;
-			}
-
-			#staticImg.active .imgsContainer{
-				top: 50%;
-			}
-
-
-			#staticImg.active img{
-				top: 487px;
-			}
-
-
-			/* Section 3
-			* --------------------------------------- */
-			/*
-			#section3 .imgsContainer{
-			top: 50%;
-			}
-
-			#section3 img{
-			top: 200px;
-			left: 455px;
-			position: absolute;
-			}
-			*/
-=======
-			#section2 .box{
-				position: absolute;
 				height: 110%;
-                width: 80%;
-                left: 7%;
-                top: 35px;
-                
-            
+				width: 80%;
+				left: 7%;
+				top: 35px;
+
+
+			}
+			#imagesegmentation{
+				position: absolute;
+				top: 9%;
+				left: 0%;
+				height: 16%;
+				width: 16%;
+			}
+			#deeplearning{
+				position: absolute;
+				top: 67%;
+				left: 0%;
+				height: 15%;
+				width: 15%;
+			}
+			#imageclassification{
+				position: absolute;
+				top:82%;
+				left:55%;
+				height: 14%;
+				width: 14%;
+			}
+			#edgedetection{
+				position: absolute;
+				top: 66%;
+				left: 73%;
+				height: 15%;
+				width: 15%;
+			}
+			#stochastic{
+				position: absolute;
+				top: 12%;
+				left: 85%;
+				height: 12%;
+				width: 12%;
+			}
+=======
+				height: 100%;
+                width: 100%;
 			}
             #imagesegmentation{
                 position: absolute;
@@ -750,22 +587,22 @@
             }
             #deeplearning{
                 position: absolute;
-                top: 67%;
-                left: 0%;
+                top: 73%;
+                left: 7%;
                 height: 15%;
                 width: 15%;
             }
             #imageclassification{
                 position: absolute;
                 top:82%;
-                left:55%;
+                left:35%;
                 height: 14%;
                 width: 14%;
             }
             #edgedetection{
                 position: absolute;
-                top: 66%;
-                left: 73%;
+                top: 43%;
+                left: 0%;
                 height: 15%;
                 width: 15%;
             }
@@ -776,6 +613,7 @@
                 height: 12%;
                 width: 12%;
             }
+>>>>>>> origin/ericasite
 
 			.modal{
 				width:1000px;
@@ -783,8 +621,7 @@
 			}
 			/* Section 3
 			* --------------------------------------- */
-			
->>>>>>> 2bb8dae3c4e54d4c24aff73dc392fe67410978c5
+
 			#section3{
 				background-image: url(imgs/ca.jpg);
 				background-size: 100% 100%;
@@ -795,25 +632,14 @@
 			}
 
 			#section3 .signupbox {
-<<<<<<< HEAD
-				width:305px;
-=======
 				width:305px; 
->>>>>>> 2bb8dae3c4e54d4c24aff73dc392fe67410978c5
 				margin:0;
 				text-align: center;
 				top: 25%;
 				left: 25%;
 				position: absolute;
 				width: 582px;
-<<<<<<< HEAD
-
 			}
-
-
-=======
-			}
->>>>>>> 2bb8dae3c4e54d4c24aff73dc392fe67410978c5
 			.inputWithButton{
 				display:inline-block;
 				/*    overflow:hidden;*/
@@ -832,23 +658,13 @@
 				border:1px solid #444;
 				/*    border-right:none;*/
 			}
-<<<<<<< HEAD
-			.inputWithButton > input[type=submit]{
-=======
 			.inputWithButton > input[type=button]{
->>>>>>> 2bb8dae3c4e54d4c24aff73dc392fe67410978c5
 				border-left:1px solid gray;
 				background:#A30000;
 				border:1px solid #A30000;
 				color:#fff;
-<<<<<<< HEAD
-				margin-top: 5px;
-				height: 30px;
-=======
->>>>>>> 2bb8dae3c4e54d4c24aff73dc392fe67410978c5
 				cursor:pointer;
 				width:70px;
-				outline
 			}
 
 			/* Section 4
@@ -863,7 +679,7 @@
 			{
 				margin: 0px;
 				/*            background-color: ;*/
-				/*            opacity:0.6;*/
+/*				            opacity:0.7;*/
 				/*            filter:alpha(opacity=60);  For IE8 and earlier */
 				text-align: center;
 				top: 35%;
@@ -881,21 +697,13 @@
 
 			/*
 			#section4 .signupbox {
-<<<<<<< HEAD
-			width:305px;
-=======
 			width:305px; 
->>>>>>> 2bb8dae3c4e54d4c24aff73dc392fe67410978c5
 			margin:0;
 			text-align: center;
 			top: 25%;
 			left: 25%;
 			position: absolute;
-<<<<<<< HEAD
-			width: 582px;
-=======
 			width: 582px;  
->>>>>>> 2bb8dae3c4e54d4c24aff73dc392fe67410978c5
 
 			}
 			*/
@@ -903,11 +711,7 @@
 			/* Nicely lines up the labels. */
 			#section4 .form label {display:inline-block; width:500px;}
 
-<<<<<<< HEAD
-			/* You could add a class to all the input boxes instead,
-=======
 			/* You could add a class to all the input boxes instead, 
->>>>>>> 2bb8dae3c4e54d4c24aff73dc392fe67410978c5
 			if you like. That would be safer, and more backwards-compatible */
 			#section4 .form input[type="email"],
 			#section4 .form input[type="password"],
@@ -916,11 +720,7 @@
 			form .line {clear:both;}
 			form .line.submit {text-align:right; width: 400px;}
 			input[type=submit] {padding:1px 1px; background:skyblue; border:0 none; cursor:pointer;
-<<<<<<< HEAD
-				color: white; width: 54%;
-=======
 				color: white; width: 54%; 
->>>>>>> 2bb8dae3c4e54d4c24aff73dc392fe67410978c5
 				-webkit-border-radius: 5px; border-radius: 5px; }
 
 
@@ -934,12 +734,8 @@
 			}
 			#fp-nav li .active span, .fp-slidesNav .active span{
 				background: #AAA;
-<<<<<<< HEAD
-			}			
-=======
 			}
 
->>>>>>> 2bb8dae3c4e54d4c24aff73dc392fe67410978c5
 
 		</style>
 
@@ -950,11 +746,7 @@ var console = { log: function() {} };
 <![endif]-->
 
 
-<<<<<<< HEAD
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-=======
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
->>>>>>> 2bb8dae3c4e54d4c24aff73dc392fe67410978c5
 		<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
 		<script type="text/javascript" src="../fancyapps-fancyBox-18d1712/source/jquery.fancybox.pack.js?v=2.1.5"></script>
 		<script src="../circle-progress.js"></script>
@@ -966,38 +758,38 @@ var console = { log: function() {} };
 
 		<script type="text/javascript">
 			$(document).ready(function() {
-				var medicalInterval;
+				var medicalInterval;				
+				var interiorDesignInterval;
+				var automotiveInterval;
 
-				$('#circle').circleProgress({
-							value: 1,
-							size: 275,
-							thickness: 10,
-							emptyFill: 'rgba(0,0,0,0)',
-							fill: {color: "black"},							
-						});
-				
-				$('#circle').on('circle-animation-end', function(event){
-							$('#shirt').css('opacity',1);
-							$('#circle').css('opacity',0);
-							$('#shirt').animate({left:'600px',width:'250px',height:'250px',top:'125px'},'slow');
-							$('#cart').animate({top:'200px'}, 'slow');
-							$('#shirt').animate({top:'200px'}, 'slow', function(){
-								$('#fashionText').animate({opacity:1});
-							});
-						});
-				
 				$(".interiorDesign .fancybox").fancybox({
 					fitToView: true,
 					width: '90%',
 					height: '90%',
 					scrolling: 'no',
 					afterLoad: function(){
-						var $background = $('.modalBackground');
-						var $mouseover = $('.modalMouseOver');
+						var normalInteriorBackground = "imgs/temp/interiordesign.jpg";
+						var outlineInteriorBackground = "imgs/temp/interiordesign.gif" ;
 						var couchFactor = 1.25;
 						var clockFactor = 1.5;
 						var couchWidth, couchHeight, couchLeft, couchTop;
 						var clockWidth, clockHeight, clockLeft, clockTop;
+
+						function swapBackground(){
+							if ($('.modalBackground').attr('src') == normalInteriorBackground){
+								$('.modalBackground').attr('src', outlineInteriorBackground);
+							}
+							else{
+								$('.modalBackground').attr('src', normalInteriorBackground)	
+							}
+						}
+
+						$('.modalBackground').attr('src', outlineInteriorBackground);
+						interiorDesignInterval = setInterval(swapBackground, 2000);
+
+						$('.mouseoverInstructions').css('top','-60px');						
+						$('.mouseoverInstructions').css('opacity',1);
+						$('.mouseoverInstructions').animate({top:0});
 
 						//Positioning and sizing the couch
 						$('.modalMouseOver#couch').width(couchWidth = $('#interiorDesignModal').width()*0.56);		
@@ -1013,7 +805,7 @@ var console = { log: function() {} };
 
 						function expandCouch(){
 							$('.modalMouseOver#couch').stop().css('opacity',1);
-							$('.modalMouseOver#couch').parent().find('.modalDescription').stop().animate({opacity:1},'fast');
+							$('.mouseoverInstructions').animate({opacity:0},'fast');
 							$('#interiorDesignModal .modalOverlay').stop().animate({opacity:0.5}, 'fast');
 							$('.modalMouseOver#couch').stop().animate({
 								width: couchWidth*couchFactor,
@@ -1025,7 +817,7 @@ var console = { log: function() {} };
 
 						function expandClock(){
 							$('.modalMouseOver#clock').stop().css('opacity',1);
-							$('.modalMouseOver#clock').parent().find('.modalDescription').stop().animate({opacity:1},'fast');
+							$('.mouseoverInstructions').animate({opacity:0},'fast');
 							$('#interiorDesignModal .modalOverlay').stop().animate({opacity:0.5}, 'fast');
 							$('.modalMouseOver#clock').stop().animate({
 								width: clockWidth*clockFactor,
@@ -1037,7 +829,6 @@ var console = { log: function() {} };
 
 						function collapseCouch(){
 							$('#interiorDesignModal .modalOverlay').stop().animate({opacity:0}, 'fast');
-							$('.modalMouseOver#couch').parent().find('.modalDescription').stop().animate({opacity:0},'fast');
 							$('.modalMouseOver#couch').stop().animate({
 								width: couchWidth+"px",
 								height: couchHeight+"px",
@@ -1050,7 +841,6 @@ var console = { log: function() {} };
 
 						function collapseClock(){
 							$('#interiorDesignModal .modalOverlay').stop().animate({opacity:0}, 'fast');
-							$('.modalMouseOver#clock').parent().find('.modalDescription').stop().animate({opacity:0},'fast');
 							$('.modalMouseOver#clock').stop().animate({
 								width: clockWidth+"px",
 								height: clockHeight+"px",
@@ -1063,6 +853,8 @@ var console = { log: function() {} };
 
 						$('.modalMouseOver#couch').hover(
 							function(){
+								clearInterval(interiorDesignInterval);
+								$('.modalBackground').attr('src', normalInteriorBackground);
 								expandCouch();
 							},
 							function(){
@@ -1071,6 +863,8 @@ var console = { log: function() {} };
 
 						$('.modalMouseOver#clock').hover(
 							function(){
+								clearInterval(interiorDesignInterval);
+								$('.modalBackground').attr('src', normalInteriorBackground);
 								expandClock();	
 							},
 							function(){
@@ -1078,6 +872,10 @@ var console = { log: function() {} };
 							});
 
 
+					},
+
+					afterClose: function(){
+						clearInterval(interiorDesignInterval);
 					}
 				});
 
@@ -1087,6 +885,24 @@ var console = { log: function() {} };
 					height: '90%',
 					scrolling: 'no',
 					afterLoad: function(){
+						var normalAutoBackground = "imgs/temp/automobile.jpg";
+						var outlineAutoBackground = "imgs/temp/automobile.gif" ;
+
+						function swapAutoBackground(){
+							if ($('.modalBackground').attr('src') == normalAutoBackground){
+								$('.modalBackground').attr('src', outlineAutoBackground);
+							}
+							else{
+								$('.modalBackground').attr('src', normalAutoBackground)	
+							}
+						}
+
+						$('.modalBackground').attr('src', outlineAutoBackground);
+						automotiveInterval = setInterval(swapAutoBackground, 2000);
+
+						$('.mouseoverInstructions').css('top','-60px');						
+						$('.mouseoverInstructions').css('opacity',1);
+						$('.mouseoverInstructions').animate({top:0});
 
 						//Positioning and sizing the engine specs
 						$('#engineSpecs').width($('#automotiveModal').height()*0.7);								
@@ -1101,6 +917,7 @@ var console = { log: function() {} };
 						$('.modalMouseOver#engine').css('top',$('#automotiveModal').height()*0.45);
 
 						function showSpecs(){
+							$('.mouseoverInstructions').animate({opacity:0},'fast');
 							$('#automotiveModal .modalOverlay').stop().animate({opacity:0.5}, 'fast');
 							$('#automotiveModal .modalDescription').stop().animate({opacity:1},'fast');							
 						}
@@ -1112,11 +929,17 @@ var console = { log: function() {} };
 
 						$('.modalMouseOver#engine').hover(
 							function(){
+								clearInterval(automotiveInterval);
+								$('.modalBackground').attr('src', normalAutoBackground);
 								showSpecs();
 							},
 							function(){
 								hideSpecs();							
 							});		
+					},
+
+					afterClose: function(){
+						clearInterval(automotiveInterval);
 					}
 				});
 
@@ -1140,41 +963,73 @@ var console = { log: function() {} };
 						clearInterval(medicalInterval);
 					}
 				});
-					
+
 				$('.fashion .fancybox').fancybox({
 					fitToView: true,
 					width: '90%',
 					height: '90%',
 					scrolling: 'no',
 					afterLoad: function(){
-						$('#cart').css('left',550);
-						$('#cart').css('top',600);
-						$('#circle').css('opacity',1)
-						$('#shirt').css('opacity',0);
+						$('#cart').css('left','55%');
+						$('#cart').css('top','120%');
+						$('#loadingCircle').css('opacity',0)
+						$('#shirtCircle').css('opacity',0);
+						$('#shirt').css('opacity',1);
 						$('#shirt').css('left',0);
 						$('#shirt').css('top',0);
-						$('#shirt').css('width',475);
-						$('#shirt').css('height',500);							
-						$('#circle').circleProgress('redraw');	
-						$('#fashionText').css('opacity',0);
+						$('#shirt').css('width','47.5%');
+						$('#shirt').css('height','100%');
+						$('#fashionText').css('opacity',0);						
+						setTimeout(function(){
+							$('#loadingCircle').css('opacity',1);
+							var thick = 3;
+							var circleWidth = $('#shirt').width()*0.55;
+							var circleHeight = $('#shirt').height()*0.52;
+							$('#loadingCircle').circleProgress({
+								value: 1,
+								sizeX: circleWidth,
+								sizeY: circleHeight,
+								thickness: thick,
+								emptyFill: 'rgba(0,0,0,0)',
+								fill: {color: "#AAA"}
+							});
+						},1000);								  
 					}
 				});
 
-<<<<<<< HEAD
+				$('#loadingCircle').on('circle-animation-end', function(event){
+					$('#shirt').css('opacity',1);
+					$('#loadingCircle').css('opacity',0);
+					$('#shirtCircle').css('opacity',1);
+					$('#shirt').animate({left:'60%',width:'25%',height:'50%',top:'25%'},'slow');
+					$('#cart').animate({top:'40%'}, 'slow');					
+					$('#shirt').animate({top:'40%'}, 'slow', function(){
+						$('#fashionText').animate({opacity:1});
+					});
+				});
+
+				$('.overlay').hover(
+					function(){
+						$(this).stop().animate({top:-200});
+					},
+					function(){
+					});	
+
+				$('.container').hover(
+					function(){
+						$(this).find('.overlay').stop().animate({top:-200});
+					},
+					function(){
+						$(this).find('.overlay').stop().animate({top:0});
+					});	
+
 				$('#fullpage').fullpage({
+
+
 
 					'verticalCentered': false,
 					'css3': true,
-					'sectionsColor': ['#FFFFFF', '#fff', '#000', '#fff', '#000', '#000'],
-=======
-
-				$('#fullpage').fullpage({
-                    
-
-					'verticalCentered': false,
-					'css3': true,
-					'sectionsColor': ['#FFFFFF', '#000', '#000', '#fff', '#000', '#000'],
->>>>>>> 2bb8dae3c4e54d4c24aff73dc392fe67410978c5
+					'sectionsColor': ['#000', '#000', '#000', '#9B785C', '#000'],
 					'navigation': true,
 					'navigationPosition': 'right',
 					'navigationTooltips': ['1', '2', '3', '4', '5'],
@@ -1187,12 +1042,9 @@ var console = { log: function() {} };
 
 <<<<<<< HEAD
 					'onLeave': function(index, nextIndex, direction){
-						if (index == 2){
-							$('.fancybox-close').click();
-						}
 						if (index == 1 && direction == 'down'){
 							$('#logo').animate({height:'40px', width:'30px', top:'5px', left:'30px'}, "fast");
-							$('#headerImage').animate({height:'30px',width:'200px', top:'5px',left:'40%'}, "fast");
+							$('#headerImage').animate({height:'30px',width:'200px', top:'5px',left:'6%'}, "fast");
 							$('#header').animate({top:'0px'});
 						}
 						else if (nextIndex == 1 && direction == 'up'){
@@ -1201,29 +1053,36 @@ var console = { log: function() {} };
 							$('#header').animate({top:'-60px'});
 						}
 
-						if (index == 3 && direction == 'down'){
-							$('.section').eq(index -1).removeClass('moveDown').addClass('moveUp');
+						if (index ==1 || index ==2 || index ==4 || index ==5 && direction == 'down'){
+							$('#section2 .wrap').fadeOut(10);
+						}                        
+						if (index ==3 && direction == 'down'){
+							$('#section2 .wrap').fadeOut(10);
 						}
-						else if(index == 3 && direction == 'up'){
-							$('.section').eq(index -1).removeClass('moveUp').addClass('moveDown');
+						if (nextIndex ==3 && direction == 'up'){
+							$('#section2 .wrap').fadeIn(3000);
 						}
 
-						$('#staticImg').toggleClass('active', (index == 2 && direction == 'down' ) || (index == 4 && direction == 'up'));
-						$('#staticImg').toggleClass('moveDown', nextIndex == 4);
-						$('#staticImg').toggleClass('moveUp', index == 4 && direction == 'up');
-					},
-
+						if (index ==3 && direction == 'up'){
+							$('#section2 .wrap').fadeOut(10);
+						}
+						if (nextIndex ==3 && direction == 'down'){
+							$('#section2 .wrap').fadeIn(3000);
+						}
+						if (index == 2){
+							$.fancybox.close();
+						}
 =======
                     'onLeave': function(index, nextIndex, direction){
                         if (index == 1 && direction == 'down'){
-                            $('#logo').animate({height:'40px', width:'30px', top:'5px', left:'30px'}, "fast");
-                            $('#headerImage').animate({height:'30px',width:'200px', top:'5px',left:'6%'}, "fast");
+                            $('#logo').animate({height:'40px', width:'40px', top:'5px', left:'30px'}, 430);
+                            $('#headerImage').animate({height:'30px',width:'150px', top:'5px',left:'55px'}, 430);
                             $('#header').animate({top:'0px'});
                         }
                         else if (nextIndex == 1 && direction == 'up'){
-                            $('#logo').animate({height:'200px', width:'150px', top:'40%', left:'50px'}, "fast");
-                            $('#headerImage').animate({height:'150px',width:'1000px', top:'40%',left:'250px'}, "fast");
-                            $('#header').animate({top:'-60px'});
+                            $('#logo').animate({height:'200px', width:'200px', top:'37%', left:'16%'}, 430);
+                            $('#headerImage').animate({height:'150px',width:'800px', top:'40%',left:'24%'}, 430);
+                            $('#header').animate({top:'0px'});
                             }
                         
                         if (index ==1 || index ==2 || index ==4 || index ==5 && direction == 'down'){
@@ -1242,20 +1101,17 @@ var console = { log: function() {} };
                         if (nextIndex ==3 && direction == 'down'){
                             $('#section2 .wrap').fadeIn(3000);
                         }
+>>>>>>> origin/ericasite
 					},
-                    
->>>>>>> 2bb8dae3c4e54d4c24aff73dc392fe67410978c5
+
 					afterRender: function(){
 						//playing the video
 						$('video').get(0).play();
 					},
 					anchors: ['firstPage', 'secondPage', '3rdPage', '4thPage', '5thPage' ],
-<<<<<<< HEAD
-					menu: '#menu2, #menu1',
-=======
 					menu: '#menu2', 
->>>>>>> 2bb8dae3c4e54d4c24aff73dc392fe67410978c5
-					easingcss3: 'cubic-bezier(0.175, 0.885, 0.320, 1.275)'
+					easingcss3: 'cubic-bezier(0.175, 0.885, 0.320, 1)'
+//					easingcss3: 'cubic-bezier(0.175, 0.885, 0.320, 1.275)'
 				});
 			});
 		</script>
@@ -1270,21 +1126,15 @@ var console = { log: function() {} };
 
 
 		<div id="header">
-			<a href="#firstPage"><img src="imgs/white.png" alt="logo" id = "logo"/></a>
-			<a href="#firstPage"><img src="imgs/freshHeader.png" alt="headerImage" id = "headerImage"/></a>
+			<a href="#firstPage"><img src="imgs/logotransparent.png" alt="logo" id = "logo"/></a>
+			<a href="#firstPage"><img src="imgs/deepvisioncolor.png" alt="headerImage" id = "headerImage"/></a>
 
 			<ul id="menu2">
 				<li data-menuanchor= "firstPage"><a href="#firstPage">Home</a></li>
 				<li data-menuanchor= "secondPage"><a href="#secondPage">About</a></li>
-<<<<<<< HEAD
-				<li data-menuanchor= "3rdPage"><a href="#3rdPage">RND</a></li>
-				<li data-menuanchor= "4thPage"><a href="#4thPage">Sign Up</a></li>
-				<li data-menuanchor= "5thPage"><a href="#5thPage">Contact</a></li>
-=======
 				<li data-menuanchor= "3rdPage"><a href="#3rdPage">R&amp;D</a></li>
-				<li data-menuanchor= "4thPage"><a href="#4thPage">Sign up</a></li>
-				<li data-menuanchor= "5thPage"><a href="#5thPage">Contact</a></li>	  	    
->>>>>>> 2bb8dae3c4e54d4c24aff73dc392fe67410978c5
+				<li data-menuanchor= "4thPage"><a href="#4thPage">Contact</a></li>
+<!--				<li data-menuanchor= "5thPage"><a href="#5thPage">Contact</a></li>	  	    -->
 			</ul>
 			<!--	<a href="#firstPage"><img src="imgs/templogo.png" alt="logo" id = "logo"/></a>-->
 		</div>
@@ -1300,63 +1150,80 @@ var console = { log: function() {} };
 -->
 
 			<div class="section" id="section0">
-<<<<<<< HEAD
-
-				<video autoplay loop muted controls="false" id="myVideo">
+                <div class="videosection">
+				<video autoplay loop muted id="myVideo">
 					<source src="imgs/Fireflies%20%20%20FREE%20Video%20Background%20Loop%20HD%201080p.mp4" type="video/mp4">
 					<source src="imgs/Fireflies%20%20%20FREE%20Video%20Background%20Loop%20HD%201080p.mp4" type="video/webm">
 				</video>
-
+                </div>
 			</div>
 
 			<div class="section" id="section1">
-
 				<div class="wrap">
-					<div class="bottomContainers">
+<<<<<<< HEAD
 
-						<div class="container interiorDesign">
+					<video autoplay loop muted controls="false" id="myVideo">
+						<source src="imgs/Fireflies%20%20%20FREE%20Video%20Background%20Loop%20HD%201080p.mp4" type="video/mp4">
+						<source src="imgs/Fireflies%20%20%20FREE%20Video%20Background%20Loop%20HD%201080p.mp4" type="video/webm">
+					</video>				
+					<div class="bottomContainers">						
+						<div class="container interiorDesign">							
 							<a href="#interiorDesignModal" class="fancybox">
 								<img src="imgs/interiordesign.jpg" alt="iphone"/>
 							</a>
+							<div class="overlay">
+								<a href="#interiorDesignModal" class="fancybox">
+									<img src="imgs/interiordesignhover.png" alt="iphone"/>
+								</a>
+							</div>
 						</div>
 
 						<div class="container fashion">
 							<a href="#fashionModal" class="fancybox">
 								<img src="imgs/fashion2.png" alt="iphone"/>
 							</a>
+							<div class="overlay">
+								<a href="#fashionModal" class="fancybox">
+									<img src="imgs/fashionhover.png" alt="iphone"/>
+								</a>
+							</div>
 						</div>
 
 						<div class="container automotive">
 							<a href="#automotiveModal" class="fancybox">
 								<img src="imgs/automobile.jpg" alt="iphone"/>
 							</a>
-						</div>
-
+							<div class="overlay">
+								<a href="#automotiveModal" class="fancybox">
+									<img src="imgs/automotivehover.png" alt="iphone"/>
+								</a>
+							</div>
+						</div>		
 						<div class="container medical">
 							<a href="#medicalModal" class="fancybox">
 								<img src="imgs/medicalcollaborate.jpg" alt="iphone"/>
-							</a>
+							</a>							
+							<div class="overlay">
+								<a href="#medicalModal" class="fancybox">
+									<img src="imgs/medicalhover.png" alt="iphone" id="overlayMedical" />
+								</a>
+							</div>
 						</div>
+
+
+
 						<div class="box">
-							<h2 style = "color: #FFFFFF; font-family: optima;">Every imgage has a story <br>to tell...</h2>
+							<h2 style = "font-family: optima; color: floralwhite">
+								Every image has a story <br>to tell...</h2>
 						</div>
-					</div>
 =======
-
-				<video autoplay loop muted controls="false" id="myVideo">
-					<source src="imgs/Fireflies%20%20%20FREE%20Video%20Background%20Loop%20HD%201080p.mp4" type="video/mp4">
-					<source src="imgs/Fireflies%20%20%20FREE%20Video%20Background%20Loop%20HD%201080p.mp4" type="video/webm">
-				</video>
-
-			</div>
-
-			<div class="section" id="section1">
-				<div class="wrap">
 				
-				<video autoplay loop muted controls="false" id="myVideo">
+<!--
+				<video autoplay loop muted  id="myVideo">
 					<source src="imgs/Fireflies%20%20%20FREE%20Video%20Background%20Loop%20HD%201080p.mp4" type="video/mp4">
 					<source src="imgs/Fireflies%20%20%20FREE%20Video%20Background%20Loop%20HD%201080p.mp4" type="video/webm">
 				</video>
+-->
 				
 					<div class="bottomContainers">
 
@@ -1404,11 +1271,11 @@ var console = { log: function() {} };
                             </a>
                         </div>
                         <div class="box">
-                            <h2 style = "font-family: optima; color: floralwhite">
+                            <h2 style = "color: floralwhite">
                             Every image has a story <br>to tell...</h2>
                         </div>
+>>>>>>> origin/ericasite
 					</div>			
->>>>>>> 2bb8dae3c4e54d4c24aff73dc392fe67410978c5
 				</div>
 			</div>
 
@@ -1416,49 +1283,18 @@ var console = { log: function() {} };
 				<div class="wrap">
 <<<<<<< HEAD
 
-					<div class="imgsContainer">
-						<img src="imgs/whiteclick.png" alt="iphone" id="iphone-yellow" />
-						<img src="imgs/whiteclick.png" alt="iphone" id="iphone-red" />
-						<img src="imgs/whiteclick.png" alt="iphone" id="iphone-blue" />
+					<div class="box"> 
+						<img src="imgs/neuralhoverlines2.png"/>
 					</div>
-
-
-					<!--
-<div class="box">
-<h2 style = "color: #FFFFFF">Amazing Stuff</h2>
-<strong>"A Fresh new way to view<br>
-your favourite style inspirations"</strong><br>
-Come explore our Fresh New World!
-</div>
--->
-
-				</div>
-			</div>
-			<div class="section moveDown" id="section3">
-				<div class="wrap">
-					<div class="box">
-						<h2 style = "color:#FFFFFF">Get an exclusive <br>preview of
-							FreshXLab's <br>cutting edge
-							technology</h2>
-
-						<div class = signupbox>
-							<form class="inputWithButton" action="//formspree.io/fxlabsinc@gmail.com" method="POST">
-								<input type="text" placeholder="Your email"/>
-								<input type= "submit" value = "Sign up"/>
-							</form>
-						</div>
-					</div>
-				</div>
-				<!--
-<div class="imgsContainer">
-<img src="imgs/ins5.png" alt="iphone" id="iphone-two" />
-</div>
--->
 =======
-                   
+                    <h2 id = "text" style = "color:#D6EBFF ; font-size: 34pt;">
+                        R&amp;D<br>Section, For DeepVision!
+                    </h2>
                     <div class="box"> 
-                    <img src="imgs/neuralhoverlines2.png"/>
+                    <img src="imgs/neuralhoverlines.png"/>
                     </div>
+                    
+>>>>>>> origin/ericasite
 					<div class="imgsContainer">
 						<img src="imgs/deeplearning.png" id="deeplearning" />
 						<img src="imgs/edgedetection.png" id="edgedetection" />
@@ -1466,15 +1302,15 @@ Come explore our Fresh New World!
 						<img src="imgs/imageclassification.png" id="imageclassification" />
 						<img src="imgs/stochastic.png" id="stochastic" />
 					</div>
-                    
+
 				</div>
 			</div>
-			
+
 			<div class="section moveDown" id="section3">
 				<div class="wrap">
 					<div class="box">
 						<h2 style = "color:#FFFFFF">Get an exclusive <br>preview of
-							FreshXLab's <br>cutting edge
+							DeepVision's <br>cutting edge
 							technology</h2>
 
 						<div class = signupbox>
@@ -1490,14 +1326,13 @@ Come explore our Fresh New World!
 <img src="imgs/ins5.png" alt="iphone" id="iphone-two" />
 </div>
 -->
->>>>>>> 2bb8dae3c4e54d4c24aff73dc392fe67410978c5
 			</div>
 
 			<div class="section moveDown" id="section4">
 				<div class="wrap">
 					<div class="transbox">
-						<h2 style = "color:#FFFFFF"><b>Contact Us</b></h2>
-						<address id = "address" style = "color:#FFFFFF">
+						<h2 style = "color:floralwhite"><b>Contact Us</b></h2>
+						<address id = "address" style = "color:floralwhite">
 							151 Charles Street West<br>
 							Kitchener, Ontario<br>
 							Canada, N2G 1H6<br><br>
@@ -1515,14 +1350,17 @@ Come explore our Fresh New World!
 			<div class="modalOverlay"></div>
 			<img class="modalMouseOver" id="couch" src="imgs/popupSofa.png"/>
 			<img class="modalMouseOver" id="clock" src="imgs/popupClock.png"/>
-			<div class="modalDescription">Interact with objects within images.</div>
+			<div class="mouseoverInstructions">Mouse over highlighted images...</div>
 			</div></div>
 		<div style="display:none"><div id="fashionModal" class="modal">
 			<img id="girl" src="imgs/fashion2.png"/>
-			<img id="shirt" src="imgs/temp/boylondonshirt.png"/>
+			<div id="shirt">				
+				<img src="imgs/temp/boylondonshirt.png"/>
+				<div class="circle" id="shirtCircle"></div>
+			</div>
 			<img id="cart" src="imgs/temp/blackcart.png"/>
 			<div id="fashionText">Single swipe purchasing.</div>
-			<div id="circle"></div>
+			<div id="loadingCircle"></div>
 			</div></div>
 		<div style="display:none"><div id="automotiveModal" class="modal">
 			<img class="modalBackground" src="imgs/temp/automobile.gif"/>
@@ -1530,6 +1368,7 @@ Come explore our Fresh New World!
 			<img class="modalMouseOver" id="engine" src="imgs/temp/engine.jpg"/>
 			<img id="engineSpecs" class="modalDescription" src="imgs/temp/enginespecs.JPG"/>
 			<div class="modalDescription">Find out exactly what's under the hood.</div>
+			<div class="mouseoverInstructions">Mouse over highlighted images...</div>
 			</div></div>
 		<div style="display:none"><div id="medicalModal" class="modal">
 			<div class="medicalPages">
@@ -1545,6 +1384,6 @@ Come explore our Fresh New World!
 				</div>
 			</div>
 
-			</div></div>		
+			</div></div>
 	</body>
 </html>

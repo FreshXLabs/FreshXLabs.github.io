@@ -72,8 +72,8 @@
 				background:#666;
 				background: rgba(0,0,0, 0.5);
 				color: #fff;
-				-webkit-border-radius: 3px;
-				border-radius: 3px;
+				-webkit-border-radius: 7px;
+				border-radius: 7px;
 			}
 			#menu2 li.active{
 				color: #000;
@@ -100,10 +100,10 @@
 			}
 			#menu2{
 				position: relative;
-				padding-bottom: 10px;
-				z-index:10;
-				padding-right:10px;
-				margin:0;
+/*				padding-bottom: 10px;*/
+/*				z-index:10;*/
+				padding-right:5%;
+				margin:-1%;
 				text-align: right;
 			}
 			/*    MENU ENDED    */
@@ -114,6 +114,7 @@
 				padding-top:2px;
 				width: 150px;
 				left: 50px;
+                top: -500px;
 			}
 			#headerImage
 			{
@@ -127,12 +128,12 @@
 			}
 			#header{
 				position: absolute;
-				height: 50px;
+                height: 40px;
 				display:block;
-				top: -500px;
+                top: 0px;
 				width: 100%;
 				background: #000;
-				opacity: 0.7;
+                opacity: 0.6;
 				z-index:9;
 				text-align:left;
 				color: #FFFFFF;
@@ -157,12 +158,26 @@
 				left: 0;
 				top: 70%;
 			}
-
+            #myVideo{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                
+            }
+/*
+            .videosection{
+             position: relative;
+            padding-bottom: 56%;
+                height: 0;
+            }
+*/
 			/* Section 1
 			* --------------------------------------- */
 			#section1{
 
-				/*                background-image: url(imgs/temp.png);*/
+                background-image: url(imgs/back5.jpg);
 				background-size: 100% 100%;
 				padding: 0px 0px;
 				overflow: hidden;
@@ -460,19 +475,22 @@
 			* --------------------------------------- */
 			#section2{
 				background-image: url(imgs/neural.jpg);
-				background-size: 80% 110%;
+				background-size: 50% 70%;
 				background-repeat: no-repeat;
 				background-position: center;
 
 			}
+            #text{
+                position: absolute;
+                top: 58%;
+                left: 70%;
+                height: 20%;
+                width: 25%;
+            }
 			#section2 .box{
 				position: absolute;
-				height: 110%;
-				width: 80%;
-				left: 7%;
-				top: 35px;
-
-
+				height: 100%;
+                width: 100%;
 			}
 			#imagesegmentation{
 				position: absolute;
@@ -483,22 +501,22 @@
 			}
 			#deeplearning{
 				position: absolute;
-				top: 67%;
-				left: 0%;
+                top: 73%;
+                left: 7%;
 				height: 15%;
 				width: 15%;
 			}
 			#imageclassification{
 				position: absolute;
 				top:82%;
-				left:55%;
+                left:35%;
 				height: 14%;
 				width: 14%;
 			}
 			#edgedetection{
 				position: absolute;
-				top: 66%;
-				left: 73%;
+                top: 43%;
+                left: 0%;
 				height: 15%;
 				width: 15%;
 			}
@@ -574,7 +592,7 @@
 			{
 				margin: 0px;
 				/*            background-color: ;*/
-				/*            opacity:0.6;*/
+/*				            opacity:0.7;*/
 				/*            filter:alpha(opacity=60);  For IE8 and earlier */
 				text-align: center;
 				top: 35%;
@@ -924,7 +942,7 @@ var console = { log: function() {} };
 
 					'verticalCentered': false,
 					'css3': true,
-					'sectionsColor': ['#FFFFFF', '#000', '#000', '#fff', '#000', '#000'],
+					'sectionsColor': ['#000', '#000', '#000', '#9B785C', '#000'],
 					'navigation': true,
 					'navigationPosition': 'right',
 					'navigationTooltips': ['1', '2', '3', '4', '5'],
@@ -937,14 +955,14 @@ var console = { log: function() {} };
 
 					'onLeave': function(index, nextIndex, direction){
 						if (index == 1 && direction == 'down'){
-							$('#logo').animate({height:'40px', width:'30px', top:'5px', left:'30px'}, "fast");
-							$('#headerImage').animate({height:'30px',width:'200px', top:'5px',left:'6%'}, "fast");
+                            $('#logo').animate({height:'40px', width:'40px', top:'5px', left:'30px'}, 430);
+                            $('#headerImage').animate({height:'30px',width:'150px', top:'5px',left:'55px'}, 430);
 							$('#header').animate({top:'0px'});
 						}
 						else if (nextIndex == 1 && direction == 'up'){
-							$('#logo').animate({height:'200px', width:'150px', top:'40%', left:'50px'}, "fast");
-							$('#headerImage').animate({height:'150px',width:'1000px', top:'40%',left:'250px'}, "fast");
-							$('#header').animate({top:'-60px'});
+                            $('#logo').animate({height:'200px', width:'200px', top:'37%', left:'16%'}, 430);
+                            $('#headerImage').animate({height:'150px',width:'800px', top:'40%',left:'24%'}, 430);
+                            $('#header').animate({top:'0px'});
 						}
 
 						if (index ==1 || index ==2 || index ==4 || index ==5 && direction == 'down'){
@@ -974,7 +992,8 @@ var console = { log: function() {} };
 					},
 					anchors: ['firstPage', 'secondPage', '3rdPage', '4thPage', '5thPage' ],
 					menu: '#menu2', 
-					easingcss3: 'cubic-bezier(0.175, 0.885, 0.320, 1.275)'
+					easingcss3: 'cubic-bezier(0.175, 0.885, 0.320, 1)'
+//					easingcss3: 'cubic-bezier(0.175, 0.885, 0.320, 1.275)'
 				});
 			});
 		</script>
@@ -989,15 +1008,15 @@ var console = { log: function() {} };
 
 
 		<div id="header">
-			<a href="#firstPage"><img src="imgs/white.png" alt="logo" id = "logo"/></a>
-			<a href="#firstPage"><img src="imgs/freshHeader.png" alt="headerImage" id = "headerImage"/></a>
+			<a href="#firstPage"><img src="imgs/logotransparent.png" alt="logo" id = "logo"/></a>
+			<a href="#firstPage"><img src="imgs/deepvisioncolor.png" alt="headerImage" id = "headerImage"/></a>
 
 			<ul id="menu2">
 				<li data-menuanchor= "firstPage"><a href="#firstPage">Home</a></li>
 				<li data-menuanchor= "secondPage"><a href="#secondPage">About</a></li>
 				<li data-menuanchor= "3rdPage"><a href="#3rdPage">R&amp;D</a></li>
-				<li data-menuanchor= "4thPage"><a href="#4thPage">Sign up</a></li>
-				<li data-menuanchor= "5thPage"><a href="#5thPage">Contact</a></li>	  	    
+				<li data-menuanchor= "4thPage"><a href="#4thPage">Contact</a></li>
+<!--				<li data-menuanchor= "5thPage"><a href="#5thPage">Contact</a></li>	  	    -->
 			</ul>
 			<!--	<a href="#firstPage"><img src="imgs/templogo.png" alt="logo" id = "logo"/></a>-->
 		</div>
@@ -1013,21 +1032,23 @@ var console = { log: function() {} };
 -->
 
 			<div class="section" id="section0">
-
-				<video autoplay loop muted controls="false" id="myVideo">
+                <div class="videosection">
+				<video autoplay loop muted id="myVideo">
 					<source src="imgs/Fireflies%20%20%20FREE%20Video%20Background%20Loop%20HD%201080p.mp4" type="video/mp4">
 					<source src="imgs/Fireflies%20%20%20FREE%20Video%20Background%20Loop%20HD%201080p.mp4" type="video/webm">
 				</video>
-
+                </div>
 			</div>
 
 			<div class="section" id="section1">
 				<div class="wrap">
 
-					<video autoplay loop muted controls="false" id="myVideo">
+<!--
+				<video autoplay loop muted  id="myVideo">
 						<source src="imgs/Fireflies%20%20%20FREE%20Video%20Background%20Loop%20HD%201080p.mp4" type="video/mp4">
 						<source src="imgs/Fireflies%20%20%20FREE%20Video%20Background%20Loop%20HD%201080p.mp4" type="video/webm">
 					</video>				
+-->
 					<div class="bottomContainers">						
 						<div class="container interiorDesign">							
 							<a href="#interiorDesignModal" class="fancybox">
@@ -1075,7 +1096,7 @@ var console = { log: function() {} };
 
 
 						<div class="box">
-							<h2 style = "font-family: optima; color: floralwhite">
+                            <h2 style = "color: floralwhite">
 								Every image has a story <br>to tell...</h2>
 						</div>
 					</div>			
@@ -1084,10 +1105,13 @@ var console = { log: function() {} };
 
 			<div class="section moveDown" id="section2">
 				<div class="wrap">
-
+                    <h2 id = "text" style = "color:#D6EBFF ; font-size: 34pt;">
+                        R&amp;D<br>Section, For DeepVision!
+                    </h2>
 					<div class="box"> 
-						<img src="imgs/neuralhoverlines2.png"/>
+                    <img src="imgs/neuralhoverlines.png"/>
 					</div>
+                    
 					<div class="imgsContainer">
 						<img src="imgs/deeplearning.png" id="deeplearning" />
 						<img src="imgs/edgedetection.png" id="edgedetection" />
@@ -1103,7 +1127,7 @@ var console = { log: function() {} };
 				<div class="wrap">
 					<div class="box">
 						<h2 style = "color:#FFFFFF">Get an exclusive <br>preview of
-							FreshXLab's <br>cutting edge
+							DeepVision's <br>cutting edge
 							technology</h2>
 
 						<div class = signupbox>
@@ -1124,8 +1148,8 @@ var console = { log: function() {} };
 			<div class="section moveDown" id="section4">
 				<div class="wrap">
 					<div class="transbox">
-						<h2 style = "color:#FFFFFF"><b>Contact Us</b></h2>
-						<address id = "address" style = "color:#FFFFFF">
+						<h2 style = "color:floralwhite"><b>Contact Us</b></h2>
+						<address id = "address" style = "color:floralwhite">
 							151 Charles Street West<br>
 							Kitchener, Ontario<br>
 							Canada, N2G 1H6<br><br>
