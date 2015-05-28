@@ -373,41 +373,69 @@
 				z-index:1;
 			}
 
-			#circle{
+			#loadingCircle{
 				position:absolute;
-				left:111px;
-				top:81px;
+				left:11.1%;
+				top:16.2%;
 				z-index:2;
+				display:block;
+			}
+			
+			.circle{
+				border-radius: 100%;
+				background-color: transparent;
+				border: 3px solid #AAA;
+			}
+			
+			#shirtCircle{
+				position:absolute;
+				left:24%;
+				top:16.5%;
+				width:52%;
+				height:50%;
+				z-index:2;
+				display:block;
+				opacity:0;
 			}
 
 			#girl{
 				position:absolute;
-				height:500px;
-				width:475px;
+				height:100%;
+				width:47.5%;
 				z-index:0;
+				display:block;
 			}
 
 			#shirt{
 				position:absolute;
 				z-index:1;
-				height:500px;
-				width:475px;				
+				height:100%;
+				width:47.5%;				
 				opacity:0;
+				display:block;
 			}
 
+			#shirt img{
+				height:100%;
+				width:100%;
+				z-index:0;
+			}
+			
 			#cart{
 				position:absolute;
 				z-index:4;
-				width:300px;
-				height:300px;
+				width:30%;
+				height:60%;
+				display:block;
 			}
 			
 			#fashionText{
 				position:absolute;
 				z-index:4;
 				font-size:40px;
-				left:450px;
-				top:50px;
+				left:45%;
+				top:10%;
+				display:block;
 			}
 			/* Section 2
 			* --------------------------------------- */
@@ -513,7 +541,6 @@
 				color:#fff;
 				cursor:pointer;
 				width:70px;
-				outline
 			}
 
 			/* Section 4
@@ -609,20 +636,15 @@ var console = { log: function() {} };
 			$(document).ready(function() {
 				var medicalInterval;
 
-				$('#circle').circleProgress({
-							value: 1,
-							size: 275,
-							thickness: 10,
-							emptyFill: 'rgba(0,0,0,0)',
-							fill: {color: "black"},							
-						});
 				
-				$('#circle').on('circle-animation-end', function(event){
+				
+				$('#loadingCircle').on('circle-animation-end', function(event){
 							$('#shirt').css('opacity',1);
-							$('#circle').css('opacity',0);
-							$('#shirt').animate({left:'600px',width:'250px',height:'250px',top:'125px'},'slow');
-							$('#cart').animate({top:'200px'}, 'slow');
-							$('#shirt').animate({top:'200px'}, 'slow', function(){
+							$('#loadingCircle').css('opacity',0);
+							$('#shirtCircle').css('opacity',1);
+							$('#shirt').animate({left:'60%',width:'25%',height:'50%',top:'25%'},'slow');
+							$('#cart').animate({top:'40%'}, 'slow');					
+							$('#shirt').animate({top:'40%'}, 'slow', function(){
 								$('#fashionText').animate({opacity:1});
 							});
 						});
@@ -788,16 +810,30 @@ var console = { log: function() {} };
 					height: '90%',
 					scrolling: 'no',
 					afterLoad: function(){
-						$('#cart').css('left',550);
-						$('#cart').css('top',600);
-						$('#circle').css('opacity',1)
-						$('#shirt').css('opacity',0);
+						$('#cart').css('left','55%');
+						$('#cart').css('top','120%');
+						$('#loadingCircle').css('opacity',0)
+						$('#shirtCircle').css('opacity',0);
+						$('#shirt').css('opacity',1);
 						$('#shirt').css('left',0);
 						$('#shirt').css('top',0);
-						$('#shirt').css('width',475);
-						$('#shirt').css('height',500);							
-						$('#circle').circleProgress('redraw');	
-						$('#fashionText').css('opacity',0);
+						$('#shirt').css('width','47.5%');
+						$('#shirt').css('height','100%');
+						$('#fashionText').css('opacity',0);						
+						setTimeout(function(){
+							$('#loadingCircle').css('opacity',1);
+							var thick = 3;
+							var circleWidth = $('#shirt').width()*0.55;
+							var circleHeight = $('#shirt').height()*0.52;
+							$('#loadingCircle').circleProgress({
+								value: 1,
+								sizeX: circleWidth,
+								sizeY: circleHeight,
+								thickness: thick,
+								emptyFill: 'rgba(0,0,0,0)',
+								fill: {color: "#AAA"}
+							});
+						},1000);								  
 					}
 				});
 
@@ -846,6 +882,9 @@ var console = { log: function() {} };
                         if (nextIndex ==3 && direction == 'down'){
                             $('#section2 .wrap').fadeIn(3000);
                         }
+						if (index == 2){
+							$.fancybox.close();
+						}
 					},
                     
 					afterRender: function(){
@@ -1027,10 +1066,13 @@ var console = { log: function() {} };
 			</div></div>
 		<div style="display:none"><div id="fashionModal" class="modal">
 			<img id="girl" src="imgs/fashion2.png"/>
-			<img id="shirt" src="imgs/temp/boylondonshirt.png"/>
+			<div id="shirt">				
+				<img src="imgs/temp/boylondonshirt.png"/>
+				<div class="circle" id="shirtCircle"></div>
+			</div>
 			<img id="cart" src="imgs/temp/blackcart.png"/>
 			<div id="fashionText">Single swipe purchasing.</div>
-			<div id="circle"></div>
+			<div id="loadingCircle"></div>
 			</div></div>
 		<div style="display:none"><div id="automotiveModal" class="modal">
 			<img class="modalBackground" src="imgs/temp/automobile.gif"/>

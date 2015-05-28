@@ -23,8 +23,8 @@ License: MIT
          * Size of the circle / canvas in pixels
          * @type {number}
          */
-        size: 100.0,
-
+        sizeX: 100.0,
+		sizeY: 100.0,
         /**
          * Initial angle for 0.0 value in radians
          * @type {number}
@@ -143,7 +143,7 @@ License: MIT
          */
         init: function(config) {
             $.extend(this, config);
-            this.radius = this.size / 2;
+            this.radius = this.sizeX / 2;
             this.initWidget();
             this.initFill();
             this.draw();
@@ -154,9 +154,10 @@ License: MIT
          */
         initWidget: function() {
             var canvas = this.canvas = this.canvas || $('<canvas>').prependTo(this.el)[0];
-            canvas.width = this.size;
-            canvas.height = this.size;
+            canvas.width = this.sizeX;
+            canvas.height = this.sizeY;
             this.ctx = canvas.getContext('2d');
+			this.ctx.scale(1, this.sizeY/this.sizeX);
         },
 
         /**
@@ -168,7 +169,7 @@ License: MIT
             var self = this,
                 fill = this.fill,
                 ctx = this.ctx,
-                size = this.size;
+                size = this.sizeX;
 
             if (!fill)
                 throw Error("The fill is not specified!");
@@ -226,9 +227,9 @@ License: MIT
 
             function setImageFill() {
                 var bg = $('<canvas>')[0];
-                bg.width = self.size;
-                bg.height = self.size;
-                bg.getContext('2d').drawImage(img, 0, 0, size, size);
+                bg.width = self.sizeX;
+                bg.height = self.sizeX;
+                bg.getContext('2d').drawImage(img, 0, 0, sizeX, sizeX);
                 self.arcFill = self.ctx.createPattern(bg, 'no-repeat');
                 self.drawFrame(self.lastFrameValue);
             }
@@ -247,7 +248,7 @@ License: MIT
          */
         drawFrame: function(v) {
             this.lastFrameValue = v;
-            this.ctx.clearRect(0, 0, this.size, this.size);
+            this.ctx.clearRect(0, 0, this.sizeX, this.sizeX);
             this.drawEmptyArc(v);
             this.drawArc(v);
         },
@@ -339,7 +340,7 @@ License: MIT
          * @returns {number}
          */
         getThickness: function() {
-            return $.isNumeric(this.thickness) ? this.thickness : this.size / 14;
+            return $.isNumeric(this.thickness) ? this.thickness : this.sizeX / 14;
         }
     };
 
