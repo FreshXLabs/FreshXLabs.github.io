@@ -114,6 +114,7 @@
                 padding-top:2px;
                 width: 150px;
                 left: 50px;
+                top: -500px;
             }
             #headerImage
             {
@@ -127,9 +128,9 @@
             }
             #header{
                 position: absolute;
-                height: 6.9%;
+                height: 40px;
                 display:block;
-                top: -500px;
+                top: 0px;
                 width: 100%;
                 background: #000;
                 opacity: 0.6;
@@ -157,7 +158,21 @@
 				left: 0;
 				top: 70%;
 			}
-
+            #myVideo{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                
+            }
+/*
+            .videosection{
+             position: relative;
+            padding-bottom: 56%;
+                height: 0;
+            }
+*/
 			/* Section 1
 			* --------------------------------------- */
             #section1{
@@ -823,14 +838,14 @@ var console = { log: function() {} };
 
                     'onLeave': function(index, nextIndex, direction){
                         if (index == 1 && direction == 'down'){
-                            $('#logo').animate({height:'40px', width:'40px', top:'5px', left:'13.5%'}, 430);
-                            $('#headerImage').animate({height:'30px',width:'150px', top:'5px',left:'3%'}, 430);
+                            $('#logo').animate({height:'40px', width:'40px', top:'5px', left:'30px'}, 430);
+                            $('#headerImage').animate({height:'30px',width:'150px', top:'5px',left:'55px'}, 430);
                             $('#header').animate({top:'0px'});
                         }
                         else if (nextIndex == 1 && direction == 'up'){
                             $('#logo').animate({height:'200px', width:'200px', top:'37%', left:'16%'}, 430);
                             $('#headerImage').animate({height:'150px',width:'800px', top:'40%',left:'24%'}, 430);
-                            $('#header').animate({top:'-60px'});
+                            $('#header').animate({top:'0px'});
                             }
                         
                         if (index ==1 || index ==2 || index ==4 || index ==5 && direction == 'down'){
@@ -857,7 +872,8 @@ var console = { log: function() {} };
 					},
 					anchors: ['firstPage', 'secondPage', '3rdPage', '4thPage', '5thPage' ],
 					menu: '#menu2', 
-					easingcss3: 'cubic-bezier(0.175, 0.885, 0.320, 1.275)'
+					easingcss3: 'cubic-bezier(0.175, 0.885, 0.320, 1)'
+//					easingcss3: 'cubic-bezier(0.175, 0.885, 0.320, 1.275)'
 				});
 			});
 		</script>
@@ -879,8 +895,8 @@ var console = { log: function() {} };
 				<li data-menuanchor= "firstPage"><a href="#firstPage">Home</a></li>
 				<li data-menuanchor= "secondPage"><a href="#secondPage">About</a></li>
 				<li data-menuanchor= "3rdPage"><a href="#3rdPage">R&amp;D</a></li>
-				<li data-menuanchor= "4thPage"><a href="#4thPage">SignUp</a></li>
-				<li data-menuanchor= "5thPage"><a href="#5thPage">Contact</a></li>	  	    
+				<li data-menuanchor= "4thPage"><a href="#4thPage">Contact</a></li>
+<!--				<li data-menuanchor= "5thPage"><a href="#5thPage">Contact</a></li>	  	    -->
 			</ul>
 			<!--	<a href="#firstPage"><img src="imgs/templogo.png" alt="logo" id = "logo"/></a>-->
 		</div>
@@ -896,12 +912,12 @@ var console = { log: function() {} };
 -->
 
 			<div class="section" id="section0">
-
+                <div class="videosection">
 				<video autoplay loop muted id="myVideo">
 					<source src="imgs/Fireflies%20%20%20FREE%20Video%20Background%20Loop%20HD%201080p.mp4" type="video/mp4">
 					<source src="imgs/Fireflies%20%20%20FREE%20Video%20Background%20Loop%20HD%201080p.mp4" type="video/webm">
 				</video>
-
+                </div>
 			</div>
 
 			<div class="section" id="section1">
