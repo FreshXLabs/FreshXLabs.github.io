@@ -43,7 +43,7 @@
 
 
 			/* Common styles
-			* --------------------------------------- */
+			* --------------------------------------- */			
 			.section{
 				text-align:center;
 				overflow:hidden;
@@ -72,8 +72,8 @@
 				background:#666;
 				background: rgba(0,0,0, 0.5);
 				color: #fff;
-				-webkit-border-radius: 10px;
-				border-radius: 10px;
+				-webkit-border-radius: 3px;
+				border-radius: 3px;
 			}
 			#menu2 li.active{
 				color: #000;
@@ -92,7 +92,7 @@
 			}
 			#menu2 li a,
 			#menu2 li.active a{
-				padding: 9px 18px;
+				padding: 7px 20px;
 				display:block;
 			}
 			#menu2 li.active a{
@@ -107,47 +107,44 @@
 				text-align: right;
 			}
 			/*    MENU ENDED    */
-
-			#logo{
-				position: fixed;
-				display: block;
-				height: 200px;
-				padding-top:2px;
-				width: 150px;
-				left: 50px;
-			}
-			#headerImage
-			{
-				position: fixed;
-				display: block;
-				height: 150px;
-				top:40%;
-				width: 800px;
-				left: 250px;
-				padding-top:7px;
-			}
-			#header{
-				position: absolute;
-				height: 50px;
-				display:block;
-				top: -500px;
-				width: 100%;
-				background: #000;
-				opacity: 0.7;
-				z-index:9;
-				text-align:left;
-				text-indent: 15px;
-				color: #FFFFFF;
-				padding: 10px 0 0 0;
-			}
-
+            #logo{
+                position: fixed;
+                display: block;
+                height: 200px;
+                padding-top:2px;
+                width: 150px;
+                left: 50px;
+            }
+            #headerImage
+            {
+                position: fixed;
+                display: block;
+                height: 150px;
+                top:40%;
+                width: 800px;
+                left: 250px;
+                padding-top:7px;
+            }
+            #header{
+                position: absolute;
+                height: 50px;
+                display:block;
+                top: -500px;
+                width: 100%;
+                background: #000;
+                opacity: 0.7;
+                z-index:9;
+                text-align:left;
+                color: #FFFFFF;
+                padding: 10px 0 0 0;
+            }
 
 			/* Section 0
 			* --------------------------------------- */
 			#section0{
 				padding: 0px 0;
 				overflow: hidden;
-				background-image: url(imgs/temp.png);
+/*				background-image: url(imgs/temp.png);*/
 				margin: 0px 0 0 0;
 				background-size: 100% 100%;
 			}
@@ -163,117 +160,118 @@
 
 			/* Section 1
 			* --------------------------------------- */
-			#section1{
-				background-image: url(imgs/galaxy.png);
-				background-size: 100% 100%;
-			}
-			#section1 img{
-				position:absolute;
-				left: 0px;
-				top: 0px;
-				display: block;
-				width:100%;
-				height:100%;
-			}
-			#section1 .box{
-				position: relative;
-				top: 50%;
-				left: 0px;
-				margin-top: -100px;
-				margin-left: 50px;
-				width: 350px;
-				z-index: 1;
-			}
-
-			#section1 a{
-				z-index: 2;
-				position:absolute;
-				left: 0px;
-				top: 0px;
-				display: block;
-				width:100%;
-				height:100%;
-			}
-
-			#section1 .container{
-				display: block;
-				position: absolute;
-				left: 0px;
-				top: 0px;
-				width:200px;
-				height:200px;
-			}
-
-			#section1 .container{
-				display: block;
-				position: absolute;
-				z-index: 1;
-				opacity: 1;
-				width:200px;
-				height:200px;
-
-			}
-			#section1 .bottomContainers{
-				position: absolute;
-				display: block;
-				height:200px;
-				width:100%;
-				top:100%;
-				-webkit-transition: all 0.3s ease-out;
-				-moz-transition: all 0.3s ease-out;
-				-o-transition: all 0.5s ease-out;
-				transition: all 0.4s ease-out;
-			}
-
-			#section1 .fashion{
-				left:45%;
-				top:-110px;
-				-webkit-border-radius: 10px;
-				border-radius: 10px;
-			}
-
-			#section1 .automotive{
-				left:45%;
-				top:-340px;
-				-webkit-border-radius: 10px;
-				border-radius: 10px;
-			}
-
-			#section1 .medical{
-				left:65%;
-				top:-110px;
-				-webkit-border-radius: 10px;
-				border-radius: 10px;
-			}
-
-			#section1 .interiorDesign{
-				left:65%;
-				top:-340px;
-				-webkit-border-radius: 10px;
-				border-radius: 10px;
-			}
-
-			#section1 .bottomContainers.active{
-				-webkit-transform: translate3d(0px, -100px, 0px);
-				-moz-transform: translate3d(0px, -100px%, 0px);
-				-ms-transform:translate3d(0px, -100px, 0px);
-				transform: translate3d(0px, -100px, 0px);
-				transform: translate3d(0px, -300px, 0px);
-			}
-
-			#section1 img{
+            #section1{
+              
+/*                background-image: url(imgs/temp.png);*/
+                background-size: 100% 100%;
+                padding: 0px 0px;
+				overflow: hidden;
 				height: 100%;
-				width: 100%;
-				position: absolute;
-				left: 0px;
-				top: 0px;
+            }
+            #section1 img{
+                position:absolute;
+                left: 40px;
+                top: 100px;
+            }
+            #section1 .box{
+                position: relative;
+                top:-260px;
+                left: 0px;
+                margin-top: -100px;
+                margin-left: 50px;
+                width: 350px;
+                z-index: 1;
+            }	
 
-				-webkit-border-radius: 10px;
-				border-radius: 10px;
-				box-shadow: 0 0 8px rgba(0, 0, 0, .8);
-				-webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
-				-moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
-			}
+            #section1 a{
+                position:absolute;
+                left: 0px;
+                top: 0px;
+                display: block;
+                width:100%;
+                height:100%;
+        }
+        #section1 .overlay {
+            z-index: 2;
+            opacity: 1;
+            display: block;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            width:200px;
+            height:200px;
+        }
+
+        #section1 .overlay:hover{
+            opacity:0;
+        }
+        #section1 .container{
+            display: block;
+            position: absolute;
+            z-index: 1;
+            opacity: 1;
+            width:200px;
+            height:200px;
+            
+        }
+        #section1 .bottomContainers{
+            position: absolute;
+            display: block;
+            height:200px;
+            width:100%;
+            top:100%;
+            -webkit-transition: all 0.4
+                s ease-out;
+            -moz-transition: all 0.4s ease-out;
+            -o-transition: all 0.4s ease-out;
+            transition: all 0.4s ease-out;
+           
+        }
+        #section1 .fashion{
+            left:45%;
+            top:-220px;
+            -webkit-border-radius: 10px;
+            border-radius: 10px;
+        }
+        #section1 .automotive{
+            left:45%;
+            top:-440px;
+            -webkit-border-radius: 10px;
+            border-radius: 10px;
+        }
+        #section1 .medical{
+            left:65%;
+            top:-220px;
+            -webkit-border-radius: 10px;
+            border-radius: 10px;
+        }
+
+        #section1 .interiorDesign{
+            left:65%;
+            top:-440px;
+            -webkit-border-radius: 10px;
+            border-radius: 10px;
+        }
+
+        #section1 .bottomContainers.active{
+            -webkit-transform: translate3d(0px, -100px, 0px);
+            -moz-transform: translate3d(0px, -100px%, 0px);
+            -ms-transform:translate3d(0px, -100px, 0px);
+            transform: translate3d(0px, -100px, 0px);
+        }
+        #section1 img{
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            
+            -webkit-border-radius: 10px;
+            border-radius: 10px;
+            box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+            -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+            -moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+        }
 			/*screen resolutions between 620px and 800px*/
 			@media all and (min-width: 620px) and (max-width: 800px){
 				#section1 .imgsContainer{
@@ -283,7 +281,7 @@
 					height: 563px;
 				}
 			}
-			/*screen resolutions lower than 620px*/
+			screen resolutions lower than 620px
 			@media all and (max-width: 620px){
 				#section1 .imgsContainer{
 					margin-top: -208px;
@@ -291,22 +289,7 @@
 					width: 534px;
 					height: 464px;
 				}
-			}
-			#bubble{
-				z-index: 11;
-				left: 140px;
-			}
-			#bubble.active{
-				-webkit-transform: translate3d(600px, 0px, 0px);
-				-moz-transform: translate3d(600px, 0px, 0px);
-				-ms-transform:translate3d(600px, 0px, 0px);
-				transform: translate3d(600px, 0px, 0px);
-				-webkit-transition: all 3s ease-out;
-				-moz-transition: all 3s ease-out;
-				-o-transition: all 3s ease-out;
-				transition: all 3s ease-out;
-
-			}
+			}	
 			.modalBackground{
 				position:absolute;
 				left:0px;
@@ -435,127 +418,58 @@
 				background-position: center;
 
 			}
-			#section2 img{
-				position:absolute;
-
-			}
-			#section2 .imgsContainer,
-			#staticImg .imgsContainer,
-			#section3 .imgsContainer{
-				position: absolute;
-				z-index: 1;
-				left: 50%;
-				display: block;
-				margin-top: -288px;
-				margin-left: -636px;
-				width: 0;
-				height: 0;
-
-				-webkit-transition: all 1.1s ease-in-out;
-				-moz-transition: all 1.1s ease-in-out;
-				-o-transition: all 1.1s ease-in-out;
-				transition: all 1.1s ease-in-out;
-			}
-
-			#section2.moveUp .imgsContainer{
-				/*		top: 50%;*/
-			}
-
-			#section2.moveDown .imgsContainer,
-			#staticImg .imgsContainer{
-				/*		top: 90%;*/
-			}
-
-			#section2.active .imgsContainer{
-				/*		top: 50%;*/
-			}
-
 			#section2 .box{
-				top: 22%;
-				left: 42%;
 				position: absolute;
-				width: 582px;
+				height: 110%;
+                width: 80%;
+                left: 7%;
+                top: 35px;
+                
+            
 			}
+            #imagesegmentation{
+                position: absolute;
+                top: 9%;
+                left: 0%;
+                height: 16%;
+                width: 16%;
+            }
+            #deeplearning{
+                position: absolute;
+                top: 67%;
+                left: 0%;
+                height: 15%;
+                width: 15%;
+            }
+            #imageclassification{
+                position: absolute;
+                top:82%;
+                left:55%;
+                height: 14%;
+                width: 14%;
+            }
+            #edgedetection{
+                position: absolute;
+                top: 66%;
+                left: 73%;
+                height: 15%;
+                width: 15%;
+            }
+            #stochastic{
+                position: absolute;
+                top: 12%;
+                left: 85%;
+                height: 12%;
+                width: 12%;
+            }
 
-			#iphone-yellow{
-				top: -35px;
-				left: -222px;
+			.modal{
+				width:1000px;
+				height:500px;
 			}
-
-			#iphone-red{
-				top: -194px;
-				left: 106px;
-			}
-
-			#iphone-blue{
-				top: 320px;
-				left: 448px;
-			}
-
-			#iphone-green{
-				left: 106px;
-				position:absolute;
-			}
-
-			#staticImg{
-				display: block;
-				position: absolute;
-				z-index: 1;
-				top: 200%;
-				left: 0;
-				width: 100%;
-				min-width: 980px;
-				height: 100%;
-
-				-webkit-transition: all 0.7s ease-out;
-				-moz-transition: all 0.7s ease-out;
-				-o-transition: all 0.7s ease-out;
-				transition: all 0.7s ease-out;
-
-				-webkit-backface-visibility: hidden;
-				-webkit-perspective: 1000;
-			}
-			#staticImg.moveDown{
-				-webkit-transform: translate3d(0, 100%, 0);
-				-ms-transform: translate3d(0, 100%, 0);
-				transform: translate3d(0, 100%, 0);
-			}
-			#staticImg.moveUp{
-
-				-webkit-transform: translate3d(0, 0, 0);
-				-ms-transform: translate3d(0, 0, 0);
-				transform: translate3d(0, 0, 0);
-			}
-			#staticImg.moveDown .imgsContainer{
-				top: 50%;
-			}
-			#staticImg.moveDown img{
-				top: 200px;
-			}
-
-			#staticImg.active .imgsContainer{
-				top: 50%;
-			}
-
-
-			#staticImg.active img{
-				top: 487px;
-			}
-
-
 			/* Section 3
 			* --------------------------------------- */
-			/*
-			#section3 .imgsContainer{
-			top: 50%;
-			}
-
-			#section3 img{
-			top: 200px;
-			left: 455px;
-			position: absolute;
-			}
-			*/
+			
 			#section3{
 				background-image: url(imgs/ca.jpg);
 				background-size: 100% 100%;
@@ -566,17 +480,14 @@
 			}
 
 			#section3 .signupbox {
-				width:305px;
+				width:305px; 
 				margin:0;
 				text-align: center;
 				top: 25%;
 				left: 25%;
 				position: absolute;
 				width: 582px;
-
 			}
-
-
 			.inputWithButton{
 				display:inline-block;
 				/*    overflow:hidden;*/
@@ -595,13 +506,11 @@
 				border:1px solid #444;
 				/*    border-right:none;*/
 			}
-			.inputWithButton > input[type=submit]{
+			.inputWithButton > input[type=button]{
 				border-left:1px solid gray;
 				background:#A30000;
 				border:1px solid #A30000;
 				color:#fff;
-				margin-top: 5px;
-				height: 30px;
 				cursor:pointer;
 				width:70px;
 				outline
@@ -637,13 +546,13 @@
 
 			/*
 			#section4 .signupbox {
-			width:305px;
+			width:305px; 
 			margin:0;
 			text-align: center;
 			top: 25%;
 			left: 25%;
 			position: absolute;
-			width: 582px;
+			width: 582px;  
 
 			}
 			*/
@@ -651,7 +560,7 @@
 			/* Nicely lines up the labels. */
 			#section4 .form label {display:inline-block; width:500px;}
 
-			/* You could add a class to all the input boxes instead,
+			/* You could add a class to all the input boxes instead, 
 			if you like. That would be safer, and more backwards-compatible */
 			#section4 .form input[type="email"],
 			#section4 .form input[type="password"],
@@ -660,7 +569,7 @@
 			form .line {clear:both;}
 			form .line.submit {text-align:right; width: 400px;}
 			input[type=submit] {padding:1px 1px; background:skyblue; border:0 none; cursor:pointer;
-				color: white; width: 54%;
+				color: white; width: 54%; 
 				-webkit-border-radius: 5px; border-radius: 5px; }
 
 
@@ -674,7 +583,8 @@
 			}
 			#fp-nav li .active span, .fp-slidesNav .active span{
 				background: #AAA;
-			}			
+			}
+
 
 		</style>
 
@@ -685,7 +595,7 @@ var console = { log: function() {} };
 <![endif]-->
 
 
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 		<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
 		<script type="text/javascript" src="../fancyapps-fancyBox-18d1712/source/jquery.fancybox.pack.js?v=2.1.5"></script>
 		<script src="../circle-progress.js"></script>
@@ -891,11 +801,13 @@ var console = { log: function() {} };
 					}
 				});
 
+
 				$('#fullpage').fullpage({
+                    
 
 					'verticalCentered': false,
 					'css3': true,
-					'sectionsColor': ['#FFFFFF', '#fff', '#000', '#fff', '#000', '#000'],
+					'sectionsColor': ['#FFFFFF', '#000', '#000', '#fff', '#000', '#000'],
 					'navigation': true,
 					'navigationPosition': 'right',
 					'navigationTooltips': ['1', '2', '3', '4', '5'],
@@ -906,39 +818,42 @@ var console = { log: function() {} };
 						}
 					},
 
-					'onLeave': function(index, nextIndex, direction){
-						if (index == 2){
-							$('.fancybox-close').click();
-						}
-						if (index == 1 && direction == 'down'){
-							$('#logo').animate({height:'40px', width:'30px', top:'5px', left:'30px'}, "fast");
-							$('#headerImage').animate({height:'30px',width:'200px', top:'5px',left:'40%'}, "fast");
-							$('#header').animate({top:'0px'});
-						}
-						else if (nextIndex == 1 && direction == 'up'){
-							$('#logo').animate({height:'200px', width:'150px', top:'40%', left:'50px'}, "fast");
-							$('#headerImage').animate({height:'150px',width:'1000px', top:'40%',left:'250px'}, "fast");
-							$('#header').animate({top:'-60px'});
-						}
-
-						if (index == 3 && direction == 'down'){
-							$('.section').eq(index -1).removeClass('moveDown').addClass('moveUp');
-						}
-						else if(index == 3 && direction == 'up'){
-							$('.section').eq(index -1).removeClass('moveUp').addClass('moveDown');
-						}
-
-						$('#staticImg').toggleClass('active', (index == 2 && direction == 'down' ) || (index == 4 && direction == 'up'));
-						$('#staticImg').toggleClass('moveDown', nextIndex == 4);
-						$('#staticImg').toggleClass('moveUp', index == 4 && direction == 'up');
+                    'onLeave': function(index, nextIndex, direction){
+                        if (index == 1 && direction == 'down'){
+                            $('#logo').animate({height:'40px', width:'30px', top:'5px', left:'30px'}, "fast");
+                            $('#headerImage').animate({height:'30px',width:'200px', top:'5px',left:'6%'}, "fast");
+                            $('#header').animate({top:'0px'});
+                        }
+                        else if (nextIndex == 1 && direction == 'up'){
+                            $('#logo').animate({height:'200px', width:'150px', top:'40%', left:'50px'}, "fast");
+                            $('#headerImage').animate({height:'150px',width:'1000px', top:'40%',left:'250px'}, "fast");
+                            $('#header').animate({top:'-60px'});
+                            }
+                        
+                        if (index ==1 || index ==2 || index ==4 || index ==5 && direction == 'down'){
+                            $('#section2 .wrap').fadeOut(10);
+                        }                        
+                        if (index ==3 && direction == 'down'){
+                            $('#section2 .wrap').fadeOut(10);
+                        }
+                        if (nextIndex ==3 && direction == 'up'){
+                            $('#section2 .wrap').fadeIn(3000);
+                        }
+                        
+                        if (index ==3 && direction == 'up'){
+                            $('#section2 .wrap').fadeOut(10);
+                        }
+                        if (nextIndex ==3 && direction == 'down'){
+                            $('#section2 .wrap').fadeIn(3000);
+                        }
 					},
-
+                    
 					afterRender: function(){
 						//playing the video
 						$('video').get(0).play();
 					},
 					anchors: ['firstPage', 'secondPage', '3rdPage', '4thPage', '5thPage' ],
-					menu: '#menu2, #menu1',
+					menu: '#menu2', 
 					easingcss3: 'cubic-bezier(0.175, 0.885, 0.320, 1.275)'
 				});
 			});
@@ -960,9 +875,9 @@ var console = { log: function() {} };
 			<ul id="menu2">
 				<li data-menuanchor= "firstPage"><a href="#firstPage">Home</a></li>
 				<li data-menuanchor= "secondPage"><a href="#secondPage">About</a></li>
-				<li data-menuanchor= "3rdPage"><a href="#3rdPage">RND</a></li>
-				<li data-menuanchor= "4thPage"><a href="#4thPage">Sign Up</a></li>
-				<li data-menuanchor= "5thPage"><a href="#5thPage">Contact</a></li>
+				<li data-menuanchor= "3rdPage"><a href="#3rdPage">R&amp;D</a></li>
+				<li data-menuanchor= "4thPage"><a href="#4thPage">Sign up</a></li>
+				<li data-menuanchor= "5thPage"><a href="#5thPage">Contact</a></li>	  	    
 			</ul>
 			<!--	<a href="#firstPage"><img src="imgs/templogo.png" alt="logo" id = "logo"/></a>-->
 		</div>
@@ -987,61 +902,83 @@ var console = { log: function() {} };
 			</div>
 
 			<div class="section" id="section1">
-
 				<div class="wrap">
+				
+				<video autoplay loop muted controls="false" id="myVideo">
+					<source src="imgs/Fireflies%20%20%20FREE%20Video%20Background%20Loop%20HD%201080p.mp4" type="video/mp4">
+					<source src="imgs/Fireflies%20%20%20FREE%20Video%20Background%20Loop%20HD%201080p.mp4" type="video/webm">
+				</video>
+				
 					<div class="bottomContainers">
 
-						<div class="container interiorDesign">
-							<a href="#interiorDesignModal" class="fancybox">
-								<img src="imgs/interiordesign.jpg" alt="iphone"/>
-							</a>
-						</div>
+                        <div class="container interiorDesign">
+                            <a href="#interiorDesignModal" class="fancybox">
+                            <img src="imgs/interiordesign.jpg" alt="iphone"/>
+                            </a>
+                        </div>
 
-						<div class="container fashion">
-							<a href="#fashionModal" class="fancybox">
-								<img src="imgs/fashion2.png" alt="iphone"/>
-							</a>
-						</div>
+                        <div class="container fashion">
+                            <a href="#fashionModal" class="fancybox">
+                            <img src="imgs/fashion2.png" alt="iphone"/>
+                            </a>
+                        </div>
 
-						<div class="container automotive">
-							<a href="#automotiveModal" class="fancybox">
-								<img src="imgs/automobile.jpg" alt="iphone"/>
-							</a>
-						</div>
+                        <div class="container automotive">
+                            <a href="#automotiveModal" class="fancybox">
+                            <img src="imgs/automobile.jpg" alt="iphone"/>
+                            </a>
+                        </div>		
 
-						<div class="container medical">
-							<a href="#medicalModal" class="fancybox">
-								<img src="imgs/medicalcollaborate.jpg" alt="iphone"/>
-							</a>
-						</div>
-						<div class="box">
-							<h2 style = "color: #FFFFFF; font-family: optima;">Every imgage has a story <br>to tell...</h2>
-						</div>
-					</div>
+                        <div class="container medical">
+                            <a href="#medicalModal" class="fancybox">
+                            <img src="imgs/medicalcollaborate.jpg" alt="iphone"/>
+                            </a>
+                        </div>
+                        <div class="overlay interiorDesign">
+                            <a href="#interiorDesignModal" class="fancybox">
+                            <img src="imgs/interiordesignhover.png" alt="iphone"/>
+                            </a>
+                        </div>
+                        <div class="overlay fashion">
+                            <a href="#fashionModal" class="fancybox">
+                            <img src="imgs/fashionhover.png" alt="iphone"/>
+                            </a>
+                        </div>
+                        <div class="overlay automotive">
+                            <a href="#automotiveModal" class="fancybox">
+                            <img src="imgs/automotivehover.png" alt="iphone"/>
+                            </a>
+                        </div>
+                        <div class="overlay medical">
+                            <a href="#medicalModal" class="fancybox">
+                            <img src="imgs/medicalhover.png" alt="iphone" id="overlayMedical" />
+                            </a>
+                        </div>
+                        <div class="box">
+                            <h2 style = "font-family: optima; color: floralwhite">
+                            Every image has a story <br>to tell...</h2>
+                        </div>
+					</div>			
 				</div>
 			</div>
 
 			<div class="section moveDown" id="section2">
 				<div class="wrap">
-
+                   
+                    <div class="box"> 
+                    <img src="imgs/neuralhoverlines2.png"/>
+                    </div>
 					<div class="imgsContainer">
-						<img src="imgs/whiteclick.png" alt="iphone" id="iphone-yellow" />
-						<img src="imgs/whiteclick.png" alt="iphone" id="iphone-red" />
-						<img src="imgs/whiteclick.png" alt="iphone" id="iphone-blue" />
+						<img src="imgs/deeplearning.png" id="deeplearning" />
+						<img src="imgs/edgedetection.png" id="edgedetection" />
+						<img src="imgs/imageseg.png" id="imagesegmentation" />
+						<img src="imgs/imageclassification.png" id="imageclassification" />
+						<img src="imgs/stochastic.png" id="stochastic" />
 					</div>
-
-
-					<!--
-<div class="box">
-<h2 style = "color: #FFFFFF">Amazing Stuff</h2>
-<strong>"A Fresh new way to view<br>
-your favourite style inspirations"</strong><br>
-Come explore our Fresh New World!
-</div>
--->
-
+                    
 				</div>
 			</div>
+			
 			<div class="section moveDown" id="section3">
 				<div class="wrap">
 					<div class="box">
@@ -1050,14 +987,14 @@ Come explore our Fresh New World!
 							technology</h2>
 
 						<div class = signupbox>
-							<form class="inputWithButton" action="//formspree.io/fxlabsinc@gmail.com" method="POST">
+							<span class="inputWithButton" action="demo_form.asp" method="post">
 								<input type="text" placeholder="Your email"/>
-								<input type= "submit" value = "Sign up"/>
-							</form>
+								<input type= "button" value = "Sign up"/>
+							</span>
 						</div>
 					</div>
 				</div>
-				<!--
+				<!-- 
 <div class="imgsContainer">
 <img src="imgs/ins5.png" alt="iphone" id="iphone-two" />
 </div>
