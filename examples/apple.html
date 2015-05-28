@@ -332,8 +332,8 @@
 				opacity: 0;
 				z-index: 3;				
 			}
-			
-			
+
+
 			.modal{
 				width:1000px;
 				height:500px;
@@ -442,7 +442,7 @@
 				top:10%;
 				display:block;
 			}
-			
+
 			.mouseoverInstructions{
 				top:0px;
 				opacity:1;
@@ -455,7 +455,7 @@
 				color:white;
 				z-index: 3;	
 			}
-			
+
 			/* Section 2
 			* --------------------------------------- */
 			#section2{
@@ -656,31 +656,36 @@ var console = { log: function() {} };
 				var medicalInterval;				
 				var interiorDesignInterval;
 				var automotiveInterval;
-				
+
 				$(".interiorDesign .fancybox").fancybox({
 					fitToView: true,
 					width: '90%',
 					height: '90%',
 					scrolling: 'no',
 					afterLoad: function(){
-						var normalBackground = "imgs/temp/interiordesign.jpg";
-						var outlineBackground = "imgs/temp/interiordesign.gif" ;
+						var normalInteriorBackground = "imgs/temp/interiordesign.jpg";
+						var outlineInteriorBackground = "imgs/temp/interiordesign.gif" ;
 						var couchFactor = 1.25;
 						var clockFactor = 1.5;
 						var couchWidth, couchHeight, couchLeft, couchTop;
 						var clockWidth, clockHeight, clockLeft, clockTop;
-						
+
 						function swapBackground(){
-							if ($('.modalBackground').attr('src') == normalBackground){
-								$('.modalBackground').attr('src', outlineBackground);
+							if ($('.modalBackground').attr('src') == normalInteriorBackground){
+								$('.modalBackground').attr('src', outlineInteriorBackground);
 							}
 							else{
-								$('.modalBackground').attr('src', normalBackground)	
+								$('.modalBackground').attr('src', normalInteriorBackground)	
 							}
 						}
-						
+
+						$('.modalBackground').attr('src', outlineInteriorBackground);
+						interiorDesignInterval = setInterval(swapBackground, 2000);
+
+						$('.mouseoverInstructions').css('top','-60px');						
 						$('.mouseoverInstructions').css('opacity',1);
-												
+						$('.mouseoverInstructions').animate({top:0});
+
 						//Positioning and sizing the couch
 						$('.modalMouseOver#couch').width(couchWidth = $('#interiorDesignModal').width()*0.56);		
 						$('.modalMouseOver#couch').height(couchHeight = $('#interiorDesignModal').height()*0.32);
@@ -743,6 +748,8 @@ var console = { log: function() {} };
 
 						$('.modalMouseOver#couch').hover(
 							function(){
+								clearInterval(interiorDesignInterval);
+								$('.modalBackground').attr('src', normalInteriorBackground);
 								expandCouch();
 							},
 							function(){
@@ -751,6 +758,8 @@ var console = { log: function() {} };
 
 						$('.modalMouseOver#clock').hover(
 							function(){
+								clearInterval(interiorDesignInterval);
+								$('.modalBackground').attr('src', normalInteriorBackground);
 								expandClock();	
 							},
 							function(){
@@ -758,6 +767,10 @@ var console = { log: function() {} };
 							});
 
 
+					},
+
+					afterClose: function(){
+						clearInterval(interiorDesignInterval);
 					}
 				});
 
@@ -767,21 +780,25 @@ var console = { log: function() {} };
 					height: '90%',
 					scrolling: 'no',
 					afterLoad: function(){
-						var normalBackground = "imgs/temp/interiordesign.jpg";
-						var outlineBackground = "imgs/temp/interiordesign.gif" ;
-						
-						function swapBackground(){
-							if ($('.modalBackground').attr('src') == normalBackground){
-								$('.modalBackground').attr('src', outlineBackground);
+						var normalAutoBackground = "imgs/temp/automobile.jpg";
+						var outlineAutoBackground = "imgs/temp/automobile.gif" ;
+
+						function swapAutoBackground(){
+							if ($('.modalBackground').attr('src') == normalAutoBackground){
+								$('.modalBackground').attr('src', outlineAutoBackground);
 							}
 							else{
-								$('.modalBackground').attr('src', normalBackground)	
+								$('.modalBackground').attr('src', normalAutoBackground)	
 							}
 						}
-						
-						
+
+						$('.modalBackground').attr('src', outlineAutoBackground);
+						automotiveInterval = setInterval(swapAutoBackground, 2000);
+
+						$('.mouseoverInstructions').css('top','-60px');						
 						$('.mouseoverInstructions').css('opacity',1);
-						
+						$('.mouseoverInstructions').animate({top:0});
+
 						//Positioning and sizing the engine specs
 						$('#engineSpecs').width($('#automotiveModal').height()*0.7);								
 						$('#engineSpecs').height($('#automotiveModal').height()*0.7);
@@ -807,11 +824,17 @@ var console = { log: function() {} };
 
 						$('.modalMouseOver#engine').hover(
 							function(){
+								clearInterval(automotiveInterval);
+								$('.modalBackground').attr('src', normalAutoBackground);
 								showSpecs();
 							},
 							function(){
 								hideSpecs();							
 							});		
+					},
+
+					afterClose: function(){
+						clearInterval(automotiveInterval);
 					}
 				});
 
@@ -1120,7 +1143,7 @@ var console = { log: function() {} };
 			<div class="modalOverlay"></div>
 			<img class="modalMouseOver" id="couch" src="imgs/popupSofa.png"/>
 			<img class="modalMouseOver" id="clock" src="imgs/popupClock.png"/>
-			<div class="mouseoverInstructions">Mouse over highlighted images</div>
+			<div class="mouseoverInstructions">Mouse over highlighted images...</div>
 			</div></div>
 		<div style="display:none"><div id="fashionModal" class="modal">
 			<img id="girl" src="imgs/fashion2.png"/>
@@ -1138,7 +1161,7 @@ var console = { log: function() {} };
 			<img class="modalMouseOver" id="engine" src="imgs/temp/engine.jpg"/>
 			<img id="engineSpecs" class="modalDescription" src="imgs/temp/enginespecs.JPG"/>
 			<div class="modalDescription">Find out exactly what's under the hood.</div>
-			<div class="mouseoverInstructions">Mouse over highlighted images</div>
+			<div class="mouseoverInstructions">Mouse over highlighted images...</div>
 			</div></div>
 		<div style="display:none"><div id="medicalModal" class="modal">
 			<div class="medicalPages">
@@ -1154,6 +1177,6 @@ var console = { log: function() {} };
 				</div>
 			</div>
 
-			</div></div>		
+			</div></div>
 	</body>
 </html>
