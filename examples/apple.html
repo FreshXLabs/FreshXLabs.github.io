@@ -111,10 +111,9 @@
                 position: fixed;
                 display: block;
                 height: 200px;
-                padding-top:2px;
-                width: 150px;
-                left: 50px;
-                top: -500px;
+                width: 200px;
+                left: 16%;
+                top: 37%;
             }
             #headerImage
             {
@@ -123,8 +122,7 @@
                 height: 150px;
                 top:40%;
                 width: 800px;
-                left: 250px;
-                padding-top:7px;
+                left: 24%;
             }
             #header{
                 position: absolute;
@@ -201,11 +199,8 @@
                 top: 100px;
             }
             #section1 .box{
-                position: relative;
-                top:-260px;
-                left: 0px;
-                margin-top: -100px;
-                margin-left: 50px;
+                top:0%;
+                padding-left: 9% ;
                 width: 350px;
                 z-index: 1;
             }	
@@ -244,9 +239,10 @@
         #section1 .bottomContainers{
             position: absolute;
             display: block;
-            height:200px;
+            height:100%;
             width:100%;
-            top:100%;
+            top:50%;
+            text-align: center;
             -webkit-transition: all 0.4
                 s ease-out;
             -moz-transition: all 0.4s ease-out;
@@ -256,26 +252,26 @@
         }
         #section1 .fashion{
             left:45%;
-            top:-110%;
+            top:20%;
             -webkit-border-radius: 10px;
             border-radius: 10px;
         }
         #section1 .automotive{
             left:45%;
-            top:-220%;
+            top:-15%;
             -webkit-border-radius: 10px;
             border-radius: 10px;
         }
         #section1 .medical{
             left:65%;
-            top:-110%;
+            top:20%;
             -webkit-border-radius: 10px;
             border-radius: 10px;
         }
 
         #section1 .interiorDesign{
             left:65%;
-            top:-220%;
+            top:-15%;
             -webkit-border-radius: 10px;
             border-radius: 10px;
         }
@@ -509,12 +505,12 @@
 				margin: 10% 0 0 0;
 			}
 
-			#section3 .signupbox {
-				width:305px; 
+			#section4 .signupbox {
+				
 				margin:0;
 				text-align: center;
-				top: 25%;
-				left: 25%;
+				top: 3%;
+				left: 60%;
 				position: absolute;
 				width: 582px;
 			}
@@ -553,7 +549,7 @@
 				/*            background-image: url(imgs/fresh.jpg);*/
 				margin: 0px 0 0 0;
 				background-size: 100% 100%;
-				background-image: url(imgs/back5.jpg);
+				background-image: url(imgs/communitech.jpg);
 			}
 			#section4 .transbox
 			{
@@ -562,8 +558,8 @@
 /*				            opacity:0.7;*/
 				/*            filter:alpha(opacity=60);  For IE8 and earlier */
 				text-align: center;
-				top: 20%;
-				left: -95px;
+				top: 35%;
+				left: 25%;
 				position: absolute;
 				width: 500px;
 			}
@@ -851,13 +847,13 @@ var console = { log: function() {} };
 
                     'onLeave': function(index, nextIndex, direction){
                         if (index == 1 && direction == 'down'){
-                            $('#logo').animate({height:'40px', width:'40px', top:'5px', left:'30px'}, 250);
-                            $('#headerImage').animate({height:'30px',width:'150px', top:'5px',left:'55px'}, 250);
+                            $('#logo').animate({height:'40px', width:'40px', top:'5px', left:'30px'}, 300);
+                            $('#headerImage').animate({height:'30px',width:'150px', top:'10px',left:'55px'}, 300);
                             $('#header').animate({top:'0px'});
                         }
                         else if (nextIndex == 1 && direction == 'up'){
-                            $('#logo').animate({height:'200px', width:'200px', top:'37%', left:'16%'}, 250);
-                            $('#headerImage').animate({height:'150px',width:'800px', top:'40%',left:'24%'}, 250);
+                            $('#logo').animate({height:'200px', width:'200px', top:'37%', left:'16%'}, 300);
+                            $('#headerImage').animate({height:'150px',width:'800px', top:'40%',left:'24%'}, 300);
                             $('#header').animate({top:'0px'});
                             }
                         
@@ -1043,13 +1039,12 @@ var console = { log: function() {} };
 			<div class="section moveDown" id="section4">
 				<div class="wrap">
 					<div class="transbox">
+					
 						<h2 style = "color:floralwhite"><b>Contact Us</b></h2>
 						<address id = "address" style = "color:floralwhite">
 							151 Charles Street West<br>
 							Kitchener, Ontario<br>
 							Canada, N2G 1H6<br><br>
-							<strong>C:</strong> 519-123-1234<br>
-							<strong>T:</strong> 519-123-1234<br><br>
 							Copyright © fresh.Inc<br>
 						</address>
 						<div class = signupbox>
