@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 
@@ -11,9 +12,9 @@
 		<meta name="Resource-type" content="Document" />
 
 
-		<link rel="stylesheet" type="text/css" href="../jquery.fullPage.css" />
+		<link rel="stylesheet" type="text/css" href="jquery.fullPage.css" />
 		<link rel="stylesheet" type="text/css" href="examples.css" />
-		<link rel="stylesheet" href="../fancyapps-fancyBox-18d1712/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+		<link rel="stylesheet" href="fancyapps-fancyBox-18d1712/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
 
 		<style>
 
@@ -139,7 +140,7 @@
             }
             #footer{
                 position: absolute;
-                height: 50px;
+                height: 60px;
                 display:block;
                 bottom: 0px;
                 width: 100%;
@@ -263,26 +264,26 @@
 
 			}
 			#section1 .fashion{
-				left:8%;
-            top:30%;
-				-webkit-border-radius: 10px;
-				border-radius: 10px;
-			}
-			#section1 .automotive{
 				left:31%;
             top:30%;
 				-webkit-border-radius: 10px;
 				border-radius: 10px;
 			}
-			#section1 .medical{
+			#section1 .automotive{
 				left:54%;
+            top:30%;
+				-webkit-border-radius: 10px;
+				border-radius: 10px;
+			}
+			#section1 .medical{
+				left:77%;
             top:30%;
 				-webkit-border-radius: 10px;
 				border-radius: 10px;
 			}
 
 			#section1 .interiorDesign{
-				left:77%;
+				left:8%;
             top:30%;
 				-webkit-border-radius: 10px;
 				border-radius: 10px;
@@ -486,9 +487,11 @@
 
 			#fashionText{
 				position:absolute;
+				color: #AAA;
 				z-index:4;
-				font-size:40px;
-				left:45%;
+				font-size:50px;
+				left:40%;
+				width:60%;
 				top:10%;
 				display:block;
 			}
@@ -511,20 +514,7 @@
 				width:40%;
 				top:30%;
 				display:block;
-			}
-			
-			.mouseoverInstructions{
-				top:0px;
-				opacity:1;
-				background-color: rgba(0, 0, 0, 0.5);
-				position: absolute;
-				width:100%;
-				height:60px;
-				font-size: 40px;
-				text-align: center;
-				color:white;
-				z-index: 3;	
-			}
+			}						
 
 			/* Section 2
 			* --------------------------------------- */
@@ -595,7 +585,7 @@
 				margin:0;
 				text-align: left;
 				top: 25%;
-				left: 7%;
+				left: 0%;
 				position: relative;
 				width: 582px;
 			}
@@ -607,7 +597,7 @@
                 margin:0;
 				text-align: left;
 				top: 30%;
-				left: 7%;
+				left: 0%;
 				position: relative;
 				width: 582px;
             }
@@ -615,7 +605,7 @@
                 margin:0;
 				text-align: center;
 				top: 40%;
-				left: 0%;
+				left: -10%;
 				position: relative;
 				width: 582px;
                 color: floralwhite;
@@ -735,11 +725,11 @@ var console = { log: function() {} };
 
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 		<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
-		<script type="text/javascript" src="../fancyapps-fancyBox-18d1712/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-		<script src="../circle-progress.js"></script>
-		<script src="../jquery.line.js"></script>
+		<script type="text/javascript" src="fancyapps-fancyBox-18d1712/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+		<script src="circle-progress.js"></script>
+		<script src="jquery.line.js"></script>
 
-		<script type="text/javascript" src="../jquery.fullPage.js"></script>
+		<script type="text/javascript" src="jquery.fullPage.js"></script>
 		<script type="text/javascript" src="examples.js"></script>
 
 
@@ -776,10 +766,7 @@ var console = { log: function() {} };
 
 						$('.modalBackground').attr('src', outlineInteriorBackground);
 						interiorDesignInterval = setInterval(swapBackground, 400);
-
-						$('.mouseoverInstructions').css('top','-60px');						
-						$('.mouseoverInstructions').css('opacity',1);
-						$('.mouseoverInstructions').animate({top:0});
+						
 
 						//Positioning and sizing the couch
 						$('.modalMouseOver#couch').width(couchWidth = $('#interiorDesignModal').width()*0.56);		
@@ -795,7 +782,6 @@ var console = { log: function() {} };
 
 						function expandCouch(){
 							$('.modalMouseOver#couch').stop().css('opacity',1);
-							$('.mouseoverInstructions').animate({opacity:0},'fast');							
 							$('#couchText').stop().animate({opacity:1},'fast');							
 							$('#interiorDesignModal .modalOverlay').stop().animate({opacity:0.5}, 'fast');							
 							$('.modalMouseOver#couch').stop().animate({
@@ -808,7 +794,6 @@ var console = { log: function() {} };
 
 						function expandClock(){
 							$('.modalMouseOver#clock').stop().css('opacity',1);
-							$('.mouseoverInstructions').animate({opacity:0},'fast');
 							$('#clockText').stop().animate({opacity:1},'fast');							
 							$('#interiorDesignModal .modalOverlay').stop().animate({opacity:0.5}, 'fast');
 							$('.modalMouseOver#clock').stop().animate({
@@ -894,9 +879,6 @@ var console = { log: function() {} };
 						$('.modalBackground').attr('src', outlineAutoBackground);
 						automotiveInterval = setInterval(swapAutoBackground, 400);
 
-						$('.mouseoverInstructions').css('top','-60px');						
-						$('.mouseoverInstructions').css('opacity',1);
-						$('.mouseoverInstructions').animate({top:0});
 
 						//Positioning and sizing the engine specs
 						$('#engineSpecs').width($('#automotiveModal').height()*0.7);								
@@ -911,7 +893,6 @@ var console = { log: function() {} };
 						$('.modalMouseOver#engine').css('top',$('#automotiveModal').height()*0.45);
 
 						function showSpecs(){
-							$('.mouseoverInstructions').animate({opacity:0},'fast');
 							$('#automotiveModal .modalOverlay').stop().animate({opacity:0.5}, 'fast');
 							$('#automotiveModal .modalDescription').stop().animate({opacity:1},'fast');							
 						}
@@ -1244,7 +1225,7 @@ $('#section2').line(70, 51, 83, 45, "line4");
 
 						<div class="box">
                             <h2 style = "color: floralwhite; text-shadow: 2px 2px 16px #000;">
-								Take a <span style="color:#DAA520;font-family:Perpetua">D<span style="font-size:80%">EEP</span></span>er look into these images...
+								Take a <span style="color:#DAA520;font-family:Perpetua">D<span style="font-size:80%">EEP</span></span>er look at these images...
 							</h2>
 						</div>
 					</div>			
@@ -1254,7 +1235,7 @@ $('#section2').line(70, 51, 83, 45, "line4");
 			<div class="section moveDown" id="section2">
 				<div class="wrap">
                     <h2 id = "text" style = "color:#D6EBFF; font-size: 26pt; width:50%;">
-                        Constant R&amp;D Fueling Innovative Products
+                        Constant R&amp;D<br>Fueling Innovative Products
                     </h2>
 					<div class="box">
 					</div>
@@ -1302,8 +1283,7 @@ $('#section2').line(70, 51, 83, 45, "line4");
 						<address id = "address" style = "color:floralwhite">
 							151 Charles Street West<br>
 							Kitchener, Ontario<br>
-							Canada, N2G 1H6<br><br>
-							© 2015 DeepVision Inc.<br>
+							Canada, N2G 1H6<br>
 						</address>
 						
 					</div>
@@ -1325,14 +1305,14 @@ $('#section2').line(70, 51, 83, 45, "line4");
 							</span>
 						</div>
 						<div id = "emailbox">
-						        Get More Info<br><address style = "font-size: 13pt;"><br><b>Inquiries: </b>inquiries@deepvision.co<br>
+						        Get More Info<address style = "font-size: 13pt;"><b>Inquiries: </b>inquiries@deepvision.co<br>
                                <b>Press: </b>press@deepvision.co</address>
 						</div>
 					
 				</div>
 				<div id = "footer">
-                    <img src="imgs/logotransparent.png" style = "height:6%; width:4%; position: fixed; left:42%;"/>
-				    <img src="imgs/deepvisioncolor.png" style = "height:6%; width:17%; position: fixed; left:44%;"/>
+                    <img src="imgs/logotransparent.png" style = "height:6%; width:4%; position: fixed; left:42%; margin-top:8px;"/>
+				    <img src="imgs/deepvisioncolor.png" style = "height:6%; width:17%; position: fixed; left:44%; margin-top:8px;"/>
 				</div>
 			</div>
 
@@ -1344,7 +1324,6 @@ $('#section2').line(70, 51, 83, 45, "line4");
 			<div class="modalDescription" id="couchText">Fava III Sofa<br>$549.00</div>
 			<div class="modalDescription" id="clockText">Artistic Round Frame Wall Clock, 12"<br>$68.50</div>
 			<img class="modalMouseOver" id="clock" src="imgs/popupClock.png"/>
-			<div class="mouseoverInstructions">Mouse over highlighted images...</div>
 			</div></div>
 		<div style="display:none"><div id="fashionModal" class="modal">
 			<img id="girl" src="imgs/fashion2.png"/>
@@ -1353,7 +1332,7 @@ $('#section2').line(70, 51, 83, 45, "line4");
 				<div class="circle" id="shirtCircle"></div>
 			</div>
 			<img id="cart" src="imgs/temp/shoppingcart.png"/>
-			<div id="fashionText">Single swipe purchasing.</div>
+			<div id="fashionText">Single Swipe Purchasing</div>
 			<div id="loadingCircle"></div>
 			</div></div>
 		<div style="display:none"><div id="automotiveModal" class="modal">
@@ -1361,20 +1340,19 @@ $('#section2').line(70, 51, 83, 45, "line4");
 			<div class="modalOverlay"></div>
 			<img class="modalMouseOver" id="engine" src="imgs/temp/engine.jpg"/>
 			<img id="engineSpecs" class="modalDescription" src="imgs/temp/enginespecs.JPG"/>
-			<div class="modalDescription">Find out exactly what's under the hood.</div>
-			<div class="mouseoverInstructions">Mouse over highlighted images...</div>
+			<div class="modalDescription">Find out exactly what's under the hood!</div>
 			</div></div>
 		<div style="display:none"><div id="medicalModal" class="modal">
 			<div class="medicalPages">
 				<div class="medicalPage" id="leftPage">
 					<img class="medicalPageImage" src="imgs/temp/medicalcollaborate.jpg"/>
 					<div class="modalOverlay"></div>
-					<div class="modalDescription">Collaborate with other medical professionals.</div>
+					<div class="modalDescription">Collaborate with other medical professionals</div>
 				</div>
 				<div class="medicalPage" id="rightPage">					
 					<img class="medicalPageImage" src="imgs/temp/doctorwpatient.jpg"/>
 					<div class="modalOverlay"></div>
-					<div class="modalDescription">Interact with patients like never before.</div>
+					<div class="modalDescription">Interact with patients like never before</div>
 				</div>
 			</div>
 
