@@ -478,8 +478,8 @@
 
 			#cart{
 				position:absolute;
-				z-index:4;
-				width:30%;
+                z-index: 4;
+				width:40%;
 				height:60%;
 				display:block;
 			}
@@ -593,18 +593,44 @@
 			#section4 .signupbox {
 				
 				margin:0;
-				text-align: center;
-				top: 3%;
-				left: 60%;
-				position: absolute;
+				text-align: left;
+				top: 25%;
+				left: 7%;
+				position: relative;
 				width: 582px;
 			}
+            #section4 .title{
+                color: black;
+                font-size: 16pt;
+            }
+            #signupbox2{
+                margin:0;
+				text-align: left;
+				top: 30%;
+				left: 7%;
+				position: relative;
+				width: 582px;
+            }
+            #emailbox{
+                margin:0;
+				text-align: center;
+				top: 40%;
+				left: 0%;
+				position: relative;
+				width: 582px;
+                color: floralwhite;
+                font-size: 16pt;
+                
+            }
+            #emailbutton{
+                background-image: url("imgs/redemail.png");
+            }
 			.inputWithButton{
 				display:inline-block;
 				/*    overflow:hidden;*/
 				border-radius: 3px;
-				margin-top: 100px;
-				margin-left: 50px;
+				margin-top: 8px;
+				margin-left: 0;
 			}
 			.inputWithButton > *{
 				vertical-align:top;
@@ -612,28 +638,29 @@
 				margin:0;
 				padding: 13px 10px;
 			}
-			.inputWithButton > input[type=text]{
+			.inputWithButton > input[type=email]{
 				width:300px;
 				border:1px solid #444;
 				/*    border-right:none;*/
 			}
-			.inputWithButton > input[type=button]{
+			.inputWithButton > input[type=submit]{
 				border-left:1px solid gray;
 				background:#A30000;
 				border:1px solid #A30000;
 				color:#fff;
 				cursor:pointer;
 				width:70px;
+                padding: 14px;
+/*                background: url(imgs/redemail.png) no-repeat center center;*/
 			}
 
 
 			/* Section 4
 			* --------------------------------------- */
 			#section4{
-				/*            background-image: url(imgs/fresh.jpg);*/
 				margin: 0px 0 0 0;
 				background-size: 100% 100%;
-				background-image: url(imgs/communitech.jpg);
+				background-image: url(imgs/comm.jpg);
 			}
 			#section4 .transbox
 			{
@@ -642,8 +669,8 @@
 /*				            opacity:0.7;*/
 				/*            filter:alpha(opacity=60);  For IE8 and earlier */
 				text-align: center;
-				top: 35%;
-				left: 25%;
+				top: 50%;
+				left: 53%;
 				position: absolute;
 				width: 500px;
 			}
@@ -732,7 +759,7 @@ var console = { log: function() {} };
 					scrolling: 'no',
 					afterLoad: function(){
 						var normalInteriorBackground = "imgs/temp/interiordesign.jpg";
-						var outlineInteriorBackground = "imgs/temp/interiordesign.gif" ;
+						var outlineInteriorBackground = "imgs/temp/interiordesignfixed.jpg" ;
 						var couchFactor = 1.25;
 						var clockFactor = 1.5;
 						var couchWidth, couchHeight, couchLeft, couchTop;
@@ -748,7 +775,7 @@ var console = { log: function() {} };
 						}
 
 						$('.modalBackground').attr('src', outlineInteriorBackground);
-						interiorDesignInterval = setInterval(swapBackground, 2000);
+						interiorDesignInterval = setInterval(swapBackground, 400);
 
 						$('.mouseoverInstructions').css('top','-60px');						
 						$('.mouseoverInstructions').css('opacity',1);
@@ -853,7 +880,7 @@ var console = { log: function() {} };
 					scrolling: 'no',
 					afterLoad: function(){
 						var normalAutoBackground = "imgs/temp/automobile.jpg";
-						var outlineAutoBackground = "imgs/temp/automobile.gif" ;
+						var outlineAutoBackground = "imgs/temp/automobilefixed.jpg" ;
 
 						function swapAutoBackground(){
 							if ($('.modalBackground').attr('src') == normalAutoBackground){
@@ -865,7 +892,7 @@ var console = { log: function() {} };
 						}
 
 						$('.modalBackground').attr('src', outlineAutoBackground);
-						automotiveInterval = setInterval(swapAutoBackground, 2000);
+						automotiveInterval = setInterval(swapAutoBackground, 400);
 
 						$('.mouseoverInstructions').css('top','-60px');						
 						$('.mouseoverInstructions').css('opacity',1);
@@ -1176,7 +1203,7 @@ $('#section2').line(70, 51, 83, 45, "line4");
 							</a>
 							<div class="overlay">
 								<a href="#interiorDesignModal" class="fancybox">
-									<img src="imgs/interiordesignhover.png" alt="iphone"/>
+									<img src="imgs/hoverid.png" alt="iphone"/>
 								</a>
 							</div>
 						</div>
@@ -1187,7 +1214,7 @@ $('#section2').line(70, 51, 83, 45, "line4");
 							</a>
 							<div class="overlay">
 								<a href="#fashionModal" class="fancybox">
-									<img src="imgs/fashionhover.png" alt="iphone"/>
+									<img src="imgs/hoverfashion.png" alt="iphone"/>
 								</a>
 							</div>
 						</div>
@@ -1198,7 +1225,7 @@ $('#section2').line(70, 51, 83, 45, "line4");
 							</a>
 							<div class="overlay">
 								<a href="#automotiveModal" class="fancybox">
-									<img src="imgs/automotivehover.png" alt="iphone"/>
+									<img src="imgs/hoverauto.png" alt="iphone"/>
 								</a>
 							</div>
 						</div>		
@@ -1208,7 +1235,7 @@ $('#section2').line(70, 51, 83, 45, "line4");
 							</a>							
 							<div class="overlay">
 								<a href="#medicalModal" class="fancybox">
-									<img src="imgs/medicalhover.png" alt="iphone" id="overlayMedical" />
+									<img src="imgs/med2.png" alt="iphone" id="overlayMedical" />
 								</a>
 							</div>
 						</div>
@@ -1271,20 +1298,36 @@ $('#section2').line(70, 51, 83, 45, "line4");
 				<div class="wrap">
 					<div class="transbox">
 					
-						<h2 style = "color:floralwhite"><b>Contact Us</b></h2>
+<!--						<h2 style = "color:floralwhite"><b>Contact Us</b></h2>-->
 						<address id = "address" style = "color:floralwhite">
 							151 Charles Street West<br>
 							Kitchener, Ontario<br>
 							Canada, N2G 1H6<br><br>
-							Copyright © fresh.Inc<br>
+							© 2015 DeepVision Inc.<br>
 						</address>
-						<div class = signupbox>
-							<span class="inputWithButton" action="demo_form.asp" method="post">
-								<input type="text" placeholder="Your email"/>
-								<input type= "button" value = "Sign up"/>
+						
+					</div>
+					<div class = signupbox>
+							<h3 class=title><b>Sign up to join our exclusive list of API beta testers:</b></h3>
+							<span class="inputWithButton" action="//formspree.io/inquiries@deepvision.co"
+      method="POST" method="post">
+								<input type="email" placeholder="Your email"/>
+								<input type= "submit" value = "Sign up"/>
 							</span>
 						</div>
-					</div>
+						
+						<div id = "signupbox2">
+							<h3 class="title"><b>Stay in the loop with Deep Vision:</b></h3>
+							<span class="inputWithButton" action="//formspree.io/inquiries@deepvision.co"
+      method="POST" method="post">
+								<input type="email" placeholder="Your email"/>
+								<input type= "submit" value = "Sign up"/>
+							</span>
+						</div>
+						<div id = "emailbox">
+						        Get More Info<br><address style = "font-size: 13pt;"><br><b>Inquiries: </b>inquiries@deepvision.co<br>
+                               <b>Press: </b>press@deepvision.co</address>
+						</div>
 					
 				</div>
 				<div id = "footer">
@@ -1295,7 +1338,7 @@ $('#section2').line(70, 51, 83, 45, "line4");
 
 		</div>
 		<div style="display:none"><div id="interiorDesignModal" class="modal">
-			<img class="modalBackground" src="imgs/temp/interiordesign.gif"/>
+			<img class="modalBackground" src="imgs/temp/interiordesignfixed.jpg"/>
 			<div class="modalOverlay"></div>
 			<img class="modalMouseOver" id="couch" src="imgs/popupSofa.png"/>
 			<div class="modalDescription" id="couchText">Fava III Sofa<br>$549.00</div>
@@ -1309,12 +1352,12 @@ $('#section2').line(70, 51, 83, 45, "line4");
 				<img src="imgs/temp/boylondonshirt.png"/>
 				<div class="circle" id="shirtCircle"></div>
 			</div>
-			<img id="cart" src="imgs/temp/blackcart.png"/>
+			<img id="cart" src="imgs/temp/shoppingcart.png"/>
 			<div id="fashionText">Single swipe purchasing.</div>
 			<div id="loadingCircle"></div>
 			</div></div>
 		<div style="display:none"><div id="automotiveModal" class="modal">
-			<img class="modalBackground" src="imgs/temp/automobile.gif"/>
+			<img class="modalBackground" src="imgs/temp/automobilefixed.jpg"/>
 			<div class="modalOverlay"></div>
 			<img class="modalMouseOver" id="engine" src="imgs/temp/engine.jpg"/>
 			<img id="engineSpecs" class="modalDescription" src="imgs/temp/enginespecs.JPG"/>
