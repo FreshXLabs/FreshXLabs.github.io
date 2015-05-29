@@ -152,6 +152,11 @@
 
 			/* Section 0
 			* --------------------------------------- */
+			@font-face{
+				font-family:Perpetua;
+				src:url('perpetua.ttf');
+			}
+			
 			#section0{
 				padding: 0px 0;
 				overflow: hidden;
@@ -199,11 +204,15 @@
 				top: 100px;
 			}
 			#section1 .box{
-                top:0%;
-                padding-left: 9% ;
-				width: 350px;
+                margin-top:50px;
+				width: 100%;
 				z-index: 1;
 			}	
+			
+			#section1 .box h2{
+				margin-left:auto;
+				margin-right:auto;
+			}
 
 			#section1 a{
 				position:absolute;
@@ -221,8 +230,8 @@
 				position: absolute;
 				left: 0px;
 				top: 0px;
-				width:200px;
-				height:200px;
+				width:100%;
+				height:100%
 			}
 
 			#section1 .container{
@@ -230,7 +239,7 @@
 				position: absolute;
 				z-index: 1;
 				opacity: 1;
-				width:200px;
+				width:15%;
 				height:200px;
 				overflow: hidden;
 			}
@@ -244,7 +253,7 @@
 				display: block;
             height:100%;
 				width:100%;
-            top:50%;
+            top:30%;
             text-align: center;
 				-webkit-transition: all 0.4
 					s ease-out;
@@ -254,27 +263,27 @@
 
 			}
 			#section1 .fashion{
-				left:45%;
-            top:20%;
+				left:8%;
+            top:30%;
 				-webkit-border-radius: 10px;
 				border-radius: 10px;
 			}
 			#section1 .automotive{
-				left:45%;
-            top:-15%;
+				left:31%;
+            top:30%;
 				-webkit-border-radius: 10px;
 				border-radius: 10px;
 			}
 			#section1 .medical{
-				left:65%;
-            top:20%;
+				left:54%;
+            top:30%;
 				-webkit-border-radius: 10px;
 				border-radius: 10px;
 			}
 
 			#section1 .interiorDesign{
-				left:65%;
-            top:-15%;
+				left:77%;
+            top:30%;
 				-webkit-border-radius: 10px;
 				border-radius: 10px;
 			}
@@ -325,13 +334,13 @@
 			
 			#section2 .imgsContainer div{
 				background-color:transparent;
-				color: white;
+				color: #D6EBFF;
 				text-align: center;
 				font-size:20px;
 			}
 			
 			#section2 .line{
-				border-bottom: thick solid white;
+				border-bottom: thick solid #D6EBFF;
 			}
 			
 			.modalBackground{
@@ -483,7 +492,27 @@
 				top:10%;
 				display:block;
 			}
+			
+			#couchText{
+				position:absolute;
+				z-index:4;
+				font-size:20px;
+				left:75%;
+				width:20%;
+				top:60%;
+				display:block;
+			}
 
+			#clockText{
+				position:absolute;
+				z-index:4;
+				font-size:20px;
+				left: 15%;
+				width:40%;
+				top:30%;
+				display:block;
+			}
+			
 			.mouseoverInstructions{
 				top:0px;
 				opacity:1;
@@ -508,10 +537,9 @@
 			}
             #text{
                 position: absolute;
-                top: 58%;
-                left: 70%;
-                height: 20%;
-                width: 25%;
+                top: 76%;
+                left: 50%;
+                width: 50%;
             }
 			#section2 .box{
 				position: absolute;
@@ -519,41 +547,31 @@
                 width: 100%;
 			}
 			
-			#imagesegmentation{
+			.brainText{
 				position: absolute;
-				top: 9%;
-				left: 0%;
-				height: 16%;
-				width: 16%;
 			}
 			
-			#deeplearning{
-				position: absolute;
-                top: 73%;
-                left: 7%;
-				height: 15%;
-				width: 15%;
+			#brain1{
+				top: 9%;
+				left: 0%;
 			}
-			#imageclassification{
-				position: absolute;
-				top:82%;
-                left:35%;
-				height: 14%;
-				width: 14%;
-			}
-			#edgedetection{
-				position: absolute;
+			#brain2{
                 top: 43%;
                 left: 0%;
-				height: 15%;
-				width: 15%;
 			}
-			#stochastic{
-				position: absolute;
+			#brain3{
+                top: 73%;
+                left: 7%;
+
+			}
+			#brain4{
+				top:40%;
+                left:85%;
+			}
+			
+			#brain5{
 				top: 12%;
 				left: 85%;
-				height: 12%;
-				width: 12%;
 			}
 
 			.modal{
@@ -700,6 +718,9 @@ var console = { log: function() {} };
 
 		<script type="text/javascript">
 			$(document).ready(function() {
+				
+				$('.container').height($('.container').width());
+				
 				var medicalInterval;				
 				var interiorDesignInterval;
 				var automotiveInterval;
@@ -747,8 +768,9 @@ var console = { log: function() {} };
 
 						function expandCouch(){
 							$('.modalMouseOver#couch').stop().css('opacity',1);
-							$('.mouseoverInstructions').animate({opacity:0},'fast');
-							$('#interiorDesignModal .modalOverlay').stop().animate({opacity:0.5}, 'fast');
+							$('.mouseoverInstructions').animate({opacity:0},'fast');							
+							$('#couchText').stop().animate({opacity:1},'fast');							
+							$('#interiorDesignModal .modalOverlay').stop().animate({opacity:0.5}, 'fast');							
 							$('.modalMouseOver#couch').stop().animate({
 								width: couchWidth*couchFactor,
 								height: couchHeight*couchFactor,
@@ -760,6 +782,7 @@ var console = { log: function() {} };
 						function expandClock(){
 							$('.modalMouseOver#clock').stop().css('opacity',1);
 							$('.mouseoverInstructions').animate({opacity:0},'fast');
+							$('#clockText').stop().animate({opacity:1},'fast');							
 							$('#interiorDesignModal .modalOverlay').stop().animate({opacity:0.5}, 'fast');
 							$('.modalMouseOver#clock').stop().animate({
 								width: clockWidth*clockFactor,
@@ -771,6 +794,7 @@ var console = { log: function() {} };
 
 						function collapseCouch(){
 							$('#interiorDesignModal .modalOverlay').stop().animate({opacity:0}, 'fast');
+							$('#couchText').stop().animate({opacity:0},'fast');							
 							$('.modalMouseOver#couch').stop().animate({
 								width: couchWidth+"px",
 								height: couchHeight+"px",
@@ -783,6 +807,7 @@ var console = { log: function() {} };
 
 						function collapseClock(){
 							$('#interiorDesignModal .modalOverlay').stop().animate({opacity:0}, 'fast');
+							$('#clockText').stop().animate({opacity:0},'fast');							
 							$('.modalMouseOver#clock').stop().animate({
 								width: clockWidth+"px",
 								height: clockHeight+"px",
@@ -964,7 +989,7 @@ var console = { log: function() {} };
 					function(){
 						$(this).find('.overlay').stop().animate({top:0});
 					});	
-
+				
 				$('#fullpage').fullpage({
 					'verticalCentered': false,
 					'css3': true,
@@ -990,17 +1015,89 @@ var console = { log: function() {} };
                             $('#headerImage').animate({height:'150px',width:'800px', top:'40%',left:'24%'}, 300);
                             $('#header').animate({top:'0px'});
 						}
+						
+						var stop = false;
 
 						//Enter RnD
 						if (nextIndex == 3){
-							$('#section2').line(19, 18, 37, 30);
-$('#section2').line(17, 50, 32, 52);
-							$('#section2').line(22, 77, 35, 66);
-$('#section2').line(50, 85, 56, 68);							
+							stop = false;
+							var widths = [];
+							var lineT, textT, letterT;
+							function showLine(n){
+								if (stop)
+									return;
+								if (n == 5 || n == 4)
+									$('#line'+n).animate({width:widths[n-1]},500);
+								else if (n<=3){
+									var right = $('#line'+n).offset().left + widths[n-1];
+									$('#line'+n).css('left', 'auto');
+									$('#line'+n).css('right',$('#section2').width()-right);								
+								}
+								if (n <= 4)
+									$('#line'+n).animate({width:widths[n-1]},500,function(){showLine(n+1)});
+							}
+							
+							function showText(id){
+								if (id == 6 || stop)
+									return;								
+								var str = $('#brain'+id).text();
+								$('#brain'+id).empty();
+								$('#brain'+id).css('opacity',1);
+								addLetter(id, str, 0);
+							}
+							
+							function addLetter(id, str, index){
+								if (stop)
+									return;
+								if (str[index] == ' ')
+									$('#brain'+id).append('<br>');
+								else{
+									var $letter = $('<span />').attr('class', 'fadeLetter').html(str[index]);
+									$('#brain'+id).append($letter);
+									$letter.hide();
+									$letter.fadeIn(100);
+								  }
+								if (index == str.length-1)
+									showText(id+1);
+								else{
+								function next(){
+									addLetter(id, str,index+1);	
+								}
+									letterT = setTimeout(next, 25);
+								}
+							}
+							
+							$('.line').remove();
+							$('#text').hide();
+							$('.brainText').css('opacity',0);
+							$('.brainText br').replaceWith(' ');
+							
+							$('.brainText').find("span").each(function(index) {
+    	var text = $(this).text();//get span content
+    	$(this).replaceWith(text);//replace all span with just content
+	});							
+							$('#text').fadeIn(2000);
+							$('#section2').line(19, 18, 37, 30, "line1");
+$('#section2').line(17, 50, 32, 52, "line2");
+							$('#section2').line(22, 77, 35, 66, "line3");
+$('#section2').line(70, 51, 83, 45, "line4");
+							$('#section2').line(84, 20, 69, 32, "line5");
+							$('.line').css('opacity',0);
+							for (var i = 1; i<=5; i++){
+								widths.push($('#line'+i).width());							
+								$('#brain'+i).width($('#brain'+i).width());								
+								$('#line'+i).width(0);
+								$('#line'+i).css('opacity',1);
+							}
+							textT = setTimeout(function(){showText(1)}, 1000);
+							lineT = setTimeout(function(){showLine(1)}, 500);
 						}
 						
 						//Leave RnD
 						if (index == 3){
+							stop = true;
+							$('.line').animate({opacity:0},function(){$('.line').remove()});
+							$('.brainText').animate({opacity:0});
 						}
 						
 						//Leave 2nd Page
@@ -1036,8 +1133,8 @@ $('#section2').line(50, 85, 56, 68);
 
 			<ul id="menu2">
 				<li data-menuanchor= "firstPage"><a href="#firstPage">Home</a></li>
-				<li data-menuanchor= "secondPage"><a href="#secondPage">About</a></li>
-				<li data-menuanchor= "3rdPage"><a href="#3rdPage">R&amp;D</a></li>
+				<li data-menuanchor= "secondPage"><a href="#secondPage">Sneak Peek</a></li>
+				<li data-menuanchor= "3rdPage"><a href="#3rdPage">Research &amp; Development</a></li>
 				<li data-menuanchor= "4thPage"><a href="#4thPage">Contact</a></li>
 <!--				<li data-menuanchor= "5thPage"><a href="#5thPage">Contact</a></li>	  	    -->
 			</ul>
@@ -1119,8 +1216,9 @@ $('#section2').line(50, 85, 56, 68);
 
 
 						<div class="box">
-                            <h2 style = "color: floralwhite">
-								Every image has a story <br>to tell...</h2>
+                            <h2 style = "color: floralwhite; text-shadow: 2px 2px 16px #000;">
+								Take a <span style="color:#DAA520;font-family:Perpetua">D<span style="font-size:80%">EEP</span></span>er look into these images...
+							</h2>
 						</div>
 					</div>			
 				</div>
@@ -1128,18 +1226,18 @@ $('#section2').line(50, 85, 56, 68);
 
 			<div class="section moveDown" id="section2">
 				<div class="wrap">
-                    <h2 id = "text" style = "color:#D6EBFF ; font-size: 34pt;">
-                        R&amp;D<br>Section, For DeepVision!
+                    <h2 id = "text" style = "color:#D6EBFF; font-size: 26pt; width:50%;">
+                        Constant R&amp;D Fueling Innovative Products
                     </h2>
 					<div class="box">
 					</div>
                     
 					<div class="imgsContainer">						
-						<div id="deeplearning">Deep<br>Learning</div>>
-						<div id="edgedetection">Edge<br>Detection</div>
-						<div id="imagesegmentation">Image<br>Segmentation</div>
-						<div id="imageclassification">Image<br>Classification</div>
-						<div id="stochastic">Stochastic<br>Models</div>
+						<div id="brain1" class="brainText">Image Segmentation</div>
+						<div id="brain2" class="brainText">Edge Detection</div>
+						<div id="brain3" class="brainText">Deep Learning</div>>						
+						<div id="brain4" class="brainText">Image Classification</div>
+						<div id="brain5" class="brainText">Stochastic Models</div>
 					</div>
 
 				</div>
@@ -1200,6 +1298,8 @@ $('#section2').line(50, 85, 56, 68);
 			<img class="modalBackground" src="imgs/temp/interiordesign.gif"/>
 			<div class="modalOverlay"></div>
 			<img class="modalMouseOver" id="couch" src="imgs/popupSofa.png"/>
+			<div class="modalDescription" id="couchText">Fava III Sofa<br>$549.00</div>
+			<div class="modalDescription" id="clockText">Artistic Round Frame Wall Clock, 12"<br>$68.50</div>
 			<img class="modalMouseOver" id="clock" src="imgs/popupClock.png"/>
 			<div class="mouseoverInstructions">Mouse over highlighted images...</div>
 			</div></div>

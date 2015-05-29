@@ -11,7 +11,7 @@
 (function($) {
 
 	var helpers = {
-		createLine: function(x1, y1, x2, y2){
+		createLine: function(x1, y1, x2, y2, id){
 
 			// Check if browser is Internet Exploder ;)
 			var isIE = navigator.userAgent.indexOf("MSIE") > -1;
@@ -25,7 +25,7 @@
 			}
 			var line = document.createElement("div");
 
-			//line.setAttribute("id",id);
+			line.setAttribute("id",id);
 			line.setAttribute("class","line");
 			// Formula for the distance between two points
 			// http://www.mathopenref.com/coorddist.html
@@ -51,10 +51,10 @@
 	}
 
 
-	$.fn.line = function( x1, y1, x2, y2) {
+	$.fn.line = function( x1, y1, x2, y2, id) {
 		
 
-			$(this).append(helpers.createLine($(this).width()*x1/100.0,$(this).height()*y1/100.0,$(this).width()*x2/100.0,$(this).height()*y2/100.0));
+			$(this).append(helpers.createLine($(this).width()*x1/100.0,$(this).height()*y1/100.0,$(this).width()*x2/100.0,$(this).height()*y2/100.0, id));
 
 		};
 })(jQuery);
