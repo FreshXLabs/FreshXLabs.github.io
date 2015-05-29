@@ -107,7 +107,6 @@
 				text-align: right;
 			}
 			/*    MENU ENDED    */
-<<<<<<< HEAD
 			#logo{
 				position: fixed;
 				display: block;
@@ -115,6 +114,7 @@
 				padding-top:2px;
 				width: 150px;
 				left: 50px;
+                top: -500px;
 			}
 			#headerImage
 			{
@@ -128,49 +128,35 @@
 			}
 			#header{
 				position: absolute;
-				height: 50px;
+                height: 40px;
 				display:block;
-				top: -500px;
+                top: 0px;
 				width: 100%;
 				background: #000;
-				opacity: 0.7;
+                opacity: 0.6;
+<<<<<<< HEAD
 				z-index:9;
 				text-align:left;
 				color: #FFFFFF;
 				padding: 10px 0 0 0;
 			}
 =======
-            #logo{
-                position: fixed;
-                display: block;
-                height: 200px;
-                padding-top:2px;
-                width: 150px;
-                left: 50px;
-                top: -500px;
-            }
-            #headerImage
-            {
-                position: fixed;
-                display: block;
-                height: 150px;
-                top:40%;
-                width: 800px;
-                left: 250px;
-                padding-top:7px;
-            }
-            #header{
-                position: absolute;
-                height: 40px;
-                display:block;
-                top: 0px;
-                width: 100%;
-                background: #000;
-                opacity: 0.6;
                 z-index:9;
                 text-align:left;
                 color: #FFFFFF;
-                padding: 10px 0 0 0;
+                padding: 10px 0 0 10px;
+            }
+            #footer{
+                position: absolute;
+                height: 50px;
+                display:block;
+                bottom: 0px;
+                width: 100%;
+                background: #000;
+                opacity: 0.7;
+                text-align:center;
+                color: #000;
+                padding: 0 0 0 0;
             }
 >>>>>>> origin/ericasite
 
@@ -209,21 +195,14 @@
 */
 			/* Section 1
 			* --------------------------------------- */
-<<<<<<< HEAD
 			#section1{
 
-				/*                background-image: url(imgs/temp.png);*/
+                background-image: url(imgs/back5.jpg);
 				background-size: 100% 100%;
 				padding: 0px 0px;
-=======
-            #section1{
-              
-                background-image: url(imgs/back5.jpg);
-                background-size: 100% 100%;
-                padding: 0px 0px;
->>>>>>> origin/ericasite
 				overflow: hidden;
 				height: 100%;
+<<<<<<< HEAD
 			}
 			#section1 img{
 				position:absolute;
@@ -332,6 +311,113 @@
 				-webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
 				-moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
 			}
+=======
+            }
+            #section1 img{
+                position:absolute;
+                left: 40px;
+                top: 100px;
+            }
+            #section1 .box{
+                position: relative;
+                top:-260px;
+                left: 0px;
+                margin-top: -100px;
+                margin-left: 50px;
+                width: 350px;
+                z-index: 1;
+            }	
+
+            #section1 a{
+                position:absolute;
+                left: 0px;
+                top: 0px;
+                display: block;
+                width:100%;
+                height:100%;
+        }
+        #section1 .overlay {
+            z-index: 2;
+            opacity: 1;
+            display: block;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            width:200px;
+            height:200px;
+        }
+
+        #section1 .overlay:hover{
+            opacity:0;
+        }
+        #section1 .container{
+            display: block;
+            position: absolute;
+            z-index: 1;
+            opacity: 1;
+            width:200px;
+            height:200px;
+            
+        }
+        #section1 .bottomContainers{
+            position: absolute;
+            display: block;
+            height:200px;
+            width:100%;
+            top:100%;
+            -webkit-transition: all 0.4
+                s ease-out;
+            -moz-transition: all 0.4s ease-out;
+            -o-transition: all 0.4s ease-out;
+            transition: all 0.4s ease-out;
+           
+        }
+        #section1 .fashion{
+            left:45%;
+            top:-110%;
+            -webkit-border-radius: 10px;
+            border-radius: 10px;
+        }
+        #section1 .automotive{
+            left:45%;
+            top:-220%;
+            -webkit-border-radius: 10px;
+            border-radius: 10px;
+        }
+        #section1 .medical{
+            left:65%;
+            top:-110%;
+            -webkit-border-radius: 10px;
+            border-radius: 10px;
+        }
+
+        #section1 .interiorDesign{
+            left:65%;
+            top:-220%;
+            -webkit-border-radius: 10px;
+            border-radius: 10px;
+        }
+
+        #section1 .bottomContainers.active{
+            -webkit-transform: translate3d(0px, -100px, 0px);
+            -moz-transform: translate3d(0px, -100px%, 0px);
+            -ms-transform:translate3d(0px, -100px, 0px);
+            transform: translate3d(0px, -100px, 0px);
+        }
+        #section1 img{
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            
+            -webkit-border-radius: 10px;
+            border-radius: 10px;
+            box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+            -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+            -moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+        }
+>>>>>>> origin/ericasite
 			/*screen resolutions between 620px and 800px*/
 			@media all and (min-width: 620px) and (max-width: 800px){
 				#section1 .imgsContainer{
@@ -349,7 +435,25 @@
 					width: 534px;
 					height: 464px;
 				}
-			}	
+			}
+			
+			#section2 .imgsContainer{
+				position: absolute;
+				width:100%;
+				height:100%;
+			}
+			
+			#section2 .imgsContainer div{
+				background-color:transparent;
+				color: white;
+				text-align: center;
+				font-size:20px;
+			}
+			
+			#section2 .line{
+				border-bottom: thick solid white;
+			}
+			
 			.modalBackground{
 				position:absolute;
 				left:0px;
@@ -531,14 +635,10 @@
             }
 			#section2 .box{
 				position: absolute;
-<<<<<<< HEAD
-				height: 110%;
-				width: 80%;
-				left: 7%;
-				top: 35px;
-
-
+				height: 100%;
+                width: 100%;
 			}
+			
 			#imagesegmentation{
 				position: absolute;
 				top: 9%;
@@ -546,24 +646,25 @@
 				height: 16%;
 				width: 16%;
 			}
+			
 			#deeplearning{
 				position: absolute;
-				top: 67%;
-				left: 0%;
+                top: 73%;
+                left: 7%;
 				height: 15%;
 				width: 15%;
 			}
 			#imageclassification{
 				position: absolute;
 				top:82%;
-				left:55%;
+                left:35%;
 				height: 14%;
 				width: 14%;
 			}
 			#edgedetection{
 				position: absolute;
-				top: 66%;
-				left: 73%;
+                top: 43%;
+                left: 0%;
 				height: 15%;
 				width: 15%;
 			}
@@ -574,46 +675,6 @@
 				height: 12%;
 				width: 12%;
 			}
-=======
-				height: 100%;
-                width: 100%;
-			}
-            #imagesegmentation{
-                position: absolute;
-                top: 9%;
-                left: 0%;
-                height: 16%;
-                width: 16%;
-            }
-            #deeplearning{
-                position: absolute;
-                top: 73%;
-                left: 7%;
-                height: 15%;
-                width: 15%;
-            }
-            #imageclassification{
-                position: absolute;
-                top:82%;
-                left:35%;
-                height: 14%;
-                width: 14%;
-            }
-            #edgedetection{
-                position: absolute;
-                top: 43%;
-                left: 0%;
-                height: 15%;
-                width: 15%;
-            }
-            #stochastic{
-                position: absolute;
-                top: 12%;
-                left: 85%;
-                height: 12%;
-                width: 12%;
-            }
->>>>>>> origin/ericasite
 
 			.modal{
 				width:1000px;
@@ -667,13 +728,14 @@
 				width:70px;
 			}
 
+
 			/* Section 4
 			* --------------------------------------- */
 			#section4{
 				/*            background-image: url(imgs/fresh.jpg);*/
 				margin: 0px 0 0 0;
 				background-size: 100% 100%;
-				background-image: url(imgs/road.jpg);
+				background-image: url(imgs/back5.jpg);
 			}
 			#section4 .transbox
 			{
@@ -682,7 +744,7 @@
 /*				            opacity:0.7;*/
 				/*            filter:alpha(opacity=60);  For IE8 and earlier */
 				text-align: center;
-				top: 35%;
+				top: 20%;
 				left: -95px;
 				position: absolute;
 				width: 500px;
@@ -750,7 +812,7 @@ var console = { log: function() {} };
 		<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
 		<script type="text/javascript" src="../fancyapps-fancyBox-18d1712/source/jquery.fancybox.pack.js?v=2.1.5"></script>
 		<script src="../circle-progress.js"></script>
-
+		<script src="../jquery.line.js"></script>
 
 		<script type="text/javascript" src="../jquery.fullPage.js"></script>
 		<script type="text/javascript" src="examples.js"></script>
@@ -1024,9 +1086,6 @@ var console = { log: function() {} };
 					});	
 
 				$('#fullpage').fullpage({
-
-
-
 					'verticalCentered': false,
 					'css3': true,
 					'sectionsColor': ['#000', '#000', '#000', '#9B785C', '#000'],
@@ -1043,72 +1102,50 @@ var console = { log: function() {} };
 <<<<<<< HEAD
 					'onLeave': function(index, nextIndex, direction){
 						if (index == 1 && direction == 'down'){
-							$('#logo').animate({height:'40px', width:'30px', top:'5px', left:'30px'}, "fast");
-							$('#headerImage').animate({height:'30px',width:'200px', top:'5px',left:'6%'}, "fast");
+                            $('#logo').animate({height:'40px', width:'40px', top:'5px', left:'30px'}, 430);
+                            $('#headerImage').animate({height:'30px',width:'150px', top:'5px',left:'55px'}, 430);
 							$('#header').animate({top:'0px'});
 						}
 						else if (nextIndex == 1 && direction == 'up'){
-							$('#logo').animate({height:'200px', width:'150px', top:'40%', left:'50px'}, "fast");
-							$('#headerImage').animate({height:'150px',width:'1000px', top:'40%',left:'250px'}, "fast");
-							$('#header').animate({top:'-60px'});
-						}
-
-						if (index ==1 || index ==2 || index ==4 || index ==5 && direction == 'down'){
-							$('#section2 .wrap').fadeOut(10);
-						}                        
-						if (index ==3 && direction == 'down'){
-							$('#section2 .wrap').fadeOut(10);
-						}
-						if (nextIndex ==3 && direction == 'up'){
-							$('#section2 .wrap').fadeIn(3000);
-						}
-
-						if (index ==3 && direction == 'up'){
-							$('#section2 .wrap').fadeOut(10);
-						}
-						if (nextIndex ==3 && direction == 'down'){
-							$('#section2 .wrap').fadeIn(3000);
-						}
-						if (index == 2){
-							$.fancybox.close();
-						}
+                            $('#logo').animate({height:'200px', width:'200px', top:'37%', left:'16%'}, 430);
+                            $('#headerImage').animate({height:'150px',width:'800px', top:'40%',left:'24%'}, 430);
 =======
                     'onLeave': function(index, nextIndex, direction){
                         if (index == 1 && direction == 'down'){
-                            $('#logo').animate({height:'40px', width:'40px', top:'5px', left:'30px'}, 430);
-                            $('#headerImage').animate({height:'30px',width:'150px', top:'5px',left:'55px'}, 430);
+                            $('#logo').animate({height:'40px', width:'40px', top:'5px', left:'30px'}, 250);
+                            $('#headerImage').animate({height:'30px',width:'150px', top:'5px',left:'55px'}, 250);
                             $('#header').animate({top:'0px'});
                         }
                         else if (nextIndex == 1 && direction == 'up'){
-                            $('#logo').animate({height:'200px', width:'200px', top:'37%', left:'16%'}, 430);
-                            $('#headerImage').animate({height:'150px',width:'800px', top:'40%',left:'24%'}, 430);
-                            $('#header').animate({top:'0px'});
-                            }
-                        
-                        if (index ==1 || index ==2 || index ==4 || index ==5 && direction == 'down'){
-                            $('#section2 .wrap').fadeOut(10);
-                        }                        
-                        if (index ==3 && direction == 'down'){
-                            $('#section2 .wrap').fadeOut(10);
-                        }
-                        if (nextIndex ==3 && direction == 'up'){
-                            $('#section2 .wrap').fadeIn(3000);
-                        }
-                        
-                        if (index ==3 && direction == 'up'){
-                            $('#section2 .wrap').fadeOut(10);
-                        }
-                        if (nextIndex ==3 && direction == 'down'){
-                            $('#section2 .wrap').fadeIn(3000);
-                        }
+                            $('#logo').animate({height:'200px', width:'200px', top:'37%', left:'16%'}, 250);
+                            $('#headerImage').animate({height:'150px',width:'800px', top:'40%',left:'24%'}, 250);
 >>>>>>> origin/ericasite
+                            $('#header').animate({top:'0px'});
+						}
+
+						//Enter RnD
+						if (nextIndex == 3){
+							$('#section2').line(19, 18, 37, 30);
+$('#section2').line(17, 50, 32, 52);
+							$('#section2').line(22, 77, 35, 66);
+$('#section2').line(50, 85, 56, 68);							
+						}
+						
+						//Leave RnD
+						if (index == 3){
+						}
+						
+						//Leave 2nd Page
+						if (index == 2){
+							$.fancybox.close();
+						}
 					},
 
 					afterRender: function(){
 						//playing the video
 						$('video').get(0).play();
 					},
-					anchors: ['firstPage', 'secondPage', '3rdPage', '4thPage', '5thPage' ],
+					anchors: ['firstPage', 'secondPage', '3rdPage', '4thPage' ],
 					menu: '#menu2', 
 					easingcss3: 'cubic-bezier(0.175, 0.885, 0.320, 1)'
 //					easingcss3: 'cubic-bezier(0.175, 0.885, 0.320, 1.275)'
@@ -1160,12 +1197,13 @@ var console = { log: function() {} };
 
 			<div class="section" id="section1">
 				<div class="wrap">
-<<<<<<< HEAD
 
-					<video autoplay loop muted controls="false" id="myVideo">
+<!--
+				<video autoplay loop muted  id="myVideo">
 						<source src="imgs/Fireflies%20%20%20FREE%20Video%20Background%20Loop%20HD%201080p.mp4" type="video/mp4">
 						<source src="imgs/Fireflies%20%20%20FREE%20Video%20Background%20Loop%20HD%201080p.mp4" type="video/webm">
 					</video>				
+-->
 					<div class="bottomContainers">						
 						<div class="container interiorDesign">							
 							<a href="#interiorDesignModal" class="fancybox">
@@ -1213,99 +1251,37 @@ var console = { log: function() {} };
 
 
 						<div class="box">
-							<h2 style = "font-family: optima; color: floralwhite">
+                            <h2 style = "color: floralwhite">
 								Every image has a story <br>to tell...</h2>
 						</div>
-=======
-				
-<!--
-				<video autoplay loop muted  id="myVideo">
-					<source src="imgs/Fireflies%20%20%20FREE%20Video%20Background%20Loop%20HD%201080p.mp4" type="video/mp4">
-					<source src="imgs/Fireflies%20%20%20FREE%20Video%20Background%20Loop%20HD%201080p.mp4" type="video/webm">
-				</video>
--->
-				
-					<div class="bottomContainers">
-
-                        <div class="container interiorDesign">
-                            <a href="#interiorDesignModal" class="fancybox">
-                            <img src="imgs/interiordesign.jpg" alt="iphone"/>
-                            </a>
-                        </div>
-
-                        <div class="container fashion">
-                            <a href="#fashionModal" class="fancybox">
-                            <img src="imgs/fashion2.png" alt="iphone"/>
-                            </a>
-                        </div>
-
-                        <div class="container automotive">
-                            <a href="#automotiveModal" class="fancybox">
-                            <img src="imgs/automobile.jpg" alt="iphone"/>
-                            </a>
-                        </div>		
-
-                        <div class="container medical">
-                            <a href="#medicalModal" class="fancybox">
-                            <img src="imgs/medicalcollaborate.jpg" alt="iphone"/>
-                            </a>
-                        </div>
-                        <div class="overlay interiorDesign">
-                            <a href="#interiorDesignModal" class="fancybox">
-                            <img src="imgs/interiordesignhover.png" alt="iphone"/>
-                            </a>
-                        </div>
-                        <div class="overlay fashion">
-                            <a href="#fashionModal" class="fancybox">
-                            <img src="imgs/fashionhover.png" alt="iphone"/>
-                            </a>
-                        </div>
-                        <div class="overlay automotive">
-                            <a href="#automotiveModal" class="fancybox">
-                            <img src="imgs/automotivehover.png" alt="iphone"/>
-                            </a>
-                        </div>
-                        <div class="overlay medical">
-                            <a href="#medicalModal" class="fancybox">
-                            <img src="imgs/medicalhover.png" alt="iphone" id="overlayMedical" />
-                            </a>
-                        </div>
-                        <div class="box">
-                            <h2 style = "color: floralwhite">
-                            Every image has a story <br>to tell...</h2>
-                        </div>
->>>>>>> origin/ericasite
 					</div>			
 				</div>
 			</div>
 
 			<div class="section moveDown" id="section2">
 				<div class="wrap">
-<<<<<<< HEAD
-
-					<div class="box"> 
-						<img src="imgs/neuralhoverlines2.png"/>
-					</div>
-=======
                     <h2 id = "text" style = "color:#D6EBFF ; font-size: 34pt;">
                         R&amp;D<br>Section, For DeepVision!
                     </h2>
-                    <div class="box"> 
-                    <img src="imgs/neuralhoverlines.png"/>
-                    </div>
+					<div class="box">
+					</div>
                     
->>>>>>> origin/ericasite
-					<div class="imgsContainer">
-						<img src="imgs/deeplearning.png" id="deeplearning" />
-						<img src="imgs/edgedetection.png" id="edgedetection" />
-						<img src="imgs/imageseg.png" id="imagesegmentation" />
-						<img src="imgs/imageclassification.png" id="imageclassification" />
-						<img src="imgs/stochastic.png" id="stochastic" />
+					<div class="imgsContainer">						
+						<div id="deeplearning">Deep<br>Learning</div>>
+						<div id="edgedetection">Edge<br>Detection</div>
+						<div id="imagesegmentation">Image<br>Segmentation</div>
+						<div id="imageclassification">Image<br>Classification</div>
+						<div id="stochastic">Stochastic<br>Models</div>
 					</div>
 
 				</div>
 			</div>
+<<<<<<< HEAD
 
+=======
+			
+<!--
+>>>>>>> origin/ericasite
 			<div class="section moveDown" id="section3">
 				<div class="wrap">
 					<div class="box">
@@ -1321,12 +1297,13 @@ var console = { log: function() {} };
 						</div>
 					</div>
 				</div>
-				<!-- 
+				 
 <div class="imgsContainer">
 <img src="imgs/ins5.png" alt="iphone" id="iphone-two" />
 </div>
--->
+
 			</div>
+-->
 
 			<div class="section moveDown" id="section4">
 				<div class="wrap">
@@ -1340,7 +1317,18 @@ var console = { log: function() {} };
 							<strong>T:</strong> 519-123-1234<br><br>
 							Copyright © fresh.Inc<br>
 						</address>
+						<div class = signupbox>
+							<span class="inputWithButton" action="demo_form.asp" method="post">
+								<input type="text" placeholder="Your email"/>
+								<input type= "button" value = "Sign up"/>
+							</span>
+						</div>
 					</div>
+					
+				</div>
+				<div id = "footer">
+                    <img src="imgs/logotransparent.png" style = "height:6%; width:4%; position: fixed; left:42%;"/>
+				    <img src="imgs/deepvisioncolor.png" style = "height:6%; width:17%; position: fixed; left:44%;"/>
 				</div>
 			</div>
 

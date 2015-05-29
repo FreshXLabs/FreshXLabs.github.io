@@ -137,7 +137,19 @@
 				z-index:9;
 				text-align:left;
 				color: #FFFFFF;
-				padding: 10px 0 0 0;
+                padding: 10px 0 0 10px;
+            }
+            #footer{
+                position: absolute;
+                height: 50px;
+                display:block;
+                bottom: 0px;
+                width: 100%;
+                background: #000;
+                opacity: 0.7;
+                text-align:center;
+                color: #000;
+                padding: 0 0 0 0;
 			}
 
 			/* Section 0
@@ -247,26 +259,26 @@
 			}
 			#section1 .fashion{
 				left:45%;
-				top:-220px;
+            top:-110%;
 				-webkit-border-radius: 10px;
 				border-radius: 10px;
 			}
 			#section1 .automotive{
 				left:45%;
-				top:-440px;
+            top:-220%;
 				-webkit-border-radius: 10px;
 				border-radius: 10px;
 			}
 			#section1 .medical{
 				left:65%;
-				top:-220px;
+            top:-110%;
 				-webkit-border-radius: 10px;
 				border-radius: 10px;
 			}
 
 			#section1 .interiorDesign{
 				left:65%;
-				top:-440px;
+            top:-220%;
 				-webkit-border-radius: 10px;
 				border-radius: 10px;
 			}
@@ -600,13 +612,14 @@
 				width:70px;
 			}
 
+
 			/* Section 4
 			* --------------------------------------- */
 			#section4{
 				/*            background-image: url(imgs/fresh.jpg);*/
 				margin: 0px 0 0 0;
 				background-size: 100% 100%;
-				background-image: url(imgs/road.jpg);
+				background-image: url(imgs/back5.jpg);
 			}
 			#section4 .transbox
 			{
@@ -615,7 +628,7 @@
 /*				            opacity:0.7;*/
 				/*            filter:alpha(opacity=60);  For IE8 and earlier */
 				text-align: center;
-				top: 35%;
+				top: 20%;
 				left: -95px;
 				position: absolute;
 				width: 500px;
@@ -972,13 +985,13 @@ var console = { log: function() {} };
 
 					'onLeave': function(index, nextIndex, direction){
 						if (index == 1 && direction == 'down'){
-                            $('#logo').animate({height:'40px', width:'40px', top:'5px', left:'30px'}, 430);
-                            $('#headerImage').animate({height:'30px',width:'150px', top:'5px',left:'55px'}, 430);
+                            $('#logo').animate({height:'40px', width:'40px', top:'5px', left:'30px'}, 250);
+                            $('#headerImage').animate({height:'30px',width:'150px', top:'5px',left:'55px'}, 250);
 							$('#header').animate({top:'0px'});
 						}
 						else if (nextIndex == 1 && direction == 'up'){
-                            $('#logo').animate({height:'200px', width:'200px', top:'37%', left:'16%'}, 430);
-                            $('#headerImage').animate({height:'150px',width:'800px', top:'40%',left:'24%'}, 430);
+                            $('#logo').animate({height:'200px', width:'200px', top:'37%', left:'16%'}, 250);
+                            $('#headerImage').animate({height:'150px',width:'800px', top:'40%',left:'24%'}, 250);
                             $('#header').animate({top:'0px'});
 						}
 
@@ -1004,7 +1017,7 @@ $('#section2').line(50, 85, 56, 68);
 						//playing the video
 						$('video').get(0).play();
 					},
-					anchors: ['firstPage', 'secondPage', '3rdPage', '4thPage', '5thPage' ],
+					anchors: ['firstPage', 'secondPage', '3rdPage', '4thPage' ],
 					menu: '#menu2', 
 					easingcss3: 'cubic-bezier(0.175, 0.885, 0.320, 1)'
 //					easingcss3: 'cubic-bezier(0.175, 0.885, 0.320, 1.275)'
@@ -1136,6 +1149,7 @@ $('#section2').line(50, 85, 56, 68);
 				</div>
 			</div>
 
+<!--
 			<div class="section moveDown" id="section3">
 				<div class="wrap">
 					<div class="box">
@@ -1151,12 +1165,13 @@ $('#section2').line(50, 85, 56, 68);
 						</div>
 					</div>
 				</div>
-				<!-- 
+				 
 <div class="imgsContainer">
 <img src="imgs/ins5.png" alt="iphone" id="iphone-two" />
 </div>
--->
+
 			</div>
+-->
 
 			<div class="section moveDown" id="section4">
 				<div class="wrap">
@@ -1170,7 +1185,18 @@ $('#section2').line(50, 85, 56, 68);
 							<strong>T:</strong> 519-123-1234<br><br>
 							Copyright © fresh.Inc<br>
 						</address>
+						<div class = signupbox>
+							<span class="inputWithButton" action="demo_form.asp" method="post">
+								<input type="text" placeholder="Your email"/>
+								<input type= "button" value = "Sign up"/>
+							</span>
+						</div>
 					</div>
+					
+				</div>
+				<div id = "footer">
+                    <img src="imgs/logotransparent.png" style = "height:6%; width:4%; position: fixed; left:42%;"/>
+				    <img src="imgs/deepvisioncolor.png" style = "height:6%; width:17%; position: fixed; left:44%;"/>
 				</div>
 			</div>
 
